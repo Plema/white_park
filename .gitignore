@@ -13,4 +13,6 @@ psd/
 *.pdf
 *.log
 
+**/.DS_Store
+
 Thumbs.db
