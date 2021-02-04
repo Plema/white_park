@@ -15,4 +15,24 @@ $(document).ready(function() {
         $('.header__info').slideToggle(500).toggleClass('active');
 
     });
+
+    // Show/hide advantages
+    $('.advantages__list_item').click(function(e) {
+        e.preventDefault();
+
+        $(this).find('.advantages__list_text').slideToggle(200,  "linear");
+        $(this).find('.list__marker_outline').fadeToggle(200);
+    });
+
+    // Video-popup
+    //show
+    $('.intro__play').click(function() {
+        $('.intro__play_outline').toggleClass('active');
+        $('.video__popup').toggle();
+    });
+    //hide
+    $('.video__popup').click(function() {
+        $('.video__popup').toggle();
+        $('.intro__play_outline').toggleClass('active');
+    });
 });
