@@ -14,51 +14,54 @@
 <body>
 	<!-- Header -->
 	<header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="header__logo">
-                <img src="img/logo.svg" alt="logo">
+    <div class="header__inner">
+        <div class="header__logo">
+            <img class="header__logo_white" src="img/logo.png" alt="logo">
+            
+        </div>
+        <div class="header__info">
+            <img class="header__logo_dark" src="img/logo-dark.png" alt="logo">
+            
+            <nav class="nav">
+                <a href="#" class="nav__link">Главная</a>
+                <a href="#" class="nav__link">Площадки</a>
+                <a href="#" class="nav__link">Кухня</a>
+                <a href="#" class="nav__link">Мероприятия</a>
+                <a href="#" class="nav__link">Галерея</a>
+                <a href="#" class="nav__link">Отзывы</a>
+                <a href="#" class="nav__link">FAQ</a>
+                <a href="#" class="nav__link">Контакты</a>
+            </nav>
+            <div class="header__address">
+                <i class="icon-location"></i>
+                <p class="header__address_text">
+                    г. Москва, Мякининское ш., д.3 (Рублевский пляж)
+                </p>
             </div>
-            <div class="header__info">
-                <nav class="nav">
-                    <a href="#" class="nav__link">Главная</a>
-                    <a href="#" class="nav__link">Площадки</a>
-                    <a href="#" class="nav__link">Кухня</a>
-                    <a href="#" class="nav__link">Мероприятия</a>
-                    <a href="#" class="nav__link">Галерея</a>
-                    <a href="#" class="nav__link">Отзывы</a>
-                    <a href="#" class="nav__link">FAQ</a>
-                    <a href="#" class="nav__link">Контакты</a>
-                </nav>
-                <div class="header__address">
-                    <i class="icon-location"></i>
-                    <p class="header__address_text">
-                        г. Москва, Мякининское ш., д.3 (Рублевский пляж)
-                    </p>
+            <div class="header__phones">
+                <i class="icon-phone"></i>
+                <div class="header__phones_info">
+                    <p>+7 (985) 777-4-555</p>
+                    <p>+7 (926) 063-12-99</p>
                 </div>
-                <div class="header__phones">
-                    <i class="icon-phone"></i>
-                    <div class="header__phones_info">
-                        <p>+7 (985) 777-4-555</p>
-                        <p>+7 (926) 063-12-99</p>
-                    </div>
-                </div>
-                <button class="header__btn" name="call">Заказать звонок</button>
-            </div><!-- /.header__info -->
+            </div>
+            <button class="header__btn" name="call">Заказать звонок</button>
+        </div><!-- /.header__info -->
 
-            <button class="nav__toggle">
-                <div class="nav__toggle_btn"><i class="icon-menu"></i></div>
-                <p>Меню</p>
-            </button>
+        <button class="nav__toggle">
+            <div class="nav__toggle_btn"><i class="icon-menu"></i></div>
+            <p>Меню</p>
+        </button>
 
-        </div><!-- /.header__inner -->
-    </div><!-- /.container -->
+    </div><!-- /.header__inner -->
 </header>
 
 	<!-- Основной контент -->
 	<div class="wrapper">
 		<div class="intro">
 			<div class="container">
+
+				<img class="intro__logo" src="img/logo.png" alt="">
 
 				<div class="intro__title">
 					<p class="intro__title_small">Event площадка</p>
@@ -69,89 +72,113 @@
 					<p>Для мероприятий в Москве</p>
 				</div>
 
-				<button class="intro__btn" name="get-presentation">Получить презентацию</button>
+				<div class="intro__buttons">
+					<button class="intro__btn" name="get-presentation">Получить презентацию</button>
 
-				<div class="intro__play">
-					<div class="intro__play_outline">
-						<i class="icon-play-circled"></i>
+					<div class="intro__play">
+						<div class="intro__play_outline">
+							<i class="icon-play-circled"></i>
+						</div>
+						<p class="intro__play_text">Видео-обзор площадки</p>
 					</div>
-					<p class="intro__play_text">Видео-обзор площадки</p>
-				</div>
-
-				<div class="video__popup">
-					<iframe src="https://www.youtube.com/embed/z_neMO2t4jU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 				</div>
 
 			</div><!-- /.container -->
+
+			<div class="intro__social">
+				<div class="intro__social_line"></div>
+				<a href="https://vk.com/whiteparknewrigabay" target="_blank"><i class="icon-vkontakte"></i></a>
+				<a href="https://www.instagram.com/white_park/" target="_blank"><i class="icon-instagram"></i></a>
+				<a href="https://www.facebook.com/thewhitepark" target="_blank"><i class="icon-facebook"></i></a>
+			</div>
+
+			<a class="intro__bot" href="#">
+				<div class="intro__bot_bg">
+					<i class="icon-paper-plane-1"></i>
+				</div>
+				<p class="intro__bot_text">Перейти в чат-бот</p>
+			</a>
+
+			<div class="intro__mouse">
+				<img src="img/mouse.png" alt="mouse">
+			</div>
+
+			<div class="video__popup">
+				<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-src="https://www.youtube.com/embed/z_neMO2t4jU"></iframe>
+			</div>
+
+			
 		</div><!-- /.intro -->
 
 		<div class="advantages">
 			<div class="container">
 
-				<div class="advantages__title">
-					<p>Наши преимущества</p>
-				</div>
-				<div class="advantages__subtitle">
-					<p>6 причин провести мероприятие в White Park</p>
-				</div>
-				<div class="advantages__list">
-
-					<div class="advantages__list_item">
-						<div class="advantages__list_title">
-							<div class="list__marker">
-								<div class="list__marker_outline"></div>
-							</div>
-							<div class="list__subtitle">Расположение и территория</div>
-						</div>
-						<div class="advantages__list_text">1 км от МКАД по Новорижскому шоссе, берег Живописной бухты, более 2 000 кв.м. веранд</div>
+				<div class="advantages__inner">
+					<div class="advantages__title">
+						<p>Наши преимущества</p>
 					</div>
-					<div class="advantages__list_item">
-						<div class="advantages__list_title">
-							<div class="list__marker">
-								<div class="list__marker_outline"></div>
-							</div>
-							<div class="list__subtitle">Инфраструктура</div>
-						</div>
-						<div class="advantages__list_text">Более 2000 кв метров веранд, три шатра, две парковки, собственная кухня, ухоженные газоны и пляж</div>
+					<div class="advantages__subtitle">
+						<p>6 причин провести мероприятие в White Park</p>
 					</div>
-					<div class="advantages__list_item">
-						<div class="advantages__list_title">
-							<div class="list__marker">
-								<div class="list__marker_outline"></div>
+					<div class="advantages__list">
+	
+						<div class="advantages__list_item">
+							<div class="advantages__list_title">
+								<div class="list__marker">
+									<div class="list__marker_outline"></div>
+								</div>
+								<div class="list__subtitle">Расположение и территория</div>
 							</div>
-							<div class="list__subtitle">Уникальные возможности</div>
+							<div class="advantages__list_text">1 км от МКАД по Новорижскому шоссе, берег Живописной бухты, более 2 000 кв.м. веранд</div>
 						</div>
-						<div class="advantages__list_text">Посадка вертолета, установка уличной сцены, свадебная церемония над водой, салюты и файер шоу</div>
-					</div>
-					<div class="advantages__list_item">
-						<div class="advantages__list_title">
-							<div class="list__marker">
-								<div class="list__marker_outline"></div>
+						<div class="advantages__list_item">
+							<div class="advantages__list_title">
+								<div class="list__marker">
+									<div class="list__marker_outline"></div>
+								</div>
+								<div class="list__subtitle">Инфраструктура</div>
 							</div>
-							<div class="list__subtitle">Активности на воде и пляже</div>
+							<div class="advantages__list_text">Более 2000 кв метров веранд, три шатра, две парковки, собственная кухня, ухоженные газоны и пляж</div>
 						</div>
-						<div class="advantages__list_text">Песчаный пляж с лежаками и летним баром, катание на вейкборде и прокат водного транспорта</div>
-					</div>
-					<div class="advantages__list_item">
-						<div class="advantages__list_title">
-							<div class="list__marker">
-								<div class="list__marker_outline"></div>
+						<div class="advantages__list_item">
+							<div class="advantages__list_title">
+								<div class="list__marker">
+									<div class="list__marker_outline"></div>
+								</div>
+								<div class="list__subtitle">Уникальные возможности</div>
 							</div>
-							<div class="list__subtitle">Активности в лесной зоне</div>
+							<div class="advantages__list_text">Посадка вертолета, установка уличной сцены, свадебная церемония над водой, салюты и файер шоу</div>
 						</div>
-						<div class="advantages__list_text">Комплекс окружён лесным парком «Липовая Роща»</div>
-					</div>
-					<div class="advantages__list_item">
-						<div class="advantages__list_title">
-							<div class="list__marker">
-								<div class="list__marker_outline"></div>
+						<div class="advantages__list_item">
+							<div class="advantages__list_title">
+								<div class="list__marker">
+									<div class="list__marker_outline"></div>
+								</div>
+								<div class="list__subtitle">Активности на воде и пляже</div>
 							</div>
-							<div class="list__subtitle">Персонал</div>
+							<div class="advantages__list_text">Песчаный пляж с лежаками и летним баром, катание на вейкборде и прокат водного транспорта</div>
 						</div>
-						<div class="advantages__list_text">Сплочённый коллектив более 30 человек с 10-ти летним опытом организации мероприятий</div>
-					</div>
-
-				</div><!-- /.advantages__list -->
+						<div class="advantages__list_item">
+							<div class="advantages__list_title">
+								<div class="list__marker">
+									<div class="list__marker_outline"></div>
+								</div>
+								<div class="list__subtitle">Активности в лесной зоне</div>
+							</div>
+							<div class="advantages__list_text">Комплекс окружён лесным парком «Липовая Роща»</div>
+						</div>
+						<div class="advantages__list_item">
+							<div class="advantages__list_title">
+								<div class="list__marker">
+									<div class="list__marker_outline"></div>
+								</div>
+								<div class="list__subtitle">Персонал</div>
+							</div>
+							<div class="advantages__list_text">Сплочённый коллектив более 30 человек с 10-ти летним опытом организации мероприятий</div>
+						</div>
+	
+					</div><!-- /.advantages__list -->
+				</div><!-- /.advantages__inner -->
 			</div><!-- /.container -->
 		</div><!-- /.advantages -->
 
@@ -165,35 +192,47 @@
 
 				<div class="tent__title">Малый шатер</div>
 				<div class="tent__text">Прекрасная площадка для проведения под крышей на открытом воздухе мероприятия с количеством участников до 200 - на берегу водоема, на фоне прекрасной живописной природы.</div>
-				<button class="tent__btn">Посмотрите схемы рассадки</button>
+				<button class="tent__btn" name="seats-map">Посмотрите схемы рассадки</button>
 				<div class="tent__info">
 					<div class="tent__info_item">
-						<p class="tent__info_text">260 m2 и 250 м2 <span>Welcome зона</span></p>
+						<p class="tent__info_title">260 m2 и 250 м2</p>
+						<p class="tent__info_text">Welcome зона</p>
 					</div>
 					<div class="tent__info_item">
-						<p class="tent__info__text">до 120 персон <span>Банкет</span></p>
+						<p class="tent__info_title">до 120 персон</p>
+						<p class="tent__info_text">Банкет</p>
 					</div>
 					<div class="tent__info_item">
-						<p class="tent__info__text">до 200 персон <span>Фуршет</span></p>
+						<p class="tent__info_title">до 200 персон</p>
+						<p class="tent__info_text">Фуршет</p>
 					</div>
 				</div>
 				<div class="tent__gallery">
-					<div class="tent__gallery_item">
-						<img src="img/gallery-1.png" alt="">
-					</div>
-					<div class="tent__gallery_item">
-						<img src="img/gallery-2.png" alt="">
-					</div>
-					<div class="tent__gallery_item">
-						<img src="img/gallery-3.png" alt="">
-					</div>
-					<div class="tent__gallery_item">
-						<img src="img/gallery-4.png" alt="">
-					</div>
+					<div class="tent__gallery_item one"></div>
+					<div class="tent__gallery_item two"></div>
+					<div class="tent__gallery_item three"></div>
+					<div class="tent__gallery_item four"></div>
 				</div>
-				<button class="btn__more">Подробнее</button>
+				<button class="btn__more" name="more">Подробнее</button>
 			</div><!-- /.container -->
 		</div><!-- /.tent -->
+
+		<div class="estimate">
+			<div class="container">
+				<div class="estimate__title">Рассчитаем смету на мероприятие за 1 час</div>
+				<div class="estimate__text">Заполните все необходимые поля, наш менеджер свяжется с Вами и расчитает банкет за считанные минуты</div>
+				<input class="input__name" type="text" placeholder="Введите Ваше Имя" name="name">
+				<input class="input__phone" type="tel" placeholder="+7 (___) ___-__-__" name="phone">
+
+				<!-- появляется в случае error -->
+				<p class="incorrect">Неправильно набран номер</p>
+
+				<div class="accept">
+					<input class="accept__check" type="checkbox">
+					<div class="accept__text">Согласие на обработку персональных данных</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Footer -->
@@ -201,6 +240,9 @@
 
 	<!-- Скрипты -->
 	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+
+
 	<script src="js/script.min.js"></script>
 
 </body>
