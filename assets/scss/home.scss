@@ -7,7 +7,8 @@
         background-size: cover;
         height: 100vh;
         position: relative;
-        padding-top: 113px;
+        display: flex;
+        align-items: center;
 
         &__logo{
             display: none;
@@ -189,6 +190,12 @@
 
         padding: 51px 0 45px;
 
+        &__img{
+            display: none;
+            &_arrow{
+                display: none;
+            }
+        }
         &__title{
             font-family: "Alice";
             font-size: 30px;
@@ -258,6 +265,9 @@
                 color: #000;
                 margin-left: 42px;
             }
+        }
+        &__btn{
+            display: none;
         }
     }
     .map{
@@ -400,6 +410,10 @@
             }
             .four{
                 background-image: url('../img/gallery-4.png');
+            }
+            .five{
+                display: none;
+                background-image: url('../img/gallery-5.png');
             }
         }
         .btn__more{
@@ -544,9 +558,6 @@
 
 /* Media Queries */
 
-@media (min-width: 480px) {
-    
-}
 @media (min-width: 768px) {
     .wrapper{
         .intro{
@@ -572,9 +583,131 @@
 
             height: 100vh;
 
+            padding-top: 20px;
+
+            &__img{
+                display: block;
+                width: 500px;
+                height: auto;
+
+                &_arrow{
+                    display: block;
+
+                    width: 300px;
+                    height: auto;
+
+                    margin: 0 auto -33px;
+                }
+
+            }
             &__inner{
                 width: 500px;
-                background-color: rgba(255, 255, 255, .8);
+                background-color: rgba(255, 255, 255, .9);
+
+                padding: 60px 50px 0;
+
+                position: absolute;
+                top: 141.5px;
+
+            }
+            &__title{
+                font-size: 40px;
+            }
+            &__subtitle{
+                font-size: 20px;
+            }
+            &__list_item{
+                margin-left: 0;
+
+                .list__subtitle{
+                    font-size: 16px;
+                }
+                .advantages__list_text{
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+            &__btn{
+                display: flex;
+                justify-content: center;
+                width: 257px;
+                height: auto;
+
+                font-family: 'Montserrat-medium';
+                font-size: 16px;
+                color: #fff;
+
+                background-color: #74CFE3;
+
+                border: none;
+                border-radius: 5px;
+                outline: none;
+
+                padding: 16px 0;
+                margin: 40px 0;
+                transition: background-color .3s ease-out;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 4px 4px 15px rgba(107, 228, 255, 0.5);
+
+                &:hover{
+                    background-color: #2EA6C0;
+                }
+                &:before{
+                    content: '';
+                    background-image: url('../img/button-bg-blue.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 72%;
+                    height: 220%;
+                    position: absolute;
+                    top: -23px;
+                    left: -6px;
+                    z-index: 0;
+                }
+            }
+        }
+        .tent{
+            &__title{
+                font-size: 40px;
+            }
+            &__subtitle{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .tent__text{
+                    width: auto;
+                    text-align: left;
+                }
+                .tent__btn{
+                    min-width: 300px;
+                    width: 300px;
+                    height: 50px;
+
+                    margin-right: 0;
+                    margin-left: 20px;
+                }
+            }
+            &__info{
+                display: flex;
+                justify-content: space-between;
+
+                &_item{
+                    margin-bottom: 0;
+                    .tent__info_title{
+                        font-size: 30px;
+                    }
+                }
+            }
+            &__gallery{
+                &_item{
+                    width: 362px;
+                    height: 181px;
+                }
+                .five{
+                    display: block;
+                }
             }
         }
     }
@@ -583,6 +716,7 @@
     .wrapper{
         .intro{
             padding-top: 0;
+            display: block;
 
             &__logo{
                 display: flex;
@@ -838,6 +972,52 @@
         .video__popup{
             iframe{
                 max-width: 1000px;
+            }
+        }
+        .advantages{
+            &__img{
+                width: 770px;
+                height: auto;
+
+                &_arrow{
+                    margin-bottom: -34px;
+                }
+            }
+            &__inner{
+                width: 770px;
+
+                padding: 120px 70px 0;
+
+                top: 219px;
+            }
+            &__title{
+                font-size: 62px;
+            }
+            &__subtitle{
+                font-size: 24px;
+            }
+            &__list{
+                margin-top: 50px;
+
+                &_item{
+                    margin-bottom: 30px;
+                    .list__subtitle{
+                        font-size: 20px;
+                    }
+                    .advantages__list_text{
+                        font-size: 20px;
+                    }
+                }
+            }
+            &__btn{
+                margin: 50px 0;
+                padding: 23px;
+
+                &:before{
+                    width: 92%;
+                    top: -29px;
+                    left: -8px;
+                }
             }
         }
     }

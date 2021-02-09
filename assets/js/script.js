@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     // Show/hide nav
     $('.nav__toggle').on("click", function(e) {
         e.preventDefault();
@@ -8,13 +9,47 @@ $(document).ready(function() {
         if ($('.nav__toggle').hasClass('active')) {
             $('.nav__toggle_btn').find('i').removeClass('icon-menu');
             $('.nav__toggle_btn').find('i').addClass('icon-close');
-        } else{
+            $('.header__info').fadeToggle(200).addClass('active');
+
+        } else {
             $('.nav__toggle_btn').find('i').removeClass('icon-close');
             $('.nav__toggle_btn').find('i').addClass('icon-menu');
+            $('.header__info').fadeToggle(200).removeClass('active');
         }
-        $('.header__info').slideToggle(500).toggleClass('active');
-
     });
+
+    $(document).mouseup(function (e) {
+        var btn = $('.nav__toggle');
+        if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+            $('.nav__toggle').removeClass('active');
+            $('.nav__toggle_btn').find('i').removeClass('icon-close');
+            $('.nav__toggle_btn').find('i').addClass('icon-menu');
+            $('.header__info').fadeToggle(200).removeClass('active');
+        }
+    });
+
+    // Fixed header
+    /* let header = $(".header");
+    let container = $('.header__info');
+    let introH = $(".intro").innerHeight();
+    let scrollOffset = $(window).scrollTop();
+
+    checkScroll(scrollOffset);
+
+    $(window).on('scroll', function() {
+        scrollOffset = $(this).scrollTop();
+
+        checkScroll(scrollOffset);
+    });
+
+    function checkScroll(scrollOffset) {
+        if( scrollOffset >= introH ){
+            header.addClass("fixed");
+
+        } else{
+            header.removeClass("fixed");
+        }
+    } */
 
     // Show/hide advantages
     $('.advantages__list_item').click(function(e) {
@@ -44,16 +79,16 @@ $(document).ready(function() {
     });
 
     // Height for gallery
-    function windowSize(){
+    /* function windowSize(){
         if ($(window).width() >= '320'){
           var imgWidth = $('.tent__gallery_item').width();
           $('.tent__gallery_item').css({
             'height' : imgWidth
           });
-        } else if ($(window).width() <= '768'){
+        } else if ($(window).width() <= '767'){
     
         }
-    }
+    } */
     
     $(window).on('load resize',windowSize);
 
