@@ -79,16 +79,16 @@ $(document).ready(function() {
     });
 
     // Height for gallery
-    /* function windowSize(){
+    function windowSize(){
         if ($(window).width() >= '320'){
-          var imgWidth = $('.tent__gallery_item').width();
-          $('.tent__gallery_item').css({
+          var imgWidth = $('.portfolio__content_video, .portfolio__content_photo').width();
+          $('.portfolio__content_video, .portfolio__content_photo').css({
             'height' : imgWidth
           });
         } else if ($(window).width() <= '767'){
     
         }
-    } */
+    }
     
     $(window).on('load resize',windowSize);
 
