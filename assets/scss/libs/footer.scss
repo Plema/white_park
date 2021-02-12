@@ -1,0 +1,233 @@
+.footer {
+    background-color: #3C6A74;
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        padding: 20px 0 40px;
+    }
+
+    &__logo {
+        width: 300px;
+        height: auto;
+
+        margin-bottom: 50px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        width: 100%;
+
+        &_link {
+            font-family: 'Montserrat-medium';
+            font-size: 16px;
+            color: #fff;
+
+            margin-bottom: 20px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                font-family: 'Montserrat-bold';
+            }
+        }
+    }
+
+    &__calc,
+    &__download {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 32px 0 30px;
+
+        cursor: pointer;
+
+        &_outline {
+            width: 44px;
+            height: 44px;
+
+            border: 1px solid #fff;
+            border-radius: 50%;
+
+            position: relative;
+
+            i {
+                font-size: 19px;
+                color: #fff;
+
+                position: absolute;
+                top: 11px;
+                left: 50%;
+
+                transform: translate(-50%);
+
+            }
+
+            margin-bottom: 12px;
+        }
+
+        &_text {
+            font-family: 'Montserrat-bold';
+            font-size: 16px;
+            line-height: 24px;
+            color: #fff;
+            text-align: center;
+            opacity: 1;
+
+            width: 220px;
+
+            transition: opacity 0.2s linear;
+        }
+
+        &:hover {
+
+            .footer__calc_text,
+            .footer__download_text {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__download {
+        margin: 0 0 48px;
+    }
+
+    &__policy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_copyright {
+            font-family: 'Montserrat-regular';
+            font-size: 14px;
+            color: #fff;
+
+            margin-bottom: 17px;
+        }
+
+        &_conf {
+            font-family: 'Montserrat-regular';
+            font-size: 14px;
+            color: #fff;
+            text-decoration: underline;
+
+            margin-bottom: 40px;
+        }
+    }
+
+    &__create {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_title {
+            font-family: 'Montserrat-regular';
+            font-size: 16px;
+            color: #fff;
+
+        }
+
+        &_logo {
+            height: 44px;
+            margin: 8px 0 10px;
+        }
+
+        &_link {
+            font-family: 'Montserrat-regular';
+            font-size: 16px;
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    .footer {
+        &__nav {
+            &_link {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__nav {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+
+            &_link {
+                display: flex;
+                justify-content: center;
+
+                font-size: 22px;
+
+                width: 25%;
+
+                margin-bottom: 40px;
+
+                &:last-of-type {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        &__calc,
+        &__download {
+            margin-top: 0;
+
+            &_outline {
+                width: 54px;
+                height: 54px;
+
+                border: 2px solid #fff;
+
+                i {
+                    font-size: 22px;
+                    top: 12px;
+                }
+            }
+
+            &_text {
+                font-size: 16px;
+                width: 300px;
+            }
+        }
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+
+            width: 100%;
+            height: auto;
+
+            .footer__policy{
+                justify-content: center;
+
+                &_conf{
+                    margin-bottom: 0;
+                }
+            }
+            .footer__create{
+                flex-direction: row;
+            }
+        }
+    }
+}
