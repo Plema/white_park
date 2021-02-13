@@ -231,3 +231,242 @@
         }
     }
 }
+@media (min-width: 1024px) {
+    .footer{
+        width: 100%;
+
+        overflow: hidden;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+
+        .container{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            width: 100%;
+
+            padding: 20px 40px 10px;
+        }
+
+        &__logo{
+            width: 25%;
+            max-width: 200px;
+
+            margin-bottom: 0;
+        }
+        &__nav{
+            width: 45%;
+
+            &_link{
+                font-size: 14px;
+
+                margin-bottom: 20px;
+
+                &:last-of-type{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &__buttons{
+            flex-direction: column;
+
+            width: 25%;
+
+            margin-right: 0;
+            margin-top: 0;
+
+            .footer__calc, .footer__download{
+                flex-direction: row-reverse;
+                align-items: center;
+
+                margin: 0;
+                margin-bottom: 10px;
+
+                &_outline{
+                    width: 34px;
+                    height: 34px;
+
+                    border: 1px solid #fff;
+
+                    margin-bottom: 0;
+                }
+                i{
+                    font-size: 15px;
+
+                    top: 8px;
+                }
+                &_text{
+                    font-size: 10px;
+                    text-align: left;
+
+                    width: 200px;
+                }
+            }
+        }
+        &__info{
+            width: 100%;
+
+            margin-top: 20px;
+
+            .footer__policy{
+                justify-content: flex-start;
+                flex-direction: row;
+                width: 50%;
+
+                &_copyright{
+                    font-size: 10px;
+
+                    border-right: 1px solid #fff;
+                    margin-bottom: 0;
+                    margin-right: 5px;
+                    padding-right: 5px; 
+                }
+                &_conf{
+                    font-size: 10px;
+                }
+            }
+            .footer__create{
+                justify-content: flex-end;
+                width: 50%;
+
+                &_title{
+                    font-size: 10px;
+                }
+                &_logo{
+                    height: 34px;
+
+                    margin: 0 10px;
+                }
+                &_link{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1280px) {
+    .footer{
+        .container{
+            width: 1100px;
+
+            padding: 15px 0 10px;
+        }
+        &__logo{
+            max-width: 230px;
+        }
+        &__nav{
+            width: 50%;
+
+            margin-top: 20px;
+
+            &_link{
+                justify-content: flex-start;
+
+                width: 30%;
+                font-size: 14px;
+            }
+        }
+        &__buttons{
+            .footer__calc, .footer__download{
+                &_outline{
+                    width: 44px;
+                    height: 44px;
+
+                    margin-bottom: 15px;
+                }
+                i{
+                    font-size: 19px;
+                    top: 11px;
+                }
+                &_text{
+                    font-size: 12px;
+                }
+            }
+        }
+        &__info{
+            margin-top: 0;
+            .footer__policy{
+                &_copyright{
+                    font-size: 12px;
+                }
+                &_conf{
+                    font-size: 12px;
+                }
+            }
+            .footer__create{
+                &_title{
+                    font-size: 12px;
+                }
+                &_logo{
+                    height: 34px;
+                }
+                &_link{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1600px) {
+    .footer{
+        .container{
+            width: 1177px;
+
+            padding: 47px 0 17px;
+        }
+        &__logo{
+            max-width: 300px;
+        }
+        &__nav{
+            padding-left: 25px;
+
+            margin-top: 25px;
+            &_link{
+                justify-content: flex-start;
+                width: 30%;
+
+                font-size: 16px;
+            }
+        }
+        &__buttons{
+            .footer__calc, .footer__download{
+                &_text{
+                    font-family: 'Montserrat-semiBold';
+                    font-size: 14px;
+
+                    width: 210px;
+
+                    margin-right: 30px;
+                }
+            }
+        }
+        &__info{
+            margin-top: 30px;
+            .footer__policy{
+                width: 70%;
+                &_copyright{
+                    font-size: 16px;
+                }
+                &_conf{
+                    font-size: 16px;
+                }
+            }
+            .footer__create{
+                &_title{
+                    font-size: 16px;
+                }
+                &_logo{
+                    width: 44px
+                }
+                &_link{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
