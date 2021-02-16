@@ -115,7 +115,7 @@
         background-size: cover;
         background-position: -1070px 0;
 
-        padding-top: 50px;
+        padding-top: 130px;
 
         &__img{
             display: block;
@@ -153,6 +153,8 @@
 
         padding-top: 20px;
 
+        position: relative;
+
         &__img{
             width: 350px;
 
@@ -166,22 +168,27 @@
             width: 350px;
 
             .contacts__title{
-                font-size: 48px;
+                font-size: 40px;
 
-                padding-top: 20px;
+                padding-top: 10px;
             }
             .contacts__address{
                 &_text{
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 24px;
+
+                    margin: 10px 0 12px;
                 }
                 .route{
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
             .contacts__phones{
+                margin-top: 10px;
                 .contacts__phone{
-                    font-size: 20px;
+                    font-size: 16px;
+
+                    margin: 10px 0 12px;
                 }
             }
             .contacts__social{
@@ -204,6 +211,27 @@
         &__inner{
             width: 400px;
             margin-left: 100px;
+
+            .contacts__title{
+                font-size: 36px;
+            }
+            .contacts__address{
+                i{
+                    font-size: 25px;
+                }
+                &_text{
+                    margin: 10px auto;
+
+                    width: 300px;
+                }
+            }
+            .contacts__phones{
+                .contacts__phone{
+                    &:last-of-type{
+                        margin-top: 0;
+                    }
+                }
+            }
         }
     }
 }

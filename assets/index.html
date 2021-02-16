@@ -4,323 +4,470 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Главная</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="cmsmagazine" content="5a7189a28fb3dc68238dbdb44c9ea99c" />
 	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
 	<link rel="stylesheet" href="css/style.min.css" data-inprogress="">
 	<link rel="stylesheet" href="css/home.min.css" data-inprogress="">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 </head>
 
 <body>
 	<!-- Header -->
-	<include src="assets/templates/header.html"></include>
+	<!-- <include src="assets/templates/header.html"></include> -->
 
 	<!-- Основной контент -->
 	<div class="wrapper">
-		<div class="intro">
-			<div class="container">
 
-				<img class="intro__logo" src="img/logo.png" alt="">
-
-				<div class="intro__title">
-					<p class="intro__title_small">Event площадка</p>
-					<p class="intro__title_big">White Park</p>
-				</div>
-
-				<div class="intro__subtitle">
-					<p>Для мероприятий в Москве</p>
-				</div>
-
-				<div class="intro__buttons">
-					<button class="intro__btn" name="get-presentation">Получить презентацию</button>
-
-					<div class="intro__play">
-						<div class="intro__play_outline">
-							<i class="icon-play-circled"></i>
-						</div>
-						<p class="intro__play_text">Видео-обзор площадки</p>
-					</div>
-				</div>
-
-			</div><!-- /.container -->
-
-			<div class="intro__social">
-				<div class="intro__social_line"></div>
-				<a href="https://vk.com/whiteparknewrigabay" target="_blank"><i class="icon-vkontakte"></i></a>
-				<a href="https://www.instagram.com/white_park/" target="_blank"><i class="icon-instagram"></i></a>
-				<a href="https://www.facebook.com/thewhitepark" target="_blank"><i class="icon-facebook"></i></a>
-			</div>
-
-			<a class="intro__bot" href="#">
-				<div class="intro__bot_bg">
-					<i class="icon-paper-plane-1"></i>
-				</div>
-				<p class="intro__bot_text">Перейти в чат-бот</p>
-			</a>
-
-			<div class="intro__mouse">
-				<img src="img/mouse.png" alt="mouse">
-			</div>
-
-			<div class="video__popup">
-				<iframe src='' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube.com/embed/z_neMO2t4jU"></iframe>
-			</div>
-
-			
-		</div><!-- /.intro -->
-
-		<div class="advantages">
-			<div class="container">
-
-				<img class="advantages__img" src="img/header-wave.png" alt="">
-				<div class="advantages__inner">
-					<div class="advantages__title">
-						<p>Наши преимущества</p>
-					</div>
-					<div class="advantages__subtitle">
-						<p>6 причин провести мероприятие в White Park</p>
-					</div>
-					<div class="advantages__list">
-	
-						<div class="advantages__list_item">
-							<div class="advantages__list_title">
-								<div class="list__marker">
-									<div class="list__marker_outline"></div>
-								</div>
-								<div class="list__subtitle">Расположение и территория</div>
-							</div>
-							<div class="advantages__list_text">1 км от МКАД по Новорижскому шоссе, берег Живописной бухты, более 2 000 кв.м. веранд</div>
-						</div>
-						<div class="advantages__list_item">
-							<div class="advantages__list_title">
-								<div class="list__marker">
-									<div class="list__marker_outline"></div>
-								</div>
-								<div class="list__subtitle">Инфраструктура</div>
-							</div>
-							<div class="advantages__list_text">Более 2000 кв метров веранд, три шатра, две парковки, собственная кухня, ухоженные газоны и пляж</div>
-						</div>
-						<div class="advantages__list_item">
-							<div class="advantages__list_title">
-								<div class="list__marker">
-									<div class="list__marker_outline"></div>
-								</div>
-								<div class="list__subtitle">Уникальные возможности</div>
-							</div>
-							<div class="advantages__list_text">Посадка вертолета, установка уличной сцены, свадебная церемония над водой, салюты и файер шоу</div>
-						</div>
-						<div class="advantages__list_item">
-							<div class="advantages__list_title">
-								<div class="list__marker">
-									<div class="list__marker_outline"></div>
-								</div>
-								<div class="list__subtitle">Активности на воде и пляже</div>
-							</div>
-							<div class="advantages__list_text">Песчаный пляж с лежаками и летним баром, катание на вейкборде и прокат водного транспорта</div>
-						</div>
-						<div class="advantages__list_item">
-							<div class="advantages__list_title">
-								<div class="list__marker">
-									<div class="list__marker_outline"></div>
-								</div>
-								<div class="list__subtitle">Активности в лесной зоне</div>
-							</div>
-							<div class="advantages__list_text">Комплекс окружён лесным парком «Липовая Роща»</div>
-						</div>
-						<div class="advantages__list_item">
-							<div class="advantages__list_title">
-								<div class="list__marker">
-									<div class="list__marker_outline"></div>
-								</div>
-								<div class="list__subtitle">Персонал</div>
-							</div>
-							<div class="advantages__list_text">Сплочённый коллектив более 30 человек с 10-ти летним опытом организации мероприятий</div>
-						</div>
-	
-					</div><!-- /.advantages__list -->
-
-					<button class="advantages__btn">Портфолио</button>
-					<img class="advantages__img_arrow" src="img/bottom-arrow.png" alt="">
-				</div><!-- /.advantages__inner -->
-			</div><!-- /.container -->
-
-			<img class="decor__img" src="img/decor-white.png"></img>
-		</div><!-- /.advantages -->
-
-		<!-- Необходимо сделать интерактивную карту -->
-		<div class="map">
-			<div class="map__title">Cхема</div>
-		</div><!-- /.map -->
-
-		<div class="tent">
-			<div class="container">
-
-				<div class="tent__title">Малый шатер</div>
-
-				<div class="tent__subtitle">
-					<div class="tent__text">Прекрасная площадка для проведения под крышей на открытом воздухе мероприятия с количеством участников до 200 - на берегу водоема, на фоне прекрасной живописной природы.</div>
-					<button class="tent__btn" name="seats-map">Посмотрите схемы рассадки</button>
-				</div>
-				
-				<div class="tent__info">
-					<div class="tent__info_item">
-						<p class="tent__info_title">260 m2 и 250 м2</p>
-						<p class="tent__info_text">Welcome зона</p>
-					</div>
-					<div class="tent__info_item">
-						<p class="tent__info_title">до 120 персон</p>
-						<p class="tent__info_text">Банкет</p>
-					</div>
-					<div class="tent__info_item">
-						<p class="tent__info_title">до 200 персон</p>
-						<p class="tent__info_text">Фуршет</p>
-					</div>
-				</div>
-				<div class="tent__gallery">
-					<div class="tent__gallery_item one"></div>
-					<div class="tent__gallery_item two"></div>
-					<div class="tent__gallery_item three"></div>
-					<div class="tent__gallery_item four"></div>
-					<div class="tent__gallery_item five"></div>
-				</div>
-				<button class="btn__more" name="more">Подробнее</button>
-			</div><!-- /.container -->
-		</div><!-- /.tent -->
-
-		<div class="estimate">
-			<div class="container">
-				<div class="estimate__title">Рассчитаем смету на мероприятие за 1 час</div>
-				<div class="estimate__text">Заполните все необходимые поля, наш менеджер свяжется с Вами и расчитает банкет за считанные минуты</div>
-				<input class="input__name" type="text" placeholder="Введите Ваше Имя" name="name">
-				<input class="input__phone" type="tel" placeholder="+7 (___)-___-__-__" name="phone">
-
-				<!-- появляется в случае error -->
-				<p class="incorrect">Неправильно набран номер</p>
-
-				<div class="accept">
-					<input class="accept__check" type="checkbox">
-					<div class="accept__text">Согласие на обработку персональных данных</div>
-				</div>
-				<button class="btn__send">Отправить</button>
-			</div><!-- /.container -->
-
-			<div class="estimate__social">
-				<div class="estimate__social_line"></div>
-				<a href="https://vk.com/whiteparknewrigabay" target="_blank"><i class="icon-vkontakte"></i></a>
-				<a href="https://www.instagram.com/white_park/" target="_blank"><i class="icon-instagram"></i></a>
-				<a href="https://www.facebook.com/thewhitepark" target="_blank"><i class="icon-facebook"></i></a>
-			</div>
-
-		</div><!-- /.estimate -->
+		<div id="fullpage">
+			<div class="section">
+				<div class="intro">
+					<div class="container">
 		
-		<div class="portfolio">
-			<div class="portfolio__title">
-				<h1 class="portfolio__title_text">Портфолио</h1>
-				<div class="portfolio__mouse">
-					<img src="img/mouse.png" alt="mouse">
-				</div>
-			</div>
-
-			<div class="portfolio__content_bis">
-				<h4 class="portfolio__subtitle">Деловые мерприятия</h4>
-
-				<div class="portfolio__content_inner">
-					<div class="portfolio__content_video">
-						<div class="portfolio__play">
-							<div class="portfolio__play_outline">
-								<i class="icon-play-circled"></i>
+						<img class="intro__logo" src="img/logo.png" alt="">
+		
+						<div class="intro__title">
+							<p class="intro__title_small">Event площадка</p>
+							<p class="intro__title_big">White Park</p>
+						</div>
+		
+						<div class="intro__subtitle">
+							<p>Для мероприятий в Москве</p>
+						</div>
+		
+						<div class="intro__buttons">
+							<button class="intro__btn" name="get-presentation">Получить презентацию</button>
+		
+							<div class="intro__play">
+								<div class="intro__play_outline">
+									<i class="icon-play-circled"></i>
+								</div>
+								<p class="intro__play_text">Видео-обзор площадки</p>
 							</div>
-							<p class="portfolio__play_text">Видео-обзор</p>
 						</div>
+		
+					</div><!-- /.container -->
+		
+					<div class="intro__social">
+						<div class="intro__social_line"></div>
+						<a href="https://vk.com/whiteparknewrigabay" target="_blank"><i class="icon-vkontakte"></i></a>
+						<a href="https://www.instagram.com/white_park/" target="_blank"><i class="icon-instagram"></i></a>
+						<a href="https://www.facebook.com/thewhitepark" target="_blank"><i class="icon-facebook"></i></a>
 					</div>
-	
-					<div class="portfolio__content_photo">
-						<div class="portfolio__photo">
-							<i class="icon-camera"></i>
-							<p class="portfolio__photo_text">Галерея</p>
+		
+					<a class="intro__bot" href="#">
+						<div class="intro__bot_bg">
+							<i class="icon-paper-plane-1"></i>
 						</div>
+						<p class="intro__bot_text">Перейти в чат-бот</p>
+					</a>
+		
+					<div class="intro__mouse">
+						<img src="img/mouse.png" alt="mouse">
 					</div>
-				</div>
+		
+					<div class="video__popup">
+						<iframe src='' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube.com/embed/z_neMO2t4jU"></iframe>
+					</div>
+		
+					
+				</div><!-- /.intro -->
 			</div>
 
-			<div class="portfolio__content_private">
-				<h4 class="portfolio__subtitle">Частные мерприятия</h4>
-
-				<div class="portfolio__content_inner">
-					<div class="portfolio__content_video">
-						<div class="portfolio__play">
-							<div class="portfolio__play_outline">
-								<i class="icon-play-circled"></i>
+			<div class="section">
+				<div class="advantages">
+					<div class="container">
+		
+						<img class="advantages__img" src="img/header-wave.png" alt="">
+						<div class="advantages__inner">
+							<div class="advantages__title">
+								<p>Наши преимущества</p>
 							</div>
-							<p class="portfolio__play_text">Видео-обзор</p>
+							<div class="advantages__subtitle">
+								<p>6 причин провести мероприятие в White Park</p>
+							</div>
+							<div class="advantages__list">
+			
+								<div class="advantages__list_item">
+									<div class="advantages__list_title">
+										<div class="list__marker">
+											<div class="list__marker_outline"></div>
+										</div>
+										<div class="list__subtitle">Расположение и территория</div>
+									</div>
+									<div class="advantages__list_text">1 км от МКАД по Новорижскому шоссе, берег Живописной бухты, более 2 000 кв.м. веранд</div>
+								</div>
+								<div class="advantages__list_item">
+									<div class="advantages__list_title">
+										<div class="list__marker">
+											<div class="list__marker_outline"></div>
+										</div>
+										<div class="list__subtitle">Инфраструктура</div>
+									</div>
+									<div class="advantages__list_text">Более 2000 кв метров веранд, три шатра, две парковки, собственная кухня, ухоженные газоны и пляж</div>
+								</div>
+								<div class="advantages__list_item">
+									<div class="advantages__list_title">
+										<div class="list__marker">
+											<div class="list__marker_outline"></div>
+										</div>
+										<div class="list__subtitle">Уникальные возможности</div>
+									</div>
+									<div class="advantages__list_text">Посадка вертолета, установка уличной сцены, свадебная церемония над водой, салюты и файер шоу</div>
+								</div>
+								<div class="advantages__list_item">
+									<div class="advantages__list_title">
+										<div class="list__marker">
+											<div class="list__marker_outline"></div>
+										</div>
+										<div class="list__subtitle">Активности на воде и пляже</div>
+									</div>
+									<div class="advantages__list_text">Песчаный пляж с лежаками и летним баром, катание на вейкборде и прокат водного транспорта</div>
+								</div>
+								<div class="advantages__list_item">
+									<div class="advantages__list_title">
+										<div class="list__marker">
+											<div class="list__marker_outline"></div>
+										</div>
+										<div class="list__subtitle">Активности в лесной зоне</div>
+									</div>
+									<div class="advantages__list_text">Комплекс окружён лесным парком «Липовая Роща»</div>
+								</div>
+								<div class="advantages__list_item">
+									<div class="advantages__list_title">
+										<div class="list__marker">
+											<div class="list__marker_outline"></div>
+										</div>
+										<div class="list__subtitle">Персонал</div>
+									</div>
+									<div class="advantages__list_text">Сплочённый коллектив более 30 человек с 10-ти летним опытом организации мероприятий</div>
+								</div>
+			
+							</div><!-- /.advantages__list -->
+		
+							<button class="advantages__btn">Портфолио</button>
+							<img class="advantages__img_arrow" src="img/bottom-arrow.png" alt="">
+						</div><!-- /.advantages__inner -->
+					</div><!-- /.container -->
+		
+					<img class="decor__img" src="img/decor-white.png">
+				</div><!-- /.advantages -->
+			</div><!-- /.section -->		
+
+			<!-- Необходимо сделать интерактивную карту -->
+			<div class="section">
+				<div class="map">
+					<div class="map__title">Cхема</div>
+				</div><!-- /.map -->
+			</div>
+			
+
+			<div class="section">
+				<div class="tent">
+					<div class="container">
+		
+						<div class="tent__title_slider slider-nav">
+							<div class="tent__title">Малый шатер</div>
+							<div class="tent__title">Средний шатер</div>
+							<div class="tent__title">Большой шатер</div>
+							<div class="tent__title">Весь комплекс</div>
 						</div>
-					</div>
-	
-					<div class="portfolio__content_photo">
-						<div class="portfolio__photo">
-							<i class="icon-camera"></i>
-							<p class="portfolio__photo_text">Галерея</p>
+						
+						<div class="tent-slider slider-for">
+							<div class="tent__item_one">
+			
+								<div class="tent__subtitle">
+									<div class="tent__text">Прекрасная площадка для проведения под крышей на открытом воздухе мероприятия с количеством участников до 200 - на берегу водоема, на фоне прекрасной живописной природы.</div>
+									<button class="tent__btn" name="seats-map">Посмотрите схемы рассадки</button>
+								</div>
+								
+								<div class="tent__info">
+									<div class="tent__info_item">
+										<p class="tent__info_title">260 m2 и 250 м2</p>
+										<p class="tent__info_text">Welcome зона</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 120 персон</p>
+										<p class="tent__info_text">Банкет</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 200 персон</p>
+										<p class="tent__info_text">Фуршет</p>
+									</div>
+								</div>
+								<div class="tent__gallery">
+									<div class="tent__gallery_item one"></div>
+									<div class="tent__gallery_item two"></div>
+									<div class="tent__gallery_item three"></div>
+									<div class="tent__gallery_item four"></div>
+									<div class="tent__gallery_item five"></div>
+								</div>
+								<button class="btn__more" name="more">Подробнее</button>
+							</div><!-- /.tent__item -->
+
+							<div class="tent__item_two">
+								<div class="tent__subtitle">
+									<div class="tent__text">Прекрасная площадка для проведения под крышей на открытом воздухе мероприятия с количеством участников до 200 - на берегу водоема, на фоне прекрасной живописной природы.</div>
+									<button class="tent__btn" name="seats-map">Посмотрите схемы рассадки</button>
+								</div>
+								
+								<div class="tent__info">
+									<div class="tent__info_item">
+										<p class="tent__info_title">260 m2 и 250 м2</p>
+										<p class="tent__info_text">Welcome зона</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 120 персон</p>
+										<p class="tent__info_text">Банкет</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 200 персон</p>
+										<p class="tent__info_text">Фуршет</p>
+									</div>
+								</div>
+								<div class="tent__gallery">
+									<div class="tent__gallery_item one"></div>
+									<div class="tent__gallery_item two"></div>
+									<div class="tent__gallery_item three"></div>
+									<div class="tent__gallery_item four"></div>
+									<div class="tent__gallery_item five"></div>
+								</div>
+								<button class="btn__more" name="more">Подробнее</button>
+							</div><!-- /.tent__item -->
+
+							<div class="tent__item_three">
+								<div class="tent__subtitle">
+									<div class="tent__text">Прекрасная площадка для проведения под крышей на открытом воздухе мероприятия с количеством участников до 200 - на берегу водоема, на фоне прекрасной живописной природы.</div>
+									<button class="tent__btn" name="seats-map">Посмотрите схемы рассадки</button>
+								</div>
+								
+								<div class="tent__info">
+									<div class="tent__info_item">
+										<p class="tent__info_title">260 m2 и 250 м2</p>
+										<p class="tent__info_text">Welcome зона</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 120 персон</p>
+										<p class="tent__info_text">Банкет</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 200 персон</p>
+										<p class="tent__info_text">Фуршет</p>
+									</div>
+								</div>
+								<div class="tent__gallery">
+									<div class="tent__gallery_item one"></div>
+									<div class="tent__gallery_item two"></div>
+									<div class="tent__gallery_item three"></div>
+									<div class="tent__gallery_item four"></div>
+									<div class="tent__gallery_item five"></div>
+								</div>
+								<button class="btn__more" name="more">Подробнее</button>
+							</div><!-- /.tent__item -->
+
+							<div class="tent__item_four">
+								<div class="tent__subtitle">
+									<div class="tent__text">Прекрасная площадка для проведения под крышей на открытом воздухе мероприятия с количеством участников до 200 - на берегу водоема, на фоне прекрасной живописной природы.</div>
+									<button class="tent__btn" name="seats-map">Посмотрите схемы рассадки</button>
+								</div>
+								
+								<div class="tent__info">
+									<div class="tent__info_item">
+										<p class="tent__info_title">260 m2 и 250 м2</p>
+										<p class="tent__info_text">Welcome зона</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 120 персон</p>
+										<p class="tent__info_text">Банкет</p>
+									</div>
+									<div class="tent__info_item">
+										<p class="tent__info_title">до 200 персон</p>
+										<p class="tent__info_text">Фуршет</p>
+									</div>
+								</div>
+								<div class="tent__gallery">
+									<div class="tent__gallery_item one"></div>
+									<div class="tent__gallery_item two"></div>
+									<div class="tent__gallery_item three"></div>
+									<div class="tent__gallery_item four"></div>
+									<div class="tent__gallery_item five"></div>
+								</div>
+								<button class="btn__more" name="more">Подробнее</button>
+							</div><!-- /.tent__item -->
 						</div>
-					</div>
-				</div>	
+		
+					</div><!-- /.container -->
+				</div><!-- /.tent -->
 			</div>
 
-			<button class="portfolio__btn">Получите расчет вашего мероприятия</button>
-		</div><!-- /.portfolio -->
-
-		<div class="kitchen">
-			<div class="container">
-
-				<h1 class="kitchen__title">Кухня</h1>
-
-				<div class="kitchen__slider">
-
-					<div class="kitchen__slider_item">
-						<img class="slider__img" src="img/slide-1.png" alt="">
-						<div class="slider__border"></div>
-						<p class="slider__title">Анимационные станции</p>	
-					</div>
-
-				</div><!-- /.kitchen__slider -->
-
-				<button class="btn__more">Подробнее</button>
-
-			</div>
-		</div><!-- /.kitchen -->
-
-		<div class="form">
-			<div class="container">
-
-				<div class="form__inner">
-					<h1 class="form__title">Остались вопросы?</h1>
-					<p class="form__text">Оставьте почту сейчас и мы вышлем полное предложение с меню и прайсом на услуги</p>
-
-					<div class="form__inputs">
+			<div class="section">
+				<div class="estimate">
+					<div class="container">
+						<div class="estimate__title">Рассчитаем смету на мероприятие за 1 час</div>
+						<div class="estimate__text">Заполните все необходимые поля, наш менеджер свяжется с Вами и расчитает банкет за считанные минуты</div>
 						<input class="input__name" type="text" placeholder="Введите Ваше Имя" name="name">
-						<input class="input__email" type="text" placeholder="Введите Ваш E-mail" name="email">
+						<input class="input__phone" type="tel" placeholder="+7 (___)-___-__-__" name="phone">
+		
+						<!-- появляется в случае error -->
+						<p class="incorrect">Неправильно набран номер</p>
+		
+						<div class="accept">
+							<input class="accept__check" type="checkbox">
+							<div class="accept__text">Согласие на обработку персональных данных</div>
+						</div>
+						<button class="btn__send">Отправить</button>
+					</div><!-- /.container -->
+		
+					<div class="estimate__social">
+						<div class="estimate__social_line"></div>
+						<a href="https://vk.com/whiteparknewrigabay" target="_blank"><i class="icon-vkontakte"></i></a>
+						<a href="https://www.instagram.com/white_park/" target="_blank"><i class="icon-instagram"></i></a>
+						<a href="https://www.facebook.com/thewhitepark" target="_blank"><i class="icon-facebook"></i></a>
 					</div>
-
-					<div class="accept">
-						<input class="accept__check" type="checkbox">
-						<div class="accept__text">Согласие на обработку персональных данных</div>
+		
+					<img class="decor__img" src="img/decor-blue.png">
+				</div><!-- /.estimate -->
+			</div>
+			
+			
+			<div class="section">
+				<div class="portfolio">
+					<div class="portfolio__title">
+						<h1 class="portfolio__title_text">Портфолио</h1>
+						<div class="portfolio__mouse">
+							<img src="img/mouse.png" alt="mouse">
+						</div>
 					</div>
-					<button class="btn__send">Отправить</button>
-				</div>
+		
+					<div class="portfolio__content_bis">
+						<h4 class="portfolio__subtitle">Деловые мерприятия</h4>
+		
+						<div class="portfolio__content_inner">
+							<div class="portfolio__content_video">
+								<div class="portfolio__play">
+									<div class="portfolio__play_outline">
+										<i class="icon-play-circled"></i>
+									</div>
+									<p class="portfolio__play_text">Видео-обзор</p>
+								</div>
+							</div>
+			
+							<div class="portfolio__content_photo">
+								<div class="portfolio__photo">
+									<i class="icon-camera"></i>
+									<p class="portfolio__photo_text">Галерея</p>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+					<div class="portfolio__content_private">
+						<h4 class="portfolio__subtitle">Частные мерприятия</h4>
+		
+						<div class="portfolio__content_inner">
+							<div class="portfolio__content_video">
+								<div class="portfolio__play">
+									<div class="portfolio__play_outline">
+										<i class="icon-play-circled"></i>
+									</div>
+									<p class="portfolio__play_text">Видео-обзор</p>
+								</div>
+							</div>
+			
+							<div class="portfolio__content_photo">
+								<div class="portfolio__photo">
+									<i class="icon-camera"></i>
+									<p class="portfolio__photo_text">Галерея</p>
+								</div>
+							</div>
+						</div>	
+					</div>
+		
+					<button class="portfolio__btn">Получите расчет вашего мероприятия</button>
 
-			</div><!-- /.container -->
-		</div><!-- /.form -->
-	</div>
+					<img class="decor__img" src="img/decor-blue.png">
+				</div><!-- /.portfolio -->
+			</div>
 
-	<!-- Contacts include Footer -->
-	<include src="assets/templates/contacts.html"></include>
+			<div class="section">
+				<div class="kitchen">
+					<div class="container">
+		
+						<h1 class="kitchen__title">Кухня</h1>
+		
+						<div class="swiper-container">
+							<div class="kitchen__slider swiper-wrapper">
+		
+								<div class="kitchen__slider_item swiper-slide">
+									<img class="slider__img" src="img/slide-1.png" alt="">
+									<div class="slider__border"></div>
+									<p class="slider__title">Анимационные станции</p>	
+								</div>
+								<div class="kitchen__slider_item swiper-slide">
+									<img class="slider__img" src="img/slide-1.png" alt="">
+									<div class="slider__border"></div>
+									<p class="slider__title">Анимационные станции</p>	
+								</div>
+								<div class="kitchen__slider_item swiper-slide">
+									<img class="slider__img" src="img/slide-1.png" alt="">
+									<div class="slider__border"></div>
+									<p class="slider__title">Анимационные станции</p>	
+								</div>
+			
+							</div><!-- /.kitchen__slider -->
+							<div class="swiper-button-prev"></div>
+    						<div class="swiper-button-next"></div>
+							
+							<div class="swiper-pagination"></div>
+						</div>
+		
+						<button class="btn__more">Подробнее</button>
+		
+					</div>
+					<img class="decor__img" src="img/decor-blue.png">
+				</div><!-- /.kitchen -->
+			</div>
+			
+			<div class="section">
+				<div class="form">
+					<div class="container">
+		
+						<div class="form__inner">
+							<h1 class="form__title">Остались вопросы?</h1>
+							<p class="form__text">Оставьте почту сейчас и мы вышлем полное предложение с меню и прайсом на услуги</p>
+		
+							<div class="form__inputs">
+								<input class="input__name" type="text" placeholder="Введите Ваше Имя" name="name">
+								<input class="input__email" type="text" placeholder="Введите Ваш E-mail" name="email">
+							</div>
+		
+							<div class="accept">
+								<input class="accept__check" type="checkbox">
+								<div class="accept__text">Согласие на обработку персональных данных</div>
+							</div>
+							<button class="btn__send">Отправить</button>
+						</div>
+		
+					</div><!-- /.container -->
+				</div><!-- /.form -->
+			</div>
+			<!-- Contacts include Footer -->
+			<include src="assets/templates/contacts.html"></include>
+		</div><!-- /.fullpage -->
+
+	</div><!-- /.wrapper -->
 
 	<!-- Скрипты -->
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery.mask.min.js"></script>
-
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js"></script>
+	<script src="js/scrolloverflow.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 
 	<script src="js/script.min.js"></script>
-
 </body>
 
 </html>

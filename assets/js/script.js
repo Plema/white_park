@@ -1,7 +1,83 @@
 $(document).ready(function() {
 
+    // full page
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            scrollOverflow: true,
+        });
+    });
+    
+    //Slider for tents
+    $(document).ready(function(){
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            focusOnSelect: true,
+            // variableWidth: true,
+            responsive: [
+                {
+                    
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
 
-    // Show/hide nav
+        });
+        
+    });
+
+    // Slider kitchen
+    /* var $swiper = $(".swiper-container");
+    var $bottomSlide = null;
+    var $bottomSlideContent = null; */
+
+    const swiper = new Swiper('.swiper-container', {
+        spaceBetween: -30,
+        slidesPerView: 1.5,
+        centeredSlides: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        roundLengths: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            414: {
+                spaceBetween: -80,
+            },
+            768: {
+                spaceBetween: -60,
+            },
+            1024: {
+                spaceBetween: -440,
+            },
+            1280: {
+                spaceBetween: -500,
+            },
+            1440: {
+                spaceBetween: -580,
+            },
+            1600: {
+                spaceBetween: -580,
+            }
+        }
+    });
+    
+    
+    /* // Show/hide nav
     $('.nav__toggle').on("click", function(e) {
         e.preventDefault();
 
@@ -9,12 +85,18 @@ $(document).ready(function() {
         if ($('.nav__toggle').hasClass('active')) {
             $('.nav__toggle_btn').find('i').removeClass('icon-menu');
             $('.nav__toggle_btn').find('i').addClass('icon-close');
-            $('.header__info').fadeToggle(200).addClass('active');
+            $('.header__info').addClass('active');
+
+            // for vertical menu
+            $('.fixed').css({'width': '0'});
+            $('.header').css({'width': '300px'});
+            $('.header__info').css({'right': '0px'});
+            $('.nav__toggle').toggle();
 
         } else {
             $('.nav__toggle_btn').find('i').removeClass('icon-close');
             $('.nav__toggle_btn').find('i').addClass('icon-menu');
-            $('.header__info').fadeToggle(200).removeClass('active');
+            $('.header__info').removeClass('active');
         }
     });
 
@@ -24,14 +106,19 @@ $(document).ready(function() {
             $('.nav__toggle').removeClass('active');
             $('.nav__toggle_btn').find('i').removeClass('icon-close');
             $('.nav__toggle_btn').find('i').addClass('icon-menu');
-            $('.header__info').fadeToggle(200).removeClass('active');
+            $('.header__info').removeClass('active');
+
+            //for vertical menu
+            $('.fixed').css({'width': '60px'});
+            $('.header__info').css({'right': '-300px'});
+            $('.nav__toggle').toggle();
         }
-    });
+    }); */
 
     // Fixed header
     /* let header = $(".header");
     let container = $('.header__info');
-    let introH = $(".intro").innerHeight();
+    let introH = $('.intro').innerHeight();
     let scrollOffset = $(window).scrollTop();
 
     checkScroll(scrollOffset);
@@ -45,9 +132,14 @@ $(document).ready(function() {
     function checkScroll(scrollOffset) {
         if( scrollOffset >= introH ){
             header.addClass("fixed");
+            console.log('sdfsdfsd');
+            // container.addClass('.hide__menu');
+            // container.css({'right':'-300px'});
 
         } else{
             header.removeClass("fixed");
+            // container.removeClass('.hide__menu');
+            // container.css({'right':'0px'});
         }
     } */
 
