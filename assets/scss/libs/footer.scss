@@ -445,10 +445,10 @@
         .container{
             width: 1177px;
 
-            padding: 47px 0 17px;
+            padding: 15px 0 10px;
         }
         &__logo{
-            max-width: 300px;
+            max-width: 200px;
         }
         &__nav{
             padding-left: 25px;
@@ -474,7 +474,7 @@
             }
         }
         &__info{
-            margin-top: 30px;
+            margin-top: 10px;
             .footer__policy{
                 width: 70%;
                 &_copyright{
@@ -493,6 +493,29 @@
                 }
                 &_link{
                     font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1920px) {
+    .footer{
+        &__logo{
+            max-width: 240px;
+        }
+        &__nav{
+            &_link{
+                margin-bottom: 15px;
+            }
+        }
+        &__info{
+            margin-top: 20px;
+        }
+        &__buttons{
+            .footer__calc, .footer__download{
+                &_text{
+                    width: 220px;
+                    margin-right: 0;
                 }
             }
         }

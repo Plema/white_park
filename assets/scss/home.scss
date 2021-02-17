@@ -2499,59 +2499,66 @@
         }
         .advantages{
             &__img{
-                width: 770px;
+                width: 760px;
                 height: auto;
 
                 &_arrow{
-                    margin-bottom: -34px;
+                    width: 350px;
+                    margin-bottom: -39px;
                 }
             }
             &__inner{
-                width: 770px;
+                width: 760px;
 
-                padding: 120px 70px 0;
+                padding: 50px 50px 0;
 
                 top: 219px;
-            }
-            &__title{
-                font-size: 62px;
-            }
-            &__subtitle{
-                font-size: 24px;
-            }
-            &__list{
-                margin-top: 50px;
 
-                &_item{
-                    margin-bottom: 30px;
-                    .list__subtitle{
-                        font-size: 20px;
+                .advantages__title{
+                    font-size: 62px;
+                }
+                .advantages__subtitle{
+                    font-size: 24px;
+
+                }
+                .advantages__list{
+                    margin-top: 30px;
+    
+                    &_item{
+                        margin-bottom: 20px;
+
+                        .list__subtitle{
+                            font-size: 20px;
+                        }
+                        .advantages__list_text{
+                            font-size: 16px;
+
+                            padding-top: 10px;
+                        }
                     }
-                    .advantages__list_text{
-                        font-size: 20px;
+                }
+                .advantages__btn{
+                    margin: 50px 0 25px;
+                    padding: 22px;
+                    font-size: 20px;
+    
+                    &:before{
+                        width: 96%;
+                        top: -31px;
+                        left: -8px;
                     }
                 }
             }
-            &__btn{
-                margin: 50px 0;
-                padding: 22px;
-                font-size: 20px;
-
-                &:before{
-                    width: 96%;
-                    top: -31px;
-                    left: -8px;
-                }
-            }
+            
             .decor__img{
                 display: block;
-                width: 1000px;
+                width: 1200px;
 
                 transform: rotate(-90deg);
 
                 position: absolute;
-                top: 520px;
-                left: -255px;
+                top: 420px;
+                left: -405px;
             }
         }
         .tent{
@@ -2563,7 +2570,7 @@
                 .tent__title{
                     font-size: 42px;
 
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
                 }
             }
             
@@ -2589,13 +2596,15 @@
                     grid-gap: 15px;
 
                     &_item{
-                        height: 230px;
+                        height: 200px;
                     }
                 }
             }
             .btn__more{
                 width: 410px;
                 font-size: 20px;
+
+                top: 0px;
     
                 &:before{
                     top: -31px;
@@ -2645,7 +2654,7 @@
             .decor__img{
                 width: 1100px;
 
-                bottom: 430px;
+                bottom: 370px;
                 left: -370px;
             }
         }
@@ -2724,17 +2733,20 @@
             }
             .decor__img{
                 min-width: 2000px;
-                top: 530px;
+                top: 590px;
             }
         }
         .kitchen{
             padding: 70px 0;
+
             &__title{
                 font-size: 96px;
+
+                top: -20px;
             }
 
             .swiper-container{
-                min-height: 840px;
+                min-height: 800px;
                 .swiper-slide{
                     .slider__img{
                         transform: scale(0.6);
@@ -2742,7 +2754,13 @@
                 }
                 .swiper-slide-active{
                     .slider__img{
-                        transform: scale(1);
+                        transform: scale(0.9);
+                    }
+                    .slider__border{
+                        width: 150px;
+                    }
+                    .slider__title{
+                        margin-bottom: 0;
                     }
                 }
                 .swiper-button-next{
@@ -2750,6 +2768,9 @@
                 }
                 .swiper-button-prev{
                     left: -180px;
+                }
+                .swiper-pagination{
+                    top: 15px;
                 }
             }
             &__slider{
@@ -2782,7 +2803,7 @@
             }
             &__inner{
                 padding: 40px;
-                margin-top: 230px;
+                margin-top: 260px;
 
                 .form__title{
                     font-size: 55px;
@@ -2814,19 +2835,32 @@
     .wrapper{
         .intro{
             &__logo{
-                padding-top: 165px;
+                padding-top: 135px;
             }
         }
         .advantages{
+            &__img{
+                &_arrow{
+                    margin-bottom: -60px;
+                }
+            }
+            &__inner{
+                padding: 70px 50px 20px;
+            }
             .decor__img{
                 display: block;
-                width: 1100px;
+                width: 1200px;
 
                 transform: rotate(-90deg);
 
                 position: absolute;
-                top: 460px;
-                left: -200px;
+                top: 420px;
+                left: -300px;
+            }
+        }
+        .tent{
+            &__subtitle{
+                margin-top: 20px;
             }
         }
         .portfolio{
@@ -2840,6 +2874,11 @@
         .kitchen{
             .decor__img{
                 min-width: 2400px;
+            }
+        }
+        .form{
+            &__inner{
+                margin-top: 240px;
             }
         }
     }
