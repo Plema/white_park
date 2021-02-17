@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // full page
     $(document).ready(function() {
-        $('#fullpage').fullpage({
+        $('.fullpage').fullpage({
             scrollOverflow: true,
         });
     });
