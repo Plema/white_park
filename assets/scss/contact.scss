@@ -12,6 +12,7 @@
             font-weight: normal;
             color: #74CFE3;
             text-align: center;
+            text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
 
             margin: 0;
 
@@ -30,6 +31,7 @@
             font-size: 16px;
             color: #fff;
             text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
             margin-top: 10px;
         }
@@ -57,6 +59,8 @@
                     margin-bottom: 20px;
                 }
                 .contact__active_info{
+                    padding-bottom: 30px;
+
                     .info__title{
                         font-family: 'Basis-bold';
                         font-size: 16px;
@@ -112,15 +116,697 @@
                             color: #373737;
                             text-align: center;
 
-                            margin-bottom: 10px;
+                            margin-bottom: 20px;
                         }
-                        &_item{
-                            width: 40px;
-                            height: 40px;
+                        &_inner{
+                            display: flex;
+                            justify-content: space-around;
 
-                            border: 1px #74CFE3 solid;
-                            border-radius: 50%;
+                            width: 200px;
+
+                            margin: 0 auto;
+
+                            .info__social_item{
+                                width: 40px;
+                                height: 40px;
+    
+                                border: 1px #74CFE3 solid;
+                                border-radius: 50%;
+
+                                position: relative;
+
+                                transition: border 0.2s linear;
+
+                                i{
+                                    font-size: 21px;
+                                    color: #373737;
+
+                                    position: absolute;
+                                    top: 7px;
+                                    left: 50%;
+
+                                    transform: translate(-50%);
+                                    transition: color 0.2s linear;
+                                }
+
+                                &:hover i{
+                                    color: #74CFE3;
+                                }
+                                &:hover{
+                                    border: 1px #373737 solid;
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+            &_passive{
+                .contact__passive_title{
+                    font-family: 'Basis-bold';
+                    font-size: 22px;
+                    color: #74CFE3;
+
+                    margin-bottom: 20px;
+                }
+                .contact__passive_form{
+                    .input__name, .input__phone, .input__comment{
+                        display: flex;
+                        width: 300px;
+
+                        font-family: 'Montserrat-regular';
+                        font-size: 14px;
+                        color: #0E0E0E;
+
+
+                        background-color: transparent;
+                        border: 1px solid #74CFE3;
+                        border-radius: 5px;
+                        filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.3));
+
+                        padding: 16px 20px;
+                        margin: 0 auto 10px;
+
+                        &::placeholder{
+                            color: #0E0E0E;
                         }
+                    }
+                    .incorrect{
+                        display: none;
+                        font-family: "Montserrat-regular";
+                        font-size: 14px;
+                        color: #F55A5A;
+
+                        margin-bottom: 10px;
+                    }
+                    .accept{
+                        display: flex;
+                
+                        margin: 19px 0 22px;
+                
+                
+                        &__check{
+                            min-width: 17px;
+                            height: 17px;
+                
+                            margin-right: 8px;
+                
+                            border: 1px solid #74CFE3;
+                            border-radius: 5px;
+                            filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.3));
+                            cursor: pointer;
+                
+                            &:before{
+                                display: none;
+                                content: '\e809';
+                                font-family: 'fontello';
+                                font-size: 10px;
+                                
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                z-index: 1;
+                
+                                transform: translate(-50%, -50%);
+                            }
+                            &:checked:before{
+                                display: block;
+                            }
+                        }
+                
+                        &__text{
+                            font-family: 'Montserrat-regular';
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: #0E0E0E;
+                
+                            min-width: 274px;
+                        }
+                    }
+                    .btn__send{
+                        display: flex;
+                        justify-content: center;
+                        width: 300px;
+                        height: auto;
+                
+                        font-family: 'Basis-bold';
+                        font-size: 16px;
+                        color: #fff;
+                
+                        background-color: #74CFE3;
+                
+                        border: none;
+                        border-radius: 5px;
+                        outline: none;
+                
+                        padding: 16px 0;
+                        margin: 0 auto;
+                        transition: background-color .3s ease-out;
+                        position: relative;
+                        overflow: hidden;
+                        box-shadow: 4px 4px 15px rgba(107, 228, 255, 0.5);
+                
+                        &:hover{
+                            background-color: #2EA6C0;
+                        }
+                        &:before{
+                            content: '';
+                            background-image: url('../img/button-bg-blue.png');
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 62%;
+                            height: 220%;
+                            position: absolute;
+                            top: -23px;
+                            left: -6px;
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .decor__img{
+            display: none;
+        }
+    }
+}
+@media (min-width: 480px) {
+    .wrapper{
+        .contact{
+            &__title{
+                font-size: 52px;
+            }
+
+            &__inner_active{
+                .contact__active_title{
+                    font-size: 26px;
+                }
+                .contact__active_info{
+                    .info__title{
+                        font-size: 18px;
+                    }
+                    .info__inner{
+                        .info__phones{
+                            i{
+                                font-size: 28px;
+                            }
+                            p{
+                                font-size: 16px;
+                            }
+                        }
+                        .info__email{
+                            i{
+                                font-size: 20px;
+                            }
+                            p{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .info__social{
+                        .social__title{
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            &__inner_passive{
+                .contact__passive_title{
+                    font-size: 26px;
+                }
+                .contact__passive_form{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    width: 100%;
+
+                    .input__name{
+                        width: calc(50% - 5px);
+                        height: 40px;
+
+                        margin: 0;
+                        margin-bottom: 10px;
+                    }
+                    .input__phone_inner{
+                        width: calc(50% - 5px);
+
+                        margin: 0;
+                        margin-bottom: 10px;
+
+                        .input__phone{
+                            width: 100%;
+                            height: 40px;
+                        }
+                    }
+                    .input__comment{
+                        width: 100%;
+                        height: 40px;
+                    }
+                    .accept{
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 768px){
+    .wrapper{
+        .intro{
+            &__logo{
+                width: 300px;
+
+                margin: 30px auto;
+            }
+            &__text{
+                font-size: 18px;
+                line-height: 26px;
+                width: 600px;
+
+                margin: 10px auto;
+            }
+        }
+        .contact{
+            &__title{
+                font-size: 68px;
+            }
+            &__inner{
+                &_active{
+                    .contact__active_info{
+                        .info__title{
+                            font-size: 22px;
+                            text-align: left;
+                        }
+                        .info__inner{
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: flex-start;
+
+                            
+                            .info__phones{
+                                margin-right: 40px;
+                            }
+                            .info__email{
+                                margin: 20px 0 10px 40px;
+
+                                p{
+                                    margin-top: 18px;
+                                }
+                            }
+                        }
+                        .info__social{
+                            .social__title{
+                                font-size: 22px;
+                                text-align: left;
+                            }
+                            &_inner{
+                                .info__social_item{
+                                    width: 46px;
+                                    height: 46px;
+
+                                    i{
+                                        font-size: 25px;
+
+                                        top: 9px;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+                &_passive{
+                    padding-bottom: 40px;
+
+                    .contact__passive_form{
+                        .btn__send{
+                            width: 400px;
+
+                            &:before{
+                                top: -23px;
+
+                                width: 46%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .wrapper{
+        .intro{
+            &__title{
+                font-size: 52px;
+
+                span{
+                    font-size: 64px;
+                }
+            }
+            &__logo{
+                width: 340px;
+            }
+            &__text{
+                font-size: 22px;
+            }
+
+            &__social{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                position: absolute;
+                top: -40px;
+                left: 12px;
+
+                &_line{
+                    height: 150px; 
+                    border-left: 2px #fff solid;
+
+                    margin-bottom: 20px;
+                }
+
+                i{
+                    font-size: 20px;
+                    color: #fff;
+                    line-height: 2;
+
+                    transition: color 0.2s linear;
+
+                    &:hover{
+                        color: #74CFE3;
+                    }
+                }
+            }
+        }
+        .contact{
+            &__title{
+                text-align: left;
+            }
+            &__inner{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                &_active{
+                    width: 48%;
+
+                    .contact__active_title{
+                        font-size: 20px;
+                    }
+                    .contact__active_info{
+                        .info__title{
+                            font-size: 16px;
+                        }
+                        .info__inner{
+                            justify-content: space-between;
+
+                            margin-bottom: 10px;
+                            .info__phones{
+                                display: flex;
+
+                                margin-right: 0;
+                                i{
+                                    font-size: 22px;
+                                }
+                                .phone__inner{
+                                    margin-left: 5px;
+
+                                    p{
+                                        font-family: 'Montserrat-semiBold';
+                                        font-size: 14px;
+    
+                                        &:first-of-type{
+                                            margin-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .info__email{
+                                display: flex;
+                                margin-left: 0;
+                                i{
+                                    font-size: 16px;
+                                }
+                                p{
+                                    font-family: 'Montserrat-semiBold';
+                                    font-size: 14px;
+
+                                    margin-top: 0;
+                                    margin-left: 10px;
+                                }
+                                
+                            }
+                        }
+                        .info__social{
+                            .social__title{
+                                font-size: 16px;
+                            }
+                            &_inner{
+                                justify-content: space-between;
+                                width: 160px;
+                                margin: 0;
+
+                                .info__social_item{
+                                    width: 42px;
+                                    height: 42px;
+
+                                    i{
+                                        font-size: 21px;
+                                        top: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &_passive{
+                    width: 48%;
+
+                    .contact__passive_title{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1280px) {
+    .wrapper{
+        .intro{
+            &__title{
+                font-size: 58px;
+
+                span{
+                    font-size: 72px;
+                } 
+            }
+            &__logo{
+                width: 360px;
+            }
+            &__text{
+                font-size: 24px;
+            }
+        }
+        .contact{
+            position: relative;
+
+            &__title{
+                font-size: 72px;
+            }
+            &__inner{
+                &_active{
+                    .contact__active_info{
+                        .info__inner{
+                            .info__email{
+                                margin-right: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+            .decor__img{
+                display: block;
+
+                width: 400px;
+
+                position: absolute;
+                top: 180px;
+                left: -120px;
+
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+@media (min-width: 1600px) {
+    .wrapper{
+        .intro{
+            &__title{
+                font-size: 70px;
+
+                span{
+                    font-size: 90px;
+                }
+            }
+            &__text{
+                font-size: 26px;
+                line-height: 34px;
+                width: 900px;
+            }
+            &__social{
+                top: -180px;
+                left: 20px;
+
+                &_line{
+                    height: 290px; 
+                    border-left: 2px #fff solid;
+
+                    margin-bottom: 30px;
+                }
+
+                i{
+                    font-size: 32px;
+                    color: #fff;
+                    line-height: 2;
+
+                    transition: color 0.2s linear;
+
+                    &:hover{
+                        color: #74CFE3;
+                    }
+                }
+            }
+        }
+        .contact{
+            &__title{
+                font-size: 80px;
+            }
+            &__inner{
+                &_active{
+                    .contact__active_title{
+                        font-size: 24px;
+                    }
+                    .contact__active_info{
+                        .info__title{
+                            font-size: 20px;
+                        }
+                        .info__inner{
+                            .info__phones{
+                                i{
+                                    font-size: 24px;
+                                }
+                                .phone__inner{
+                                    p{
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                            .info__email{
+                                margin-right: 80px;
+                                i{
+                                    font-size: 18px;
+                                }
+                                p{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        .info__social{
+                            .social__title{
+                                font-size: 20px;
+                            }
+                            &_inner{
+                                width: 200px;
+                                .info__social_item{
+                                    width: 54px;
+                                    height: 54px;
+
+                                    i{
+                                        font-size: 28px;
+                                        top: 9px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &_passive{
+                    .contact__passive_title{
+                        font-size: 24px;
+                    }
+                    .contact__passive_form{
+                        .input__name, .input__phone, .input__comment{
+                            font-size: 16px;
+                        }
+                        .accept{
+                            &__text{
+                                font-size: 16px;
+                            }
+                        }
+                        .btn__send{
+                            width: 100%;
+                            font-size: 20px;
+                            padding: 22px;
+
+                            &:before{
+                                top: -32px;
+                                left: -9px;
+
+                                width: 45%;
+                            }
+                        }
+                    }
+                }
+            }
+            .decor__img{
+                width: 500px;
+
+                top: 190px;
+                left: -100px;
+            }
+        }
+    }
+}
+@media (min-width: 1920px) {
+    .wrapper{
+        .intro{
+            padding: 80px 0;
+
+            &__title{
+                font-size: 72px;
+            }
+            &__text{
+                font-size: 30px;
+            }
+        }
+        .contact{
+            &__title{
+                font-size: 96px;
+
+                margin-top: 75px;
+            }
+            &__inner{
+                &_active{
+                    .contact__active_title{
+                        font-size: 30px;
+                    }
+                    .contact__active_info{
+                        .info__title{
+                            font-size: 24px;
+                        }
+                        .info__social{
+                            .social__title{
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+                &_passive{
+                    width: 49%;
+                    .contact__passive_title{
+                        font-size: 30px;
                     }
                 }
             }
