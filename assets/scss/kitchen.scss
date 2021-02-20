@@ -1,0 +1,155 @@
+.wrapper{
+    .intro{
+        width: 100%;
+        height: 100vh;
+
+        background: url('../img/kitchen-intro-bg.png') no-repeat center/cover;
+
+        &__title{
+            font-family: 'Alice';
+            font-size: 24px;
+            font-weight: normal;
+            color: #74CFE3;
+            text-align: center;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+
+            margin: 0;
+
+            padding: 30px 0 20px;
+        }
+        &__list{
+            &_item{
+                font-family: 'Montserrat-medium';
+                font-size: 14px;
+                line-height: 16px;
+                color: #fff;
+
+                padding-left: 20px;
+                padding-bottom: 10px;
+
+                position: relative;
+
+                &:before{
+                    content: '\2022';
+                    color: #74CFE3;
+                    font-size: 45px;
+                    line-height: 0;
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                }
+            }
+        }
+        &__form{
+            background: rgba(255, 255, 255, 0.4);
+
+            margin: 0 -10px;
+            padding: 20px 10px;
+
+            &_text{
+                font-family: 'Alice';
+                font-size: 18px;
+                color: #fff;
+                text-align: center;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+
+                margin-bottom: 20px;
+            }
+            &_inner{
+                .input__name, .input__email{
+                    display: flex;
+                    width: 300px;
+
+                    font-family: 'Montserrat-regular';
+                    font-size: 14px;
+                    color: #fff;
+
+
+                    background-color: transparent;
+                    border: 1px solid #74CFE3;
+                    border-radius: 5px;
+                    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.3));
+
+                    padding: 16px 20px;
+                    margin: 0 auto 10px;
+
+                    &::placeholder{
+                        color: #fff;
+                    }
+                }
+                .input__email_inner{
+                    p{
+                        display: none;
+                        font-family: 'Montserrat-regular';
+                        font-size: 11px;
+                        color: #fff;
+                    }
+                }
+                .btn__send{
+                    display: flex;
+                    justify-content: center;
+                    width: 300px;
+                    height: auto;
+            
+                    font-family: 'Basis-bold';
+                    font-size: 16px;
+                    color: #fff;
+            
+                    background-color: #74CFE3;
+            
+                    border: none;
+                    border-radius: 5px;
+                    outline: none;
+            
+                    padding: 16px 0;
+                    margin: 0 auto;
+                    transition: background-color .3s ease-out;
+                    position: relative;
+                    overflow: hidden;
+                    box-shadow: 4px 4px 15px rgba(107, 228, 255, 0.5);
+            
+                    &:hover{
+                        background-color: #2EA6C0;
+                    }
+                    &:before{
+                        content: '';
+                        background-image: url('../img/button-bg-blue.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 62%;
+                        height: 220%;
+                        position: absolute;
+                        top: -23px;
+                        left: -6px;
+                        z-index: 0;
+                    }
+                }
+            }
+        }
+
+        &__social{
+            display: none;
+        }
+        &__bot{
+            display: none;
+        }
+    }
+    .advantages{
+        height: 100vh;
+    }
+}
+@media (min-width: 480px) {
+    .wrapper{
+        .intro{
+            &__title{
+                font-size: 28px;
+
+                padding-top: 20px;
+            }
+            &__list{
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+}
