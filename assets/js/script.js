@@ -37,10 +37,6 @@ $(document).ready(function() {
     });
 
     // Slider kitchen
-    /* var $swiper = $(".swiper-container");
-    var $bottomSlide = null;
-    var $bottomSlideContent = null; */
-
     const swiper = new Swiper('.swiper-container', {
         spaceBetween: -30,
         slidesPerView: 1.5,

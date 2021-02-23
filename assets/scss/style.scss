@@ -241,6 +241,130 @@ a {
         }
     }
 }
+.video__reviews{
+    .slick-prev{
+        width: 35px;
+        height: 35px;
+    
+        border-radius: 50%;
+        border: 3px solid #373737;
+        background-color: transparent;
+        color: transparent;
+    
+        position: absolute;
+        bottom: 5px;
+        left: 35%;
+        z-index: 1;
+
+        transition: border 0.1s linear;
+    
+        &:before{
+            content: '\e801';
+            font-family: 'fontello';
+            font-size: 20px;
+            color: #74CFE3;
+    
+            position: absolute;
+            top: 4px;
+            left: 50%;
+    
+            transform: translate(-50%);
+
+            transition: color 0.1s linear;
+        }
+
+        &:hover{
+            border: 3px solid #74CFE3;
+        }
+        &:hover:before{
+            color: #373737;
+        }
+    }
+    .slick-next{
+        width: 35px;
+        height: 35px;
+    
+        border-radius: 50%;
+        border: 3px solid #373737;
+        background-color: transparent;
+        color: transparent;
+    
+        position: absolute;
+        bottom: 5px;
+        right: 35%;
+        z-index: 1;
+
+        transition: border 0.1s linear;
+    
+        &:before{
+            content: '\e800';
+            font-family: 'fontello';
+            font-size: 20px;
+            color: #74CFE3;
+    
+            position: absolute;
+            top: 4px;
+            left: 50%;
+    
+            transform: translate(-50%);
+
+            transition: color 0.1s linear;
+        }
+        &:hover{
+            border: 3px solid #74CFE3;
+        }
+        &:hover:before{
+            color: #373737;
+        }
+    }
+    @media (min-width: 768px) {
+        .slick-prev{
+            left: 40%;
+        }
+        .slick-next{
+            right: 40%;
+        }
+
+    }
+    @media (min-width: 1440px) {
+        .slick-prev{
+            bottom: 50px; 
+            left: 45%;
+        }
+        .slick-next{
+            bottom: 50px;
+            right: 45%;
+        }
+    }
+    @media (min-width: 1600px) {
+        .slick-prev{
+            width: 59px;
+            height: 59px;
+
+            bottom: 30px;
+            right: 40%;
+
+            &:before{
+                font-size: 32px;
+
+                top: 10px;
+            }
+        }
+        .slick-next{
+            width: 59px;
+            height: 59px;
+
+            bottom: 30px;
+            right: 40%;
+
+            &:before{
+                font-size: 32px;
+
+                top: 10px;
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
 
