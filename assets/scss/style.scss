@@ -326,6 +326,15 @@ a {
         }
 
     }
+    @media (min-width: 1280px) {
+        .slick-prev{
+            left: 45%;
+        }
+        .slick-next{
+            right: 45%;
+        }
+
+    }
     @media (min-width: 1440px) {
         .slick-prev{
             bottom: 50px; 
@@ -342,7 +351,7 @@ a {
             height: 59px;
 
             bottom: 30px;
-            right: 40%;
+            left: 43%;
 
             &:before{
                 font-size: 32px;
@@ -355,7 +364,7 @@ a {
             height: 59px;
 
             bottom: 30px;
-            right: 40%;
+            right: 43%;
 
             &:before{
                 font-size: 32px;

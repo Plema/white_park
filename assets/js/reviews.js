@@ -73,9 +73,6 @@ $(document).ready(function() {
             prevEl: ".swiper-button-prev"
         },
         breakpoints: {
-            414: {
-                spaceBetween: -80,
-            },
             768: {
                 spaceBetween: -60,
             },
@@ -83,14 +80,17 @@ $(document).ready(function() {
                 spaceBetween: -440,
             },
             1280: {
-                spaceBetween: -500,
+                spaceBetween: -670,
             },
             1440: {
-                spaceBetween: -580,
+                spaceBetween: -770,
             },
             1600: {
-                spaceBetween: -580,
-            }
+                spaceBetween: -850,
+            },
+            1920: {
+                spaceBetween: -900,
+            },
         }
     });
 });
