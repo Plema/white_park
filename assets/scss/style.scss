@@ -2,6 +2,7 @@
 @import "libs/footer";
 @import 'libs/contacts';
 @import 'libs/map-footer-contact';
+@import "libs/maps";
 @import "libs/fonts";
 @import "libs/fontello";
 @import 'libs/normalize';
@@ -236,6 +237,244 @@ a {
                     font-size: 32px;
 
                     top: 10px;
+                }
+            }
+        }
+    }
+}
+.seating{
+    &__title_slider{
+
+        .slick-current{
+            text-align: center;
+            position: relative;
+
+            padding-bottom: 50px;
+
+            /* &:after{
+                content: url('../img/wave-tent-slider.png');
+                display: block;
+                
+                transform: scale(0.5);
+
+                position: absolute;
+                top: -30px;
+            } */
+        }
+        .slick-prev{
+            width: 35px;
+            height: 35px;
+        
+            border-radius: 50%;
+            border: 3px solid #373737;
+            background-color: transparent;
+            color: transparent;
+        
+            position: absolute;
+            top: 0px;
+            left: 0;
+            z-index: 2;
+
+            transition: border 0.1s linear;
+        
+            &:before{
+                content: '\e801';
+                font-family: 'fontello';
+                font-size: 20px;
+                color: #74CFE3;
+        
+                position: absolute;
+                top: 4px;
+                left: 50%;
+        
+                transform: translate(-50%);
+
+                transition: color 0.1s linear;
+            }
+
+            &:hover{
+                border: 3px solid #74CFE3;
+            }
+            &:hover:before{
+                color: #373737;
+            }
+        }
+        .slick-next{
+            width: 35px;
+            height: 35px;
+        
+            border-radius: 50%;
+            border: 3px solid #373737;
+            background-color: transparent;
+            color: transparent;
+        
+            position: absolute;
+            top: 0px;
+            right: 0;
+            z-index: 2;
+
+            transition: border 0.1s linear;
+        
+            &:before{
+                content: '\e800';
+                font-family: 'fontello';
+                font-size: 20px;
+                color: #74CFE3;
+        
+                position: absolute;
+                top: 4px;
+                left: 50%;
+        
+                transform: translate(-50%);
+
+                transition: color 0.1s linear;
+            }
+            &:hover{
+                border: 3px solid #74CFE3;
+            }
+            &:hover:before{
+                color: #373737;
+            }
+        }
+    }
+    @media (min-width: 480px) {
+        .slick-prev, .slick-next{
+            top: 10px;
+        }
+    }
+    @media (min-width: 768px) {
+        .seating{
+            &__title_slider{
+                .slick-current{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    @media (min-width: 1024px) {
+        .seating{
+            &__title_slider{
+                .slick-current{
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        .seating{
+            &__title_slider{
+                .slick-current{
+                    padding-bottom: 40px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1600px) {
+        .seating{
+            &__title_slider{
+                .slick-prev, .slick-next{
+                    width: 59px;
+                    height: 59px;
+    
+                    top: 0px;
+    
+                    &:before{
+                        font-size: 32px;
+    
+                        top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+.project{
+    &__slider_nav{
+        .slick-current{
+            width: 50px;
+        }
+
+        .slick-prev{
+            width: 35px;
+            height: 35px;
+        
+            border-radius: 50%;
+            border: 3px solid #373737;
+            background-color: transparent;
+            color: transparent;
+        
+            position: absolute;
+            top: 30%;
+            left: 0;
+            z-index: 2;
+
+            transition: border 0.1s linear;
+        
+            &:before{
+                content: '\e801';
+                font-family: 'fontello';
+                font-size: 20px;
+                color: #74CFE3;
+        
+                position: absolute;
+                top: 4px;
+                left: 50%;
+        
+                transform: translate(-50%);
+
+                transition: color 0.1s linear;
+            }
+
+            &:hover{
+                border: 3px solid #74CFE3;
+            }
+            &:hover:before{
+                color: #373737;
+            }
+        }
+        .slick-next{
+            width: 35px;
+            height: 35px;
+        
+            border-radius: 50%;
+            border: 3px solid #373737;
+            background-color: transparent;
+            color: transparent;
+        
+            position: absolute;
+            top: 30%;
+            right: 0;
+            z-index: 2;
+
+            transition: border 0.1s linear;
+        
+            &:before{
+                content: '\e800';
+                font-family: 'fontello';
+                font-size: 20px;
+                color: #74CFE3;
+        
+                position: absolute;
+                top: 4px;
+                left: 50%;
+        
+                transform: translate(-50%);
+
+                transition: color 0.1s linear;
+            }
+            &:hover{
+                border: 3px solid #74CFE3;
+            }
+            &:hover:before{
+                color: #373737;
+            }
+        }
+    }
+    @media (min-width: 1280px) {
+        .project{
+            &__slider_nav{
+                .slick-prev, .slick-next{
+                    top: 25%;
                 }
             }
         }

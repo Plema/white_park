@@ -1,0 +1,20 @@
+.maps{
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    svg{
+        width: auto;
+        height: 100%;
+    }
+    .on{
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    .map-link{
+        cursor: pointer;
+    }
+    .yes{
+        opacity: 1;
+        transition: all 0.3s;
+    }
+}

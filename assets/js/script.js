@@ -71,6 +71,19 @@ $(document).ready(function() {
             }
         }
     });
+
+    //MAP
+    $('.map-link').on('mouseenter', function(){
+        var link = $(this).data('map');
+        $('.' + link).removeClass('on');
+        $('.' + link).addClass('yes');
+    });
+    
+    $('.map-link').on('mouseleave', function(){
+        var link = $(this).data('map');
+        $('.' + link).removeClass('yes');
+        $('.' + link).addClass('on');
+    });
     
     
     /* // Show/hide nav

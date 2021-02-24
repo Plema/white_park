@@ -273,22 +273,6 @@
             display: none;
         }
     }
-    .map{
-        height: 100vh;
-        background-image: url("../img/map-bg.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &__title{
-            font-family: 'Alice';
-            font-size: 64px;
-            color: #75CFE3;
-            text-shadow: 5px 4px 15px #000000;
-
-            padding: 49px 0 0 11px;
-        }
-    }
     .tent{
         background-image: url('../img/tent-bg.png');
         background-repeat: no-repeat;
