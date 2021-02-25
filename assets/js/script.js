@@ -36,6 +36,35 @@ $(document).ready(function() {
         
     });
 
+    //Slider for project
+    $(document).ready(function(){
+        $('.project__slider_img').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite: true,
+            fade: true,
+            asNavFor: '.project__slider_nav'
+        });
+        $('.project__slider_nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.project__slider_img',
+            focusOnSelect: true,
+            infinite: true,
+            // variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+
+        });
+    });
+
     // Slider kitchen
     const swiper = new Swiper('.swiper-container', {
         spaceBetween: -30,
@@ -153,30 +182,136 @@ $(document).ready(function() {
     } */
 
     // Show/hide advantages
-    $('.advantages__list_item').click(function(e) {
-        e.preventDefault();
+    $('.advantages__list_item').click(function() {
+        //show
+        $('.advantages__list_text').removeClass('show');
+        $('.advantages__list_text').addClass('hide');
+        $(this).find('.advantages__list_text').removeClass('hide');
+        $(this).find('.advantages__list_text').addClass('show');
 
-        $(this).find('.advantages__list_text').slideToggle(200,  "linear");
-        $(this).find('.list__marker_outline').fadeToggle(200);
+        $('.list__marker_outline').removeClass('show');
+        $('.list__marker_outline').addClass('hide');
+        $(this).find('.list__marker_outline').removeClass('hide');
+        $(this).find('.list__marker_outline').addClass('show');
     });
 
+    /* $('.advantages__list_item').click(function() {
+        if($(this).find('.advantages__list_text').hadClass('show') && $(this).find('.list__marker_outline').hadClass('show')){
+
+            $(this).find('.advantages__list_text').removeClass('show');
+            $(this).find('.advantages__list_text').addClass('hide');
+
+            $(this).find('.list__marker_outline').removeClass('show');
+            $(this).find('.list__marker_outline').addClass('hide');
+        }
+    }); */
+
     // Video-popup
-    //show
+    //show intro
     $('.intro__play').click(function() {
         $('.intro__play_outline').toggleClass('active');
         $('.header').fadeToggle(200);
-        $('.video__popup').fadeToggle(200);
+        $('.video__popup').removeClass('hide-video');
+        $('.video__popup').addClass('show-video');
 
         var video_data = $('.video__popup iframe').data('src');
         $('.video__popup iframe').attr('src', video_data);
     });
-    //hide
-    $('.video__popup').click(function() {
-        $('.video__popup').fadeToggle(200);
+    //hide intro
+    $('.close-popup-video').click(function() {
+        $('.video__popup').removeClass('show-video');
+        $('.video__popup').addClass('hide-video');
         $('.header').fadeToggle(200);
         $('.intro__play_outline').toggleClass('active');
 
         $('.video__popup iframe').attr('src', '');
+    });
+
+    // Video popup-portfolio
+    //show biz
+    $('.biz-video .portfolio__play').click(function() {
+        $('.video__popup_portfolio').removeClass('hide-video-portfolio');
+        $('.video__popup_portfolio').addClass('show-video-portfolio');
+
+        var video_data = $('.video__popup_portfolio iframe').data('src');
+        $('.video__popup_portfolio iframe').attr('src', video_data);
+    });
+    //hide biz
+    $('.close-popup-video').click(function() {
+        $('.video__popup_portfolio').removeClass('show-video-portfolio');
+        $('.video__popup_portfolio').addClass('hide-video-portfolio');
+
+        $('.video__popup_portfolio iframe').attr('src', '');
+    });
+
+    //show pr
+    $('.pr-video .portfolio__play').click(function() {
+        $('.video__popup_portfolio').removeClass('hide-video-portfolio');
+        $('.video__popup_portfolio').addClass('show-video-portfolio');
+
+        var video_data = $('.video__popup_portfolio iframe').data('src');
+        $('.video__popup_portfolio iframe').attr('src', video_data);
+    });
+    //hide pr
+    $('.close-popup-video').click(function() {
+        $('.video__popup_portfolio').removeClass('show-video-portfolio');
+        $('.video__popup_portfolio').addClass('hide-video-portfolio');
+
+        $('.video__popup_portfolio iframe').attr('src', '');
+    });
+
+    //Gallery-popup biz
+    // show
+    $('.biz .portfolio__photo').click(function() {
+        $('.project').removeClass('hide-gallery');
+        $('.project').addClass('show-gallery');
+
+        $(".slider-img-pr").slick('reinit');
+        $(".slider-nav-pr").slick('reinit');
+    });
+    // hide
+    $('.close').click(function() {
+        $('.project').removeClass('show-gallery');
+        $('.project').addClass('hide-gallery');
+    });
+
+    //Gallery-popup pr
+    // show
+    $('.pr .portfolio__photo').click(function() {
+        $('.project').removeClass('hide-gallery');
+        $('.project').addClass('show-gallery');
+
+        $('.slider-img-pr').get(0).slick.setPosition();
+        $('.slider-nav-pr').get(0).slick.setPosition();
+    });
+    // hide
+    $('.close').click(function() {
+        $('.project').removeClass('show-gallery');
+        $('.project').addClass('hide-gallery');
+    });
+
+    //Estimate-popup
+    // show
+    $('.footer__calc').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
+    });
+
+    //Zayavka-popup
+    // show
+    $('.footer__download').click(function() {
+        $('.popup-app .app').removeClass('hide-app');
+        $('.popup-app .app').addClass('show-app');
+    });
+    // hide
+    $('.close-popup-app').click(function() {
+        $('.popup-app .app').removeClass('show-app');
+        $('.popup-app .app').addClass('hide-app');
     });
 
     // Height for gallery

@@ -1,0 +1,284 @@
+.popup-gallery{
+    width: 100%;
+    overflow: scroll;
+
+    background: linear-gradient(180deg, rgba(187, 243, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+
+    .project{
+        height: 100vh;
+
+        &__title{
+            font-family: 'Alice';
+            font-size: 34px;
+            color: #5CADBF;
+            text-align: center;
+    
+            padding: 20px 0;
+        }
+        &__inner{
+            .project__slider{
+                &_img{
+                    margin-bottom: 20px;
+                }
+                &_nav{
+                    padding: 0 40px;
+                    margin-bottom: 20px;
+    
+                    img{
+                        margin: 0 5px;
+                    }
+                }
+            }
+            .project__info{
+                &_title{
+                    font-family: "Alice";
+                    font-size: 24px;
+                    color: #373737;
+                    text-align: center;
+                }
+                &_subtitle{
+                    font-family: 'Basis-regular';
+                    font-size: 16px;
+                    color: #373737;
+                    text-align: center;
+    
+                    margin-bottom: 20px;
+                }
+                &_inner{
+                    margin-bottom: 20px;
+                    p{
+                        font-family: 'Basis-regular';
+                        font-size: 14px;
+                        color: rgba(0, 0, 0, 0.5);
+    
+                        padding-bottom: 5px;
+    
+                        span{
+                            font-family: 'Basis-bold';
+                        }
+    
+                    }
+                }
+                &_text{
+                    font-family: 'Basis-regular';
+                    font-size: 14px;
+                    color: #373737;
+    
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &__social{
+            &_title{
+                font-family: 'Alice';
+                font-size: 24px;
+                color: #373737;
+                text-align: center;
+    
+                margin-bottom: 20px;
+            }
+            &_inner{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+    
+                .project__social_img{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .close{
+            position: absolute;
+            right: 10px;
+            top: 20px;
+
+            cursor: pointer;
+        }
+        .decor__img{
+            display: none;
+        }
+    }
+}
+
+.show-gallery{
+    display: block;
+}
+.hide-gallery{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .popup-gallery{
+        .project{
+            width: 100%;
+
+            align-items: flex-start;
+
+            &__title{
+                font-size: 50px;
+            }
+            &__inner{
+                .project__info{
+                    &_title{
+                        font-size: 30px;
+                    }
+                    &_subtitle{
+                        font-size: 20px;
+                    }
+                    &_inner{
+                        p{
+                            font-size: 18px;
+                        }
+                    }
+                    &_text{
+                        font-size: 18px;
+                    }
+                }
+            }
+            &__social{
+                &_title{
+                    font-size: 30px;
+    
+                    margin-bottom: 30px;
+                }
+                &_inner{
+                    width: 100%;
+                    justify-content: space-between;
+    
+                    .project__social_img{
+                        width: 24%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media (min-width: 1024px) {
+    .popup-gallery{
+        .project{
+            align-items: center;
+
+            .container{
+                position: relative;
+                z-index: 3;
+            }
+        }
+    } 
+}
+@media (min-width: 1280px) {
+    .popup-gallery{
+        .project{
+            &__title{
+                font-size: 64px;
+    
+                padding-bottom: 30px;
+            }
+            &__inner{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+    
+                position: relative;
+                z-index: 3;
+                
+                .project__slider{
+                    width: 49%;
+    
+                    &_nav{
+                        margin-bottom: 40px;
+                    }
+                }
+                .project__info{
+                    width: 49%;
+                    
+                    &_title{
+                        text-align: left;
+                    }
+                    &_subtitle{
+                        text-align: left;
+                    }
+                }
+            }
+            &__social{
+                &_title{
+                    text-align: left;
+                }
+            }
+            .decor__img{
+                display: block;
+    
+                position: absolute;
+                top: 20%;
+                left: 0;
+    
+                transform: scale(1.8);
+            }
+        }
+    }
+}
+@media (min-width: 1440px) {
+    .popup-gallery{
+        .project{
+            height: 100vh;
+    
+            &__title{
+                font-size: 72px;
+                position: absolute;
+                left: -250px;
+                top: 150px;
+    
+                transform: rotate(-90deg);
+            }
+            &__inner{
+                padding-top: 20px;
+            }
+        }
+    }
+}
+@media (min-width: 1600px) {
+    .popup-gallery{
+        .project{
+            &__title{
+                font-size: 96px;
+    
+                left: -330px;
+                top: 200px;
+    
+            }
+            &__inner{
+                padding-top: 70px;
+            }
+
+            .close{
+                i{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1920px) {
+    .popup-gallery{
+        .project{
+            &__inner{
+                .project__slider{
+                    &_nav{
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+            .close{
+                i{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

@@ -15,6 +15,25 @@
 </head>
 
 <body>
+
+	<!-- Popup for gallery -->
+	<include src="assets/templates/popup-gallery-biz.html"></include>
+
+	<!-- Popup for gallery -->
+	<include src="assets/templates/popup-gallery-pr.html"></include>
+
+	<!-- Popup for estimate -->
+	<include src="assets/templates/popup-estimate.html"></include>
+
+	<!-- Popup for zayavka -->
+	<include src="assets/templates/popup-zayavka.html"></include>
+
+	<!-- Popup for video -->
+	<include src="assets/templates/popup-video.html"></include>
+	
+	<!-- Popup for video -->
+	<include src="assets/templates/popup-video-portfolio.html"></include>
+
 	<!-- Header -->
 	<!-- <include src="assets/templates/header.html"></include> -->
 
@@ -68,11 +87,6 @@
 						<img src="img/mouse.png" alt="mouse">
 					</div>
 		
-					<div class="video__popup">
-						<iframe src='' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube.com/embed/z_neMO2t4jU"></iframe>
-					</div>
-		
-					
 				</div><!-- /.intro -->
 			</div>
 
@@ -93,56 +107,56 @@
 								<div class="advantages__list_item">
 									<div class="advantages__list_title">
 										<div class="list__marker">
-											<div class="list__marker_outline"></div>
+											<div class="list__marker_outline hide"></div>
 										</div>
 										<div class="list__subtitle">Расположение и территория</div>
 									</div>
-									<div class="advantages__list_text">1 км от МКАД по Новорижскому шоссе, берег Живописной бухты, более 2 000 кв.м. веранд</div>
+									<div class="advantages__list_text hide">1 км от МКАД по Новорижскому шоссе, берег Живописной бухты, более 2 000 кв.м. веранд</div>
 								</div>
 								<div class="advantages__list_item">
 									<div class="advantages__list_title">
 										<div class="list__marker">
-											<div class="list__marker_outline"></div>
+											<div class="list__marker_outline hide"></div>
 										</div>
 										<div class="list__subtitle">Инфраструктура</div>
 									</div>
-									<div class="advantages__list_text">Более 2000 кв метров веранд, три шатра, две парковки, собственная кухня, ухоженные газоны и пляж</div>
+									<div class="advantages__list_text hide">Более 2000 кв метров веранд, три шатра, две парковки, собственная кухня, ухоженные газоны и пляж</div>
 								</div>
 								<div class="advantages__list_item">
 									<div class="advantages__list_title">
 										<div class="list__marker">
-											<div class="list__marker_outline"></div>
+											<div class="list__marker_outline hide"></div>
 										</div>
 										<div class="list__subtitle">Уникальные возможности</div>
 									</div>
-									<div class="advantages__list_text">Посадка вертолета, установка уличной сцены, свадебная церемония над водой, салюты и файер шоу</div>
+									<div class="advantages__list_text hide">Посадка вертолета, установка уличной сцены, свадебная церемония над водой, салюты и файер шоу</div>
 								</div>
 								<div class="advantages__list_item">
 									<div class="advantages__list_title">
 										<div class="list__marker">
-											<div class="list__marker_outline"></div>
+											<div class="list__marker_outline hide"></div>
 										</div>
 										<div class="list__subtitle">Активности на воде и пляже</div>
 									</div>
-									<div class="advantages__list_text">Песчаный пляж с лежаками и летним баром, катание на вейкборде и прокат водного транспорта</div>
+									<div class="advantages__list_text hide">Песчаный пляж с лежаками и летним баром, катание на вейкборде и прокат водного транспорта</div>
 								</div>
 								<div class="advantages__list_item">
 									<div class="advantages__list_title">
 										<div class="list__marker">
-											<div class="list__marker_outline"></div>
+											<div class="list__marker_outline hide"></div>
 										</div>
 										<div class="list__subtitle">Активности в лесной зоне</div>
 									</div>
-									<div class="advantages__list_text">Комплекс окружён лесным парком «Липовая Роща»</div>
+									<div class="advantages__list_text hide">Комплекс окружён лесным парком «Липовая Роща»</div>
 								</div>
 								<div class="advantages__list_item">
 									<div class="advantages__list_title">
 										<div class="list__marker">
-											<div class="list__marker_outline"></div>
+											<div class="list__marker_outline hide"></div>
 										</div>
 										<div class="list__subtitle">Персонал</div>
 									</div>
-									<div class="advantages__list_text">Сплочённый коллектив более 30 человек с 10-ти летним опытом организации мероприятий</div>
+									<div class="advantages__list_text hide">Сплочённый коллектив более 30 человек с 10-ти летним опытом организации мероприятий</div>
 								</div>
 			
 							</div><!-- /.advantages__list -->
@@ -156,7 +170,7 @@
 				</div><!-- /.advantages -->
 			</div><!-- /.section -->		
 
-			<!-- Необходимо сделать интерактивную карту -->
+			<!-- картa -->
 			<include src="assets/templates/maps.html"></include>
 			
 
@@ -326,8 +340,7 @@
 					<img class="decor__img" src="img/decor-blue.png">
 				</div><!-- /.estimate -->
 			</div>
-			
-			
+
 			<div class="section">
 				<div class="portfolio">
 					<div class="portfolio__title">
@@ -341,7 +354,7 @@
 						<h4 class="portfolio__subtitle">Деловые мерприятия</h4>
 		
 						<div class="portfolio__content_inner">
-							<div class="portfolio__content_video">
+							<div class="portfolio__content_video biz-video">
 								<div class="portfolio__play">
 									<div class="portfolio__play_outline">
 										<i class="icon-play-circled"></i>
@@ -350,7 +363,7 @@
 								</div>
 							</div>
 			
-							<div class="portfolio__content_photo">
+							<div class="portfolio__content_photo biz">
 								<div class="portfolio__photo">
 									<i class="icon-camera"></i>
 									<p class="portfolio__photo_text">Галерея</p>
@@ -363,7 +376,7 @@
 						<h4 class="portfolio__subtitle">Частные мерприятия</h4>
 		
 						<div class="portfolio__content_inner">
-							<div class="portfolio__content_video">
+							<div class="portfolio__content_video pr-video">
 								<div class="portfolio__play">
 									<div class="portfolio__play_outline">
 										<i class="icon-play-circled"></i>
@@ -372,7 +385,7 @@
 								</div>
 							</div>
 			
-							<div class="portfolio__content_photo">
+							<div class="portfolio__content_photo pr">
 								<div class="portfolio__photo">
 									<i class="icon-camera"></i>
 									<p class="portfolio__photo_text">Галерея</p>
@@ -384,6 +397,7 @@
 					<button class="portfolio__btn">Получите расчет вашего мероприятия</button>
 
 					<img class="decor__img" src="img/decor-blue.png">
+
 				</div><!-- /.portfolio -->
 			</div>
 
