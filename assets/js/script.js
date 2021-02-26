@@ -6,6 +6,10 @@ $(document).ready(function() {
             scrollOverflow: true,
         });
     });
+
+    $(window).scroll(function () {
+        $(".portfolio__title").css("background-position","100% " + ($(this).scrollTop() / 10) + "px");
+    });
     
     //Slider for tents
     $(document).ready(function(){
@@ -21,6 +25,8 @@ $(document).ready(function() {
             slidesToScroll: 1,
             asNavFor: '.slider-for',
             focusOnSelect: true,
+            prevArrow: $('.prev-tent'),
+            nextArrow: $('.next-tent'),
             // variableWidth: true,
             responsive: [
                 {
@@ -36,7 +42,7 @@ $(document).ready(function() {
         
     });
 
-    //Slider for project
+    //Slider for project 
     $(document).ready(function(){
         $('.project__slider_img').slick({
             slidesToShow: 1,
@@ -52,6 +58,7 @@ $(document).ready(function() {
             asNavFor: '.project__slider_img',
             focusOnSelect: true,
             infinite: true,
+            arrow: true,
             // variableWidth: true,
             responsive: [
                 {
@@ -184,27 +191,27 @@ $(document).ready(function() {
     // Show/hide advantages
     $('.advantages__list_item').click(function() {
         //show
-        $('.advantages__list_text').removeClass('show');
-        $('.advantages__list_text').addClass('hide');
-        $(this).find('.advantages__list_text').removeClass('hide');
-        $(this).find('.advantages__list_text').addClass('show');
+        if($(this).find('.advantages__list_text').hasClass('hide') && $(this).find('.advantages__list_text').hasClass('hide')){
 
-        $('.list__marker_outline').removeClass('show');
-        $('.list__marker_outline').addClass('hide');
-        $(this).find('.list__marker_outline').removeClass('hide');
-        $(this).find('.list__marker_outline').addClass('show');
-    });
+            $('.advantages__list_text').slideUp(200).removeClass('show');
+            $('.advantages__list_text').addClass('hide');
+            $(this).find('.advantages__list_text').slideDown(200).removeClass('hide');
+            $(this).find('.advantages__list_text').slideDown(200).addClass('show');
 
-    /* $('.advantages__list_item').click(function() {
-        if($(this).find('.advantages__list_text').hadClass('show') && $(this).find('.list__marker_outline').hadClass('show')){
+            $('.list__marker_outline').fadeOut(200).removeClass('show'); 
+            $('.list__marker_outline').addClass('hide');
+            $(this).find('.list__marker_outline').fadeIn(200).removeClass('hide');
+            $(this).find('.list__marker_outline').fadeIn(200).addClass('show');
 
-            $(this).find('.advantages__list_text').removeClass('show');
+        } else if($(this).find('.advantages__list_text').hasClass('show') && $(this).find('.advantages__list_text').hasClass('show')){
+
+            $(this).find('.advantages__list_text').slideUp(200).removeClass('show');
             $(this).find('.advantages__list_text').addClass('hide');
 
-            $(this).find('.list__marker_outline').removeClass('show');
+            $(this).find('.list__marker_outline').fadeOut(200).removeClass('show');
             $(this).find('.list__marker_outline').addClass('hide');
         }
-    }); */
+    });
 
     // Video-popup
     //show intro
@@ -266,8 +273,8 @@ $(document).ready(function() {
         $('.project').removeClass('hide-gallery');
         $('.project').addClass('show-gallery');
 
-        $(".slider-img-pr").slick('reinit');
-        $(".slider-nav-pr").slick('reinit');
+        $(".slider-img-biz").slick('reinit');
+        $(".slider-nav-biz").slick('reinit');
     });
     // hide
     $('.close').click(function() {

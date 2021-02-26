@@ -1,10 +1,15 @@
 .maps{
     overflow: scroll;
-    -webkit-overflow-scrolling: touch;
     height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    background: url('../img/seating-bg.png') no-repeat center/cover;
+
     svg{
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: auto;
     }
     .on{
         opacity: 0;
@@ -16,5 +21,15 @@
     .yes{
         opacity: 1;
         transition: all 0.3s;
+    }
+}
+@media (min-width: 1024px) {
+    .maps{
+        height: 100%;
+
+        svg{
+            width: 100%;
+            height: auto;
+        }
     }
 }

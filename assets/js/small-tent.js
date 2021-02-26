@@ -52,6 +52,9 @@ $(document).ready(function() {
             asNavFor: '.seating__slider',
             focusOnSelect: true,
             infinite: true,
+            prevArrow: $('.prev-seat'),
+            nextArrow: $('.next-seat'),
+            
             // variableWidth: true,
             responsive: [
                 {

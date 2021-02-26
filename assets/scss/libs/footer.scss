@@ -22,20 +22,29 @@
         flex-direction: column;
 
         width: 100%;
+        
+        ul{
+            display: flex;
+            flex-direction: column;
 
-        &_link {
-            font-family: 'Montserrat-medium';
-            font-size: 16px;
-            color: #fff;
+            padding-bottom: 20px;
 
-            margin-bottom: 20px;
+            li{
+                margin: 0 auto 20px;
 
-            &:last-of-type {
-                margin-bottom: 0;
-            }
+                a{
+                    font-family: 'Montserrat-medium';
+                    font-size: 16px;
+                    color: #fff;
+                }
 
-            &:hover {
-                font-family: 'Montserrat-bold';
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                &:hover {
+                    font-family: 'Montserrat-bold';
+                }
             }
         }
     }
@@ -179,21 +188,26 @@
         }
         &__nav {
             flex-direction: row;
+            align-items: flex-start;
             flex-wrap: wrap;
             width: 75%;
 
-            &_link {
-                display: flex;
-                justify-content: center;
+            padding-left: 40px;
 
-                font-size: 16px;
+            ul{
+                padding-bottom: 0;
+                margin-right: 20px;
+                li{
+                    width: auto;
 
-                width: 25%;
+                    font-size: 16px;
 
-                margin-bottom: 20px;
-
-                &:last-of-type {
+                    margin: 0;
                     margin-bottom: 20px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
@@ -283,13 +297,17 @@
         &__nav{
             width: 45%;
 
-            &_link{
-                font-size: 14px;
+            ul{
+                li{
+                    margin-bottom: 10px;
+                    a{
+                        font-size: 14px;
 
-                margin-bottom: 20px;
-
-                &:last-of-type{
-                    margin-bottom: 20px;
+                        margin-bottom: 20px;
+                    }
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
@@ -383,20 +401,6 @@
         &__nav{
             width: 50%;
 
-            margin-top: 20px;
-
-            &_link{
-                justify-content: flex-start;
-
-                width: 30%;
-                font-size: 14px;
-
-                margin-bottom: 10px;
-
-                &:last-of-type{
-                    margin-bottom: 10px;
-                }
-            }
         }
         &__buttons{
             .footer__calc, .footer__download{
@@ -453,12 +457,15 @@
         &__nav{
             padding-left: 25px;
 
-            margin-top: 25px;
-            &_link{
-                justify-content: flex-start;
-                width: 30%;
+            margin-top: 10px;
 
-                font-size: 16px;
+            ul{
+                li{
+                    margin-bottom: 15px;
+                    a{
+                        font-size: 16px;
+                    }
+                }
             }
         }
         &__buttons{
@@ -504,6 +511,9 @@
             max-width: 240px;
         }
         &__nav{
+            ul{
+                margin-right: 40px;
+            }
             &_link{
                 margin-bottom: 15px;
             }

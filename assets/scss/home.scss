@@ -226,6 +226,7 @@
                 line-height: 20px;
                 color: #000;
                 margin-left: 42px;
+
             }
         }
         &__btn{
@@ -640,12 +641,15 @@
     }
     .portfolio{
         padding-bottom: 30px;
+
         &__title{
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('../img/portfolio-bg.png') no-repeat 50% 100%;
+            background: url('../img/portfolio-bg.png');
             background-size: cover;
+            background-repeat: repeat-y;
+            background-position: 100% 0;
             padding: 60px 0;
 
             width: 100%;
@@ -2036,18 +2040,22 @@
         }
         .advantages{
             position: relative;
+
+            padding-top: 30px;
             &__img{
-                width: 500px;
+                width: 450px;
                 margin-left: 50px;
             }
             &__inner{
-                width: 500px;
+                width: 450px;
 
                 padding: 30px 30px 0;
                 margin-left: 50px;
 
                 .advantages__title{
                     font-size: 36px;
+
+                    padding-bottom: 15px;
                 }
             }
             .decor__img{
