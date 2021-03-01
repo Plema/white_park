@@ -4,12 +4,50 @@ $(document).ready(function() {
     $(document).ready(function() {
         $('.fullpage').fullpage({
             scrollOverflow: true,
+            onLeave: function(origin, destination, direction){
+                var loadedSection = this;
+        
+                if($(window).width() >= 1024){
+                    function showMenu() {
+                        $('.header__info').css({'right': '0'});
+                    }
+                    function hideMenu() {
+                        $('.nav__toggle').css({'right': '0'});
+                    }
+
+                    if(origin.index == 0 && direction =='down'){
+                        $('.header__info').css({'right': '-300px'});
+                    
+                        setTimeout(hideMenu, 200);
+
+                        $(window).click(function() {
+                            if($('.nav__toggle').hasClass('active')){
+                                $('.nav__toggle').css({'right': '-50px'});
+
+                                setTimeout(showMenu, 200);
+                            }
+                        });
+                        $(document).click(function (e) {
+                            var btn = $('.nav__toggle');
+                            if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+                                $('.header__info').css({'right': '-300px'});
+                                $('.nav__toggle').removeClass('active');
+                                $('.nav__toggle_btn').find('i').removeClass('icon-close');
+                                $('.nav__toggle_btn').find('i').addClass('icon-menu');
+
+                                setTimeout(hideMenu, 300);
+                            }
+                        });
+
+                    } else if(origin.index == 1 && direction =='up'){
+                        $('.nav__toggle').css({'right': '-50px'});
+                        setTimeout(showMenu, 200);
+                    }
+                }
+            }
         });
     });
-
-    $(window).scroll(function () {
-        $(".portfolio__title").css("background-position","100% " + ($(this).scrollTop() / 10) + "px");
-    });
+    
     
     //Slider for tents
     $(document).ready(function(){
@@ -74,7 +112,7 @@ $(document).ready(function() {
 
     // Slider kitchen
     const swiper = new Swiper('.swiper-container', {
-        spaceBetween: -30,
+        spaceBetween: -20,
         slidesPerView: 1.5,
         centeredSlides: true,
         pagination: {
@@ -88,22 +126,22 @@ $(document).ready(function() {
         },
         breakpoints: {
             414: {
-                spaceBetween: -80,
+                spaceBetween: -60,
             },
             768: {
                 spaceBetween: -60,
             },
             1024: {
-                spaceBetween: -440,
+                spaceBetween: -300,
             },
             1280: {
-                spaceBetween: -500,
+                spaceBetween: -350,
             },
             1440: {
-                spaceBetween: -580,
+                spaceBetween: -350,
             },
             1600: {
-                spaceBetween: -580,
+                spaceBetween: -500,
             }
         }
     });
@@ -122,7 +160,7 @@ $(document).ready(function() {
     });
     
     
-    /* // Show/hide nav
+    // Show/hide nav
     $('.nav__toggle').on("click", function(e) {
         e.preventDefault();
 
@@ -131,12 +169,6 @@ $(document).ready(function() {
             $('.nav__toggle_btn').find('i').removeClass('icon-menu');
             $('.nav__toggle_btn').find('i').addClass('icon-close');
             $('.header__info').addClass('active');
-
-            // for vertical menu
-            $('.fixed').css({'width': '0'});
-            $('.header').css({'width': '300px'});
-            $('.header__info').css({'right': '0px'});
-            $('.nav__toggle').toggle();
 
         } else {
             $('.nav__toggle_btn').find('i').removeClass('icon-close');
@@ -152,41 +184,8 @@ $(document).ready(function() {
             $('.nav__toggle_btn').find('i').removeClass('icon-close');
             $('.nav__toggle_btn').find('i').addClass('icon-menu');
             $('.header__info').removeClass('active');
-
-            //for vertical menu
-            $('.fixed').css({'width': '60px'});
-            $('.header__info').css({'right': '-300px'});
-            $('.nav__toggle').toggle();
         }
-    }); */
-
-    // Fixed header
-    /* let header = $(".header");
-    let container = $('.header__info');
-    let introH = $('.intro').innerHeight();
-    let scrollOffset = $(window).scrollTop();
-
-    checkScroll(scrollOffset);
-
-    $(window).on('scroll', function() {
-        scrollOffset = $(this).scrollTop();
-
-        checkScroll(scrollOffset);
     });
-
-    function checkScroll(scrollOffset) {
-        if( scrollOffset >= introH ){
-            header.addClass("fixed");
-            console.log('sdfsdfsd');
-            // container.addClass('.hide__menu');
-            // container.css({'right':'-300px'});
-
-        } else{
-            header.removeClass("fixed");
-            // container.removeClass('.hide__menu');
-            // container.css({'right':'0px'});
-        }
-    } */
 
     // Show/hide advantages
     $('.advantages__list_item').click(function() {
@@ -298,16 +297,27 @@ $(document).ready(function() {
     });
 
     //Estimate-popup
-    // show
+    // show footer
     $('.footer__calc').click(function() {
         $('.popup-estimate .estimate').removeClass('hide-estimate');
         $('.popup-estimate .estimate').addClass('show-estimate');
     });
-    // hide
+    // hide footer
     $('.close-popup-estimate').click(function() {
         $('.popup-estimate .estimate').removeClass('show-estimate');
         $('.popup-estimate .estimate').addClass('hide-estimate');
     });
+    // show portfolio
+    $('.portfolio__btn').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide portfolio
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
+    });
+
 
     //Zayavka-popup
     // show

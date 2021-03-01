@@ -229,6 +229,23 @@
 @media (min-width: 1024px) {
     .popup-app{
         .app{
+            .header__img{
+                width: 450px;
+            }
+            .container{
+                width: 450px;
+            }
+            &__title{
+                font-size: 30px;
+                line-height: 32px;
+                margin-bottom: 15px;
+            }
+            &__text{
+                margin-bottom: 15px;
+            }
+            .accept{
+                margin: 15px 0 15px;
+            }
             .decor__img{
                 display: block;
 

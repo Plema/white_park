@@ -25,11 +25,17 @@
 }
 @media (min-width: 1024px) {
     .maps{
-        height: 100%;
+        overflow: scroll;
 
         svg{
             width: 100%;
             height: auto;
+            overflow: scroll;
         }
+    }
+}
+@media (min-width: 1280px) {
+    .maps{
+        height: auto;
     }
 }
