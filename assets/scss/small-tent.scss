@@ -68,6 +68,8 @@
 
         background: url("../img/seating-bg.png");
 
+        padding-top: 40px;
+
         &__title{
             font-family: 'Alice';
             font-size: 34px;
@@ -88,17 +90,6 @@
                     font-family: 'Basis-regular';
                     font-size: 14px;
                     position: relative;
-
-                    &:after{
-                        content: url('../img/wave-tent-slider.png');
-                        display: block;
-                        
-                        transform: scale(0.5);
-        
-                        position: absolute;
-                        top: -60px;
-                        left: 0px;
-                    }
                 }
             }
         }
@@ -153,6 +144,8 @@
         background: linear-gradient(358.59deg, #DEF9FF 1.64%, rgba(255, 255, 255, 0) 154.67%);
         display: flex;
         align-items: center;
+
+        padding-top: 30px;
 
         .container{
             overflow: visible;
@@ -310,6 +303,8 @@
         height: auto;
         overflow: scroll;
 
+        padding-top: 80px;
+
         &__title{
             font-family: 'Alice';
             font-size: 34px;
@@ -400,7 +395,7 @@
         height: 100vh;
 
         .container{
-            padding-top: 20px;
+            padding-top: 100px;
             padding-bottom: 50px;
         }
 
@@ -611,6 +606,7 @@
             }
             &__title_slider{
                 padding: 0 50px;
+                padding-left: 100px;
 
                 .seating__item{
                     &_title{
@@ -803,9 +799,12 @@
             }
         }
         .seating{
+            padding-top: 20px;
+            position: relative;
+
             &__title{
-                font-size: 50px;
-                padding-bottom: 10px;
+                font-size: 40px;
+                padding-bottom: 20px;
             }
             &__title_slider{
                 .seating__item{
@@ -815,13 +814,14 @@
                 }
             }
             &__slider{
+                padding: 20px 100px;
                 &_item{
                     img{
                         padding-bottom: 15px;
                     }
                     .seating__more{
                         p{
-                            width: 18%;
+                            width: 22%;
                         }
                     }
                 }
@@ -868,6 +868,9 @@
                     }
                 }
             }
+        }
+        .project{
+            padding-top: 0;
         }
         .estimate{
             position: relative;
@@ -1063,9 +1066,9 @@
         }
         .seating{
             &__title{
-                font-size: 60px;
+                font-size: 50px;
 
-                padding-bottom: 40px;
+                padding-bottom: 20px;
             }
             &__title_slider{
                 .seating__item{
@@ -1075,9 +1078,15 @@
                 }
             }
             &__slider{
+                padding: 20px 50px;
                 &_item{
                     img{
                         padding-bottom: 25px;
+                    }
+                    .seating__more{
+                        p{
+                            width: 18%;
+                        }
                     }
                 }
             }
@@ -1098,7 +1107,7 @@
             }
         }
         .project{
-            height: 100vh;
+            height: auto;
 
             &__title{
                 font-size: 72px;
@@ -1182,6 +1191,7 @@
                 }
             }
             &__slider{
+                padding: 20px 0;
                 &_item{
                     .seating__more{
                         p{

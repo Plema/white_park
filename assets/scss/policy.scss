@@ -3,6 +3,10 @@
         background: linear-gradient(180deg, rgba(165, 239, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
 
         overflow: hidden;
+
+        .container{
+            padding-top: 100px;
+        }
         &__title{
             font-family: 'Alice';
             font-size: 30px;
@@ -78,6 +82,9 @@
             position: relative;
             &__title{
                 font-size: 50px;
+            }
+            .container{
+                padding-top: 0;
             }
             &__info{
                 &_item{
