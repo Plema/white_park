@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     //Slider for project
     $(document).ready(function(){
-        $('.project__slider_img').slick({
+        $('.project__slider_img, .project__info_slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -18,9 +18,9 @@ $(document).ready(function() {
             asNavFor: '.project__slider_nav'
         });
         $('.project__slider_nav').slick({
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
-            asNavFor: '.project__slider_img',
+            asNavFor: '.project__slider_img, .project__info_slider',
             focusOnSelect: true,
             infinite: true,
             // variableWidth: true,
@@ -71,20 +71,18 @@ $(document).ready(function() {
 
     // Slider kitchen
     const swiper = new Swiper('.swiper-container', {
-        spaceBetween: -100,
+        spaceBetween: -120,
         slidesPerView: 1.5,
         centeredSlides: true,
-        pagination: {
-            el: '.swiper-pagination',
-        },
         roundLengths: true,
+        speed: 300,
         loop: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         },
         breakpoints: {
-            768: {
+            /* 768: {
                 spaceBetween: -200,
             },
             1024: {
@@ -101,7 +99,7 @@ $(document).ready(function() {
             },
             1920: {
                 spaceBetween: -320,
-            },
+            }, */
         }
     });
 });

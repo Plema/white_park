@@ -171,7 +171,8 @@
                 }
             } 
             &.active{
-                display: block;
+                display: flex;
+                flex-direction: column;
             } 
         }
 
@@ -319,11 +320,11 @@
                     display: block;
                     width: 200px;
                     max-width: 314px;
-                    margin: -60px auto 0;
+                    margin: -40px auto 0;
                 }
                 .nav{
                     padding-left: 47px;
-                    margin-bottom: 35px;
+                    margin-bottom: 25px;
 
                     &__inner{
                         margin-top: -20px;

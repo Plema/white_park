@@ -1,4 +1,5 @@
 @import "libs/header";
+@import "libs/header-line";
 @import "libs/footer";
 @import 'libs/contacts';
 @import 'libs/map-footer-contact';
@@ -121,7 +122,7 @@ a {
 
     position: absolute;
     top: 0px;
-    right: 0;
+    right: 10px;
     z-index: 2;
 
     transition: border 0.1s linear;
@@ -158,7 +159,7 @@ a {
 
     position: absolute;
     top: 0px;
-    left: 0;
+    left: 10px;
     z-index: 2;
 
     transition: border 0.1s linear;
@@ -409,7 +410,6 @@ a {
     }
 }
 .project{
-
     &__slider_nav{
         .slick-current{
             width: 50px;
@@ -489,6 +489,113 @@ a {
                 color: #373737;
             }
         
+        }
+    }
+    @media(min-width: 768px){
+        .slick-next, .slick-prev{
+            top: 40%;
+        }
+    }
+    @media(min-width: 1280px){
+        .slick-next, .slick-prev{
+            top: 35%;
+        }
+    }
+}
+.project-popup{
+    &__slider{
+        &_nav{
+            .slick-list{
+                .slick-track{
+                    margin: 0 auto;
+                }
+            }
+            .slick-next{
+                width: 35px;
+                height: 35px;
+            
+                border-radius: 50%;
+                border: 3px solid #373737;
+                background-color: transparent;
+                color: transparent;
+            
+                position: absolute;
+                top: 30%;
+                right: 0;
+                z-index: 2;
+            
+                transition: border 0.1s linear;
+            
+                &:before{
+                    content: '\e800';
+                    font-family: 'fontello';
+                    font-size: 20px;
+                    color: #74CFE3;
+            
+                    position: absolute;
+                    top: 4px;
+                    left: 50%;
+            
+                    transform: translate(-50%);
+            
+                    transition: color 0.1s linear;
+                }
+                &:hover{
+                    border: 3px solid #74CFE3;
+                }
+                &:hover:before{
+                    color: #373737;
+                }
+            }
+            .slick-prev{
+                width: 35px;
+                height: 35px;
+            
+                border-radius: 50%;
+                border: 3px solid #373737;
+                background-color: transparent;
+                color: transparent;
+            
+                position: absolute;
+                top: 30%;
+                left: 0;
+                z-index: 2;
+            
+                transition: border 0.1s linear;
+            
+                &:before{
+                    content: '\e801';
+                    font-family: 'fontello';
+                    font-size: 20px;
+                    color: #74CFE3;
+            
+                    position: absolute;
+                    top: 4px;
+                    left: 50%;
+            
+                    transform: translate(-50%);
+            
+                    transition: color 0.1s linear;
+                }
+            
+                &:hover{
+                    border: 3px solid #74CFE3;
+                }
+                &:hover:before{
+                    color: #373737;
+                }
+            
+            }
+        }
+        @media(min-width: 768px){
+            .slick-next, .slick-prev{
+                top: 40%;
+            }
+        }
+        @media(min-width: 1280px){
+            .slick-next, .slick-prev{
+                top: 35%;
+            }
         }
     }
 }

@@ -69,7 +69,7 @@ $(document).ready(function() {
         spaceBetween: -30,
         slidesPerView: 1.5,
         centeredSlides: true,
-        speed: 2000,
+        speed: 300,
         pagination: {
             el: '.swiper-pagination',
         },
@@ -81,22 +81,22 @@ $(document).ready(function() {
         },
         breakpoints: {
             768: {
-                spaceBetween: -60,
+                spaceBetween: -200,
             },
             1024: {
-                spaceBetween: -440,
+                spaceBetween: -310,
             },
             1280: {
-                spaceBetween: -670,
+                spaceBetween: -300,
             },
             1440: {
-                spaceBetween: -770,
+                spaceBetween: -200,
             },
             1600: {
-                spaceBetween: -850,
+                spaceBetween: -500,
             },
             1920: {
-                spaceBetween: -900,
+                spaceBetween: -520,
             },
         }
     });
