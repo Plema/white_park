@@ -28,7 +28,7 @@ $(document).ready(function() {
         $('.video__popup_reviews').addClass('show-video-reviews');
 
         var video_data = $('.video__popup_reviews iframe').data('src');
-        $('.video__popup_rev iframe').attr('src', video_data);
+        $('.video__popup_reviews iframe').attr('src', video_data);
     });
     //hide
     $('.close-popup-video').click(function() {
