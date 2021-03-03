@@ -1,17 +1,20 @@
 .popup-estimate{
+    display: block;
     width: 100%;
     overflow: scroll;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    z-index: 10;
+    
     .estimate{
         background: #747474;
 
         height: 100vh;
+        width: 100%;
         overflow: hidden;
+
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        z-index: 100;
 
         .container{
             background: rgba(255, 255, 255, 0.8);
@@ -182,7 +185,7 @@
         .estimate{
             flex-direction: column;
             justify-content: center;
-            position: relative;
+            // position: relative;
 
             .header__img{
                 display: block;

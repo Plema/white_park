@@ -44,4 +44,26 @@ $(document).ready(function() {
             setTimeout(hideMenuLine, 300);
         }
     });
+
+    //Estimate-popup
+    // show footer
+    $('.footer__calc').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide footer
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
+    });
+    // show portfolio
+    $('.portfolio__btn').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide portfolio
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
+    });
 });

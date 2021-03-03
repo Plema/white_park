@@ -276,67 +276,67 @@ $(document).ready(function() {
     // Video popup-portfolio
     //show biz
     $('.biz-video .portfolio__play').click(function() {
-        $('.video__popup_portfolio').removeClass('hide-video-portfolio');
-        $('.video__popup_portfolio').addClass('show-video-portfolio');
+        $('.popup-video-1').removeClass('hide-video-portfolio');
+        $('.popup-video-1').addClass('show-video-portfolio');
 
-        var video_data = $('.video__popup_portfolio iframe').data('src');
-        $('.video__popup_portfolio iframe').attr('src', video_data);
+        var video_data = $('.popup-video-1 iframe').data('src');
+        $('.popup-video-1 iframe').attr('src', video_data);
     });
     //hide biz
     $('.close-popup-video').click(function() {
-        $('.video__popup_portfolio').removeClass('show-video-portfolio');
-        $('.video__popup_portfolio').addClass('hide-video-portfolio');
+        $('.popup-video-1').removeClass('show-video-portfolio');
+        $('.popup-video-1').addClass('hide-video-portfolio');
 
-        $('.video__popup_portfolio iframe').attr('src', '');
+        $('.popup-video-1 iframe').attr('src', '');
     });
 
     //show pr
     $('.pr-video .portfolio__play').click(function() {
-        $('.video__popup_portfolio').removeClass('hide-video-portfolio');
-        $('.video__popup_portfolio').addClass('show-video-portfolio');
+        $('.popup-video-2').removeClass('hide-video-portfolio');
+        $('.popup-video-2').addClass('show-video-portfolio');
 
-        var video_data = $('.video__popup_portfolio iframe').data('src');
-        $('.video__popup_portfolio iframe').attr('src', video_data);
+        var video_data = $('.popup-video-2 iframe').data('src');
+        $('.popup-video-2 iframe').attr('src', video_data);
     });
     //hide pr
     $('.close-popup-video').click(function() {
-        $('.video__popup_portfolio').removeClass('show-video-portfolio');
-        $('.video__popup_portfolio').addClass('hide-video-portfolio');
+        $('.popup-video-2').removeClass('show-video-portfolio');
+        $('.popup-video-2').addClass('hide-video-portfolio');
 
-        $('.video__popup_portfolio iframe').attr('src', '');
+        $('.popup-video-2 iframe').attr('src', '');
     });
 
     //Gallery-popup biz
     // show
     $('.biz .portfolio__photo').click(function() {
-        $('.project').removeClass('hide-gallery');
-        $('.project').addClass('show-gallery');
+        $('.popup-prj-1').removeClass('hide-gallery');
+        $('.popup-prj-1').addClass('show-gallery');
 
-        $(".project-popup__slider_img").slick('reinit');
-        $(".project-popup__slider_nav").slick('reinit');
-        $(".project-popup__info_slider").slick('reinit');
+        $(".project-popup__slider_img").get(0).slick.setPosition();
+        $(".project-popup__slider_nav").get(0).slick.setPosition();
+        $(".project-popup__info_slider").get(0).slick.setPosition();
         
     });
     // hide
     $('.close').click(function() {
-        $('.project').removeClass('show-gallery');
-        $('.project').addClass('hide-gallery');
+        $('.popup-prj-1').removeClass('show-gallery');
+        $('.popup-prj-1').addClass('hide-gallery');
     });
 
     //Gallery-popup pr
     // show
     $('.pr .portfolio__photo').click(function() {
-        $('.project').removeClass('hide-gallery');
-        $('.project').addClass('show-gallery');
+        $('.popup-prj-2').removeClass('hide-gallery');
+        $('.popup-prj-2').addClass('show-gallery');
 
-        $('.project-popup__slider_img').get(0).slick.setPosition();
-        $('.project-popup__slider_nav').get(0).slick.setPosition();
-        $('.project-popup__info_slider').get(0).slick.setPosition();
+        $(".project-popup__slider_img").get(1).slick.setPosition();
+        $(".project-popup__slider_nav").get(1).slick.setPosition();
+        $(".project-popup__info_slider").get(1).slick.setPosition();
     });
     // hide
     $('.close').click(function() {
-        $('.project').removeClass('show-gallery');
-        $('.project').addClass('hide-gallery');
+        $('.popup-prj-2').removeClass('show-gallery');
+        $('.popup-prj-2').addClass('hide-gallery');
     });
 
     //Estimate-popup

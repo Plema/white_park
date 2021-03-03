@@ -27,7 +27,7 @@ $(document).ready(function() {
         $('.video__popup_reviews').removeClass('hide-video-reviews');
         $('.video__popup_reviews').addClass('show-video-reviews');
 
-        var video_data = $('.video__popup_rev iframe').data('src');
+        var video_data = $('.video__popup_reviews iframe').data('src');
         $('.video__popup_rev iframe').attr('src', video_data);
     });
     //hide
@@ -35,7 +35,7 @@ $(document).ready(function() {
         $('.video__popup_reviews').removeClass('show-video-reviews');
         $('.video__popup_reviews').addClass('hide-video-reviews');
 
-        $('.video__popup_rev iframe').attr('src', '');
+        $('.video__popup_reviews iframe').attr('src', '');
     });
 
 
@@ -140,5 +140,26 @@ $(document).ready(function() {
 
             setTimeout(hideMenuLine, 300);
         }
+    });
+    //Estimate-popup
+    // show footer
+    $('.footer__calc').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide footer
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
+    });
+    // show portfolio
+    $('.portfolio__btn').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide portfolio
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
     });
 });
