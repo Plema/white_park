@@ -76,7 +76,7 @@ $(document).ready(function() {
         slidesPerView: 1.5,
         centeredSlides: true,
         roundLengths: true,
-        speed: 400,
+        speed: 300,
         loop: true,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -84,19 +84,19 @@ $(document).ready(function() {
         },
         breakpoints: {
             1024: {
-                spaceBetween: -340,
+                spaceBetween: -350,
             },
             1280: {
-                spaceBetween: -320,
+                spaceBetween: -350,
             },
             1440: {
-                spaceBetween: -320,
+                spaceBetween: -350,
             },
             1600: {
-                spaceBetween: -320,
+                spaceBetween: -550,
             },
             1920: {
-                spaceBetween: -320,
+                spaceBetween: -550,
             },
         }
     });
@@ -145,5 +145,27 @@ $(document).ready(function() {
     // Mask for input-phone
     jQuery(function($){
         $(".input__phone").mask("+7 (999) 999-99-99");
+    });
+
+    //Estimate-popup
+    // show footer
+    $('.footer__calc').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide footer
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
+    });
+    // show portfolio
+    $('.portfolio__btn').click(function() {
+        $('.popup-estimate .estimate').removeClass('hide-estimate');
+        $('.popup-estimate .estimate').addClass('show-estimate');
+    });
+    // hide portfolio
+    $('.close-popup-estimate').click(function() {
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
     });
 });
