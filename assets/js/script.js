@@ -361,19 +361,6 @@ $(document).ready(function() {
         $('.popup-estimate .estimate').addClass('hide-estimate');
     });
 
-
-    //Zayavka-popup
-    // show
-    $('.footer__download').click(function() {
-        $('.popup-app .app').removeClass('hide-app');
-        $('.popup-app .app').addClass('show-app');
-    });
-    // hide
-    $('.close-popup-app').click(function() {
-        $('.popup-app .app').removeClass('show-app');
-        $('.popup-app .app').addClass('hide-app');
-    });
-
     // Height for gallery
     function windowSize(){
         if ($(window).width() >= '320'){

@@ -76,7 +76,7 @@ $(document).ready(function() {
         slidesPerView: 1.5,
         centeredSlides: true,
         roundLengths: true,
-        speed: 1000,
+        speed: 400,
         loop: true,
         navigation: {
             nextEl: ".swiper-button-next",

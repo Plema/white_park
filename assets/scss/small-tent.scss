@@ -873,10 +873,13 @@
                 .swiper-slide{
                     transform: scale(0.4);
 
-                    transition: all 1s linear;
+                    transition: all 0.4s linear;
 
                     .slider__img{
-                        transition: all 1s linear;
+                        transition: all 0.4s linear;
+                    }
+                    .slider__text{
+                        transition: all 0.4s linear;
                     }
                 }
                 .swiper-slide-active{
@@ -885,7 +888,7 @@
                     .slider__img{
                     }
                     .slider__text{
-                        font-size: 16px;
+                        font-size: 24px;
                     }
                 }
                 .swiper-slide-prev{
@@ -959,19 +962,18 @@
             }
         }
         .opp{
-            &__title{
-                padding-top: 20px;
-            }
             .swiper-container{
                 margin-top: 100px;
                 .swiper-slide{
+                    transform: scale(0.5);
                     .slider__img{
-                        transform: scale(0.6);
+                        
                     }
                 }
                 .swiper-slide-active{
+                    transform: scale(0.8);
                     .slider__img{
-                        transform: scale(0.9);
+                        
                     }
                     .slider__text{
                         font-size: 22px;
