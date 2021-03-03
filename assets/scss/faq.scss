@@ -77,7 +77,9 @@
         background-position: center;
         background-size: cover;
 
-        padding: 100px 0 48px;
+        padding: 48px 0;
+        position: relative;
+
 
         &__title{
             font-family: 'Alice';
@@ -736,10 +738,6 @@
                 padding: 10px;
             }
         }
-    }
-}
-@media (min-width: 1440px) {
-    .wrapper{
         .tent{
             &__title_slider{
                 .tent__title{
@@ -808,20 +806,21 @@
             }
             &__item_question{
                 width: 880px;
-                padding: 20px;
+                padding: 10px 20px;
+                margin-bottom: 10px;
 
                 .intro__item_text{
-                    font-size: 22px;
-                    line-height: 28px;
+                    font-size: 18px;
+                    line-height: 20px;
                 }
             }
             &__item_answer{
                 width: 850px;
-                padding: 20px;
+                padding: 10px 20px;
 
                 .intro__item_text{
-                    font-size: 20px;
-                    line-height: 26px;
+                    font-size: 16px;
+                    line-height: 18px;
                 }
 
                 &:last-of-type{
@@ -876,10 +875,10 @@
             padding: 90px 0;
 
             &__title_slider{
-                padding: 0 70px;
+                padding: 0 60px;
 
                 .tent__title{
-                    font-size: 42px;
+                    font-size: 38px;
 
                     margin-bottom: 20px;
                 }
@@ -888,8 +887,8 @@
             &__item_one, &__item_two, &__item_three, &__item_four{
                 .tent__subtitle{
                     .tent__text{
-                        font-size: 20px;
-                        line-height: 26px;
+                        font-size: 16px;
+                        line-height: 18px;
                     }
                     .tent__btn{
                         min-width: 381px;
@@ -902,12 +901,12 @@
                     }
                 }
                 .tent__gallery{
-                    margin: 22px 0;
+                    margin: 15px 0;
 
                     grid-gap: 15px;
 
                     &_item{
-                        height: 200px;
+                        height: 160px;
                     }
                 }
             }
@@ -933,14 +932,20 @@
                 left: -120px;
             }
             &__item_question{
+                padding: 20px;
+                margin-bottom: 20px;
+
                 .intro__item_img{
                     transform: scale(1);
                 }
                 .intro__item_text{
-                    font-size: 24px;
+                    font-size: 22px;
+                    line-height: 24px;
                 }
             }
             &__item_answer{
+                padding: 20px;
+
                 .intro__item_img{
                     transform: scale(0.9);
                 }
@@ -956,8 +961,20 @@
         }
         
         .tent{
-            &__subtitle{
-                margin-top: 20px;
+            &__item_one, &__item_two, &__item_three, &__item_four{
+                .tent__subtitle{
+                    margin-top: 20px;
+                }
+                .tent__info{
+                    padding: 20px 0;
+                }
+                .tent__gallery{
+                    margin: 25px 0;
+
+                    &_item{
+                        height: 190px;
+                    }
+                }
             }
         }
     }

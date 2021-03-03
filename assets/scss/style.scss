@@ -364,7 +364,11 @@ a {
         .seating{
             &__title_slider{
                 .slick-current{
-                    text-align: left;
+
+                    &:after{
+                        top: -10px;
+                        left: -40px;
+                    }
                 }
             }
         }
@@ -374,6 +378,24 @@ a {
             &__title_slider{
                 .slick-current{
                     padding-bottom: 20px;
+
+                    &:after{
+                        top: -20px;
+                        left: -20px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1280px) {
+        .seating{
+            &__title_slider{
+                .slick-current{
+
+                    &:after{
+                        top: -20px;
+                        left: -10px;
+                    }
                 }
             }
         }
@@ -383,6 +405,23 @@ a {
             &__title_slider{
                 .slick-current{
                     padding-bottom: 40px;
+
+                    &:after{
+                        top: -15px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1600px) {
+        .seating{
+            &__title_slider{
+                .slick-current{
+
+                    &:after{
+                        top: -10px;
+                        left: 0;
+                    }
                 }
             }
         }

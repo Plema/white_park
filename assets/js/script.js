@@ -1,9 +1,9 @@
 $(document).ready(function() {
-
     // full page
     $(document).ready(function() {
         $('.fullpage').fullpage({
             scrollOverflow: true,
+            responsiveWidth: 1024,
             onLeave: function(origin, destination, direction){
                 var loadedSection = this;
         

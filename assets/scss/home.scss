@@ -5,7 +5,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
+        height: 100%;
         position: relative;
         display: flex;
         align-items: center;
@@ -152,7 +152,7 @@
         background-position: -150px 62px;
         position: relative;
 
-        padding: 70px 0 45px;
+        padding: 0;
 
         &__img{
             display: none;
@@ -248,7 +248,7 @@
         background-position: center;
         background-size: cover;
 
-        padding: 100px 0 48px;
+        padding: 48px 0;
 
         &__title{
             font-family: 'Alice';
@@ -1576,6 +1576,8 @@
             padding-top: 0;
             display: block;
 
+            height: 100vh;
+
             &__logo{
                 display: flex;
                 margin: 0 auto;
@@ -2277,7 +2279,7 @@
                 width: 700px;
                 min-height: 530px;
 
-                margin-top: 20px;
+                margin-top: -20px;
 
                 .swiper-slide{
                     .slider__img{
@@ -2512,21 +2514,23 @@
         .intro{
             &__logo{
                 width: 390px;
-                padding-top: 80px;
+                padding-top: 30px;
             }
             &__title{
                 padding-top: 0;
+                margin-top: 20px;
 
                 &_small{
-                    font-size: 72px;
+                    font-size: 60px;
                 }
                 &_big{
-                    font-size: 140px;
+                    font-size: 100px;
                 }
             }
             &__subtitle{
+                margin-bottom: 25px;
                 p{
-                    font-size: 36px;
+                    font-size: 30px;
                 }
             }
             &__buttons{
@@ -2602,7 +2606,7 @@
         }
         .advantages{
             &__img{
-                width: 600px;
+                width: 500px;
                 height: auto;
 
                 &_arrow{
@@ -2611,24 +2615,24 @@
                 }
             }
             &__inner{
-                width: 600px;
+                width: 500px;
 
-                padding: 30px 50px 0;
+                padding: 0 50px 0;
 
                 top: 219px;
 
                 .advantages__title{
-                    font-size: 50px;
+                    font-size: 40px;
                 }
                 .advantages__subtitle{
-                    font-size: 24px;
-                    line-height: 28px;
+                    font-size: 20px;
+                    line-height: 22px;
                 }
                 .advantages__list{
                     margin-top: 30px;
     
                     &_item{
-                        margin-bottom: 20px;
+                        margin-bottom: 15px;
 
                         .list__subtitle{
                             font-size: 20px;
@@ -2641,7 +2645,7 @@
                     }
                 }
                 .advantages__btn{
-                    margin: 50px 0 10px;
+                    margin: 10px 0 10px;
                     padding: 22px;
                     font-size: 20px;
     
@@ -2671,7 +2675,7 @@
                 padding: 0 60px;
 
                 .tent__title{
-                    font-size: 42px;
+                    font-size: 38px;
 
                     margin-bottom: 20px;
                 }
@@ -2680,8 +2684,8 @@
             &__item_one, &__item_two, &__item_three, &__item_four{
                 .tent__subtitle{
                     .tent__text{
-                        font-size: 20px;
-                        line-height: 26px;
+                        font-size: 16px;
+                        line-height: 18px;
                     }
                     .tent__btn{
                         min-width: 381px;
@@ -2694,12 +2698,12 @@
                     }
                 }
                 .tent__gallery{
-                    margin: 22px 0;
+                    margin: 15px 0;
 
                     grid-gap: 15px;
 
                     &_item{
-                        height: 200px;
+                        height: 160px;
                     }
                 }
             }
@@ -2845,30 +2849,33 @@
             &__title{
                 font-size: 90px;
 
-                top: -20px;
+                top: 0;
             }
 
             .swiper-container{
-                min-height: 700px;
+                min-height: 600px;
                 width: 1000px;
 
-                margin-top: 20px;
+                margin-top: 0px;
+                margin-bottom: 0;
+                padding-bottom: 20px;
 
                 .swiper-slide{
                     .slider__img{
-                        transform: scale(0.5);
+                        transform: scale(0.4);
                     }
                 }
                 .swiper-slide-active{
                     .slider__img{
-                        transform: scale(0.8);
+                        transform: scale(0.7);
                     }
                     .slider__border{
                         width: 150px;
-                        margin-top: -30px;
-                        margin-bottom: 20px;
+                        margin-top: -80px;
+                        margin-bottom: 10px;
                     }
                     .slider__title{
+                        font-size: 28px;
                         margin-bottom: 0;
                     }
                 }
@@ -2881,7 +2888,7 @@
                     left: 0;
                 }
                 .swiper-pagination{
-                    top: 10px;
+                    top: 30px;
                 }
             }
             &__slider{
@@ -2894,8 +2901,10 @@
                     }
                 }
             }
+            .btn__more{
+                margin-top: 10px;
+            }
             button{
-
                 &:before{
                     width: 62%;
                     top: -31px;
@@ -2913,15 +2922,15 @@
                 width: 590px;
             }
             &__inner{
-                padding: 40px;
-                margin-top: 260px;
+                padding: 30px 40px;
+                margin-top: 210px;
 
                 .form__title{
-                    font-size: 55px;
+                    font-size: 45px;
                 }
                 .form__text{
-                    font-size: 20px;
-                    line-height: 26px;
+                    font-size: 18px;
+                    line-height: 22px;
                 }
                 .form__inputs{
                     .input__name, .input__email{
@@ -2970,8 +2979,20 @@
             }
         }
         .tent{
-            &__subtitle{
-                margin-top: 20px;
+            &__item_one, &__item_two, &__item_three, &__item_four{
+                .tent__subtitle{
+                    margin-top: 20px;
+                }
+                .tent__info{
+                    padding: 20px 0;
+                }
+                .tent__gallery{
+                    margin: 25px 0;
+
+                    &_item{
+                        height: 190px;
+                    }
+                }
             }
         }
         .portfolio{

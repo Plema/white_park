@@ -922,6 +922,7 @@
                 max-height: 480px;
 
                 margin: 0 auto;
+                padding-bottom: 40px;
 
                 .swiper-slide{
                     transform: scale(0.3);
@@ -996,7 +997,7 @@
         .own__reviews{
             .swiper-container{
                 margin: 0 auto;
-                max-height: 520px;
+                max-height: 580px;
                 padding-bottom: 40px;
 
                 .swiper-slide{
@@ -1068,6 +1069,7 @@
             }
         }
         .own__reviews{
+            padding-top: 0;
             padding-bottom: 20px;
             .container{
                 overflow: visible;
@@ -1082,7 +1084,7 @@
                 transform: rotate(-90deg);
             }
             .swiper-container{
-                max-height: 600px;
+                max-height: 640px;
 
                 overflow: hidden;
                 margin: 0 auto;
@@ -1189,7 +1191,7 @@
 
             .swiper-container{
                 width: 1000px;
-                max-height: 700px;
+                max-height: 740px;
 
                 padding: 50px 0 100px;
 

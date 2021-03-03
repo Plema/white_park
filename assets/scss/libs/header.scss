@@ -280,6 +280,7 @@
 @media (min-width: 1024px) {
     .header{
         width: 300px;
+        height: 0;
         background-color: transparent;
 
         left: auto;
@@ -538,11 +539,13 @@
         &__inner{
             .header__info{
                 .header__logo_dark{
-                    width: 250px;
+                    width: 200px;
     
                     margin-top: -60px;
                 }
                 .nav{
+                    margin-top: -20px;
+                    margin-bottom: 30px;
                     .nav__inner{
                         li{
                             padding-bottom: 20px;
@@ -589,7 +592,8 @@
         &__inner{
             .header__info{
                 .nav{
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
+                    margin-top: 20px;
 
                     &__link{
                         line-height: 2.5;
@@ -600,6 +604,7 @@
                     }
                 }
                 .header__logo_dark{
+                    width: 250px;
                     margin-top: -30px;
                 }
             }

@@ -1,5 +1,5 @@
 .contacts{
-    padding: 80px 0 0;
+    padding: 40px 0 0;
 
     position: relative;
     &__img{
@@ -249,7 +249,7 @@
         padding-top: 20px;
 
         &__img{
-            width: 515px;
+            width: 400px;
 
             margin-left: 0;
 
@@ -260,24 +260,24 @@
             }
         }
         &__inner{
-            width: 515px;
+            width: 400px;
 
             padding: 0 20px;
             margin-left: 0;
 
             .contacts__title{
-                font-size: 50px;
-                padding-top: 20px;
+                font-size: 46px;
+                padding-top: 0px;
             }
             .contacts__address{
                 &_text{
-                    font-size: 24px;
-                    line-height: 36px;
+                    font-size: 20px;
+                    line-height: 22px;
 
-                    margin-bottom: 14px;
+                    margin-bottom: 10px;
                 }
                 .route{
-                    font-size: 24px;
+                    font-size: 20px;
                 }
             }
             .contacts__phones{
@@ -287,8 +287,8 @@
                     font-size: 24px;
                 }
                 .contacts__phone{
-                    font-size: 24px;
-                    line-height: 28px;
+                    font-size: 20px;
+                    line-height: 22px;
 
                     margin-top: 10px;
 

@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(document).ready(function() {
         $('.fullpage').fullpage({
             scrollOverflow: true,
+            responsiveWidth: 1024,
         });
     });
 
@@ -75,16 +76,13 @@ $(document).ready(function() {
         slidesPerView: 1.5,
         centeredSlides: true,
         roundLengths: true,
-        speed: 300,
+        speed: 1000,
         loop: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
         },
         breakpoints: {
-            /* 768: {
-                spaceBetween: -200,
-            },
             1024: {
                 spaceBetween: -340,
             },
@@ -99,7 +97,7 @@ $(document).ready(function() {
             },
             1920: {
                 spaceBetween: -320,
-            }, */
+            },
         }
     });
 
