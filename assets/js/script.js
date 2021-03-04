@@ -2,6 +2,8 @@ $(document).ready(function() {
     // full page
     $(document).ready(function() {
         $('.fullpage').fullpage({
+            anchors: ['section1', 'section2', 'section3', 'section4','section5', 'section6', 'section7', 'section8'],
+
             scrollOverflow: true,
             responsiveWidth: 1024,
             onLeave: function(origin, destination, direction){
@@ -168,8 +170,8 @@ $(document).ready(function() {
         $('.' + link).removeClass('yes');
         $('.' + link).addClass('on');
     });
-    
-    
+
+
     // Show/hide nav on main
     $('.nav__toggle').on("click", function(e) {
         e.preventDefault();

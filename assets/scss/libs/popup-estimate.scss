@@ -60,7 +60,7 @@
     }
     .input__name, .input__phone, .input__email{
         display: flex;
-        width: 300px;
+        width: 100%;
 
         font-family: 'Montserrat-regular';
         font-size: 14px;
@@ -224,6 +224,7 @@
         }
         .input__name, .input__phone, .input__email{
             margin: 0 0 10px;
+            width: 300px;
         }
         .btn__send{
             margin: 0;
