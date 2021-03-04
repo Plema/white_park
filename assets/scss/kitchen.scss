@@ -7,6 +7,9 @@
 
         background: url('../img/kitchen-intro-bg.png') no-repeat center/cover;
 
+        position: relative;
+        z-index: 20;
+
         &__title{
             font-family: 'Alice';
             font-size: 24px;
@@ -142,6 +145,9 @@
         height: auto;
 
         padding-top: 0;
+
+        position: relative;
+        z-index: 5;
 
         .container{
             position: relative;
@@ -430,6 +436,8 @@
         background-size: cover;
 
         padding: 48px 0;
+        position: relative;
+        z-index: 5;
 
         &__social{
             display: none;

@@ -45,6 +45,16 @@ $(document).ready(function() {
                     }
                 }
             },
+            afterLoad: function(origin, destination, direction){
+                var leavingSection = this;
+        
+                if(origin.index == 4 && direction =='down'){
+                    $('.portfolio__title_img').addClass('portfolio-active');
+
+                } else if(origin.index == 5 && direction =='up'){
+                    $('.portfolio__title_img').removeClass('portfolio-active');
+                }
+            }
         });
     });
     

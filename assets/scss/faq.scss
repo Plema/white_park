@@ -5,6 +5,9 @@
         background: -moz-linear-gradient(top, rgba(165, 239, 255, 0.5), rgba(255, 255, 255, 0));
         background: -webkit-linear-gradient(top, rgba(165, 239, 255, 0.5), rgba(255, 255, 255, 0));
 
+        position: relative;
+        z-index: 50;
+
         .container{
             padding: 80px 10px 40px;
         }
@@ -79,7 +82,6 @@
 
         padding: 48px 0;
         position: relative;
-
 
         &__title{
             font-family: 'Alice';
