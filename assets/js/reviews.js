@@ -162,4 +162,30 @@ $(document).ready(function() {
         $('.popup-estimate .estimate').removeClass('show-estimate');
         $('.popup-estimate .estimate').addClass('hide-estimate');
     });
+
+    //Zvonok-popup
+    // show footer
+    $('.header__btn').click(function() {
+        $('.popup-zvonok .zvonok').removeClass('hide-zvonok');
+        $('.popup-zvonok .zvonok').addClass('show-zvonok');
+
+    });
+    // hide footer
+    $('.close-popup-zvonok').click(function() {
+        $('.popup-zvonok .zvonok').removeClass('show-zvonok');
+        $('.popup-zvonok .zvonok').addClass('hide-zvonok');
+
+    });
+
+    //Zayavka-popup
+    // show footer
+    $('.intro__btn').click(function() {
+        $('.popup-app .app').removeClass('hide-app');
+        $('.popup-app .app').addClass('show-app');
+    });
+    // hide footer
+    $('.close-popup-app').click(function() {
+        $('.popup-app .app').removeClass('show-app');
+        $('.popup-app .app').addClass('hide-app');
+    });
 });

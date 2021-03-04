@@ -78,4 +78,18 @@ $(document).ready(function() {
         $('.popup-estimate .estimate').removeClass('show-estimate');
         $('.popup-estimate .estimate').addClass('hide-estimate');
     });
+
+    //Zvonok-popup
+    // show footer
+    $('.header__btn').click(function() {
+        $('.popup-zvonok .zvonok').removeClass('hide-zvonok');
+        $('.popup-zvonok .zvonok').addClass('show-zvonok');
+
+    });
+    // hide footer
+    $('.close-popup-zvonok').click(function() {
+        $('.popup-zvonok .zvonok').removeClass('show-zvonok');
+        $('.popup-zvonok .zvonok').addClass('hide-zvonok');
+
+    });
 });
