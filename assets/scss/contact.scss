@@ -85,10 +85,15 @@
 
                                 margin-bottom: 10px;
                             }
-                            p{
-                                font-family: 'Montserrat-semiBold';
-                                font-size: 14px;
-                                margin: 10px 0;
+                            .phone__inner{
+                                display: flex;
+                                flex-direction: column;
+                                
+                                a{
+                                    font-family: 'Montserrat-semiBold';
+                                    font-size: 14px;
+                                    margin: 10px 0;
+                                }
                             }
                         }
                         .info__email{

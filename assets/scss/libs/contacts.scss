@@ -52,6 +52,9 @@
             margin-top: 22px;
             text-align: center;
 
+            display: flex;
+            flex-direction: column;
+
             i{
                 font-size: 30px;
                 color: #74CFE3; 

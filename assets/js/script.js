@@ -287,7 +287,7 @@ $(document).ready(function() {
 
     // Video popup-portfolio
     //show biz
-    $('.biz-video .portfolio__play').click(function() {
+    $('.biz-video').click(function() {
         $('.popup-video-1').removeClass('hide-video-portfolio');
         $('.popup-video-1').addClass('show-video-portfolio');
 
@@ -302,8 +302,15 @@ $(document).ready(function() {
         $('.popup-video-1 iframe').attr('src', '');
     });
 
+    $('.biz-video').mouseover(function() {
+        $('.biz-video').css({'background-size': 'auto 120%'});
+    });
+    $('.biz-video').mouseout(function() {
+        $('.biz-video').css({'background-size': 'auto 100%'});
+    });
+
     //show pr
-    $('.pr-video .portfolio__play').click(function() {
+    $('.pr-video').click(function() {
         $('.popup-video-2').removeClass('hide-video-portfolio');
         $('.popup-video-2').addClass('show-video-portfolio');
 
@@ -318,9 +325,16 @@ $(document).ready(function() {
         $('.popup-video-2 iframe').attr('src', '');
     });
 
+    $('.pr-video').mouseover(function() {
+        $('.pr-video').css({'background-size': 'auto 120%'});
+    });
+    $('.pr-video').mouseout(function() {
+        $('.pr-video').css({'background-size': 'auto 100%'});
+    });
+
     //Gallery-popup biz
     // show
-    $('.biz .portfolio__photo').click(function() {
+    $('.biz').click(function() {
         $('.popup-prj-1').removeClass('hide-gallery');
         $('.popup-prj-1').addClass('show-gallery');
 
@@ -335,9 +349,16 @@ $(document).ready(function() {
         $('.popup-prj-1').addClass('hide-gallery');
     });
 
+    $('.biz').mouseover(function() {
+        $('.biz').css({'background-size': 'auto 120%'});
+    });
+    $('.biz').mouseout(function() {
+        $('.biz').css({'background-size': 'auto 100%'});
+    });
+
     //Gallery-popup pr
     // show
-    $('.pr .portfolio__photo').click(function() {
+    $('.pr').click(function() {
         $('.popup-prj-2').removeClass('hide-gallery');
         $('.popup-prj-2').addClass('show-gallery');
 
@@ -351,6 +372,13 @@ $(document).ready(function() {
         $('.popup-prj-2').addClass('hide-gallery');
     });
 
+    $('.pr').mouseover(function() {
+        $('.pr').css({'background-size': 'auto 120%'});
+    });
+    $('.pr').mouseout(function() {
+        $('.pr').css({'background-size': 'auto 100%'});
+    });
+
     //Estimate-popup
     // show footer
     $('.footer__calc').click(function() {
@@ -362,6 +390,7 @@ $(document).ready(function() {
         $('.popup-estimate .estimate').removeClass('show-estimate');
         $('.popup-estimate .estimate').addClass('hide-estimate');
     });
+    
     // show portfolio
     $('.portfolio__btn').click(function() {
         $('.popup-estimate .estimate').removeClass('hide-estimate');

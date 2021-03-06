@@ -728,10 +728,8 @@
             .portfolio__content_video{
                 margin-top: 36px;
                 background: url('../img/video-bis.png') no-repeat;
-                background-size: cover;
-                background-position: center;
-
-                position: relative;
+    
+                cursor: pointer;
 
                 .portfolio__play{
                     position: absolute;
@@ -770,13 +768,15 @@
                         color: #fff;
                     }
                 }
+                &:hover{
+                    background-size: auto 120%;
+                }
             }
+            
             .portfolio__content_photo{
                 background: url('../img/photo-bis.png') no-repeat;
-                background-size: cover;
-                background-position: center;
 
-                position: relative;
+                cursor: pointer;
 
                 .portfolio__photo{
                     position: absolute;
@@ -803,6 +803,9 @@
                         font-size: 16px;
                         color: #fff;
                     }
+                }
+                &:hover{
+                    background-size: auto 120%;
                 }
             }
         }
@@ -852,10 +855,8 @@
             .portfolio__content_video{
                 margin-top: 36px;
                 background: url('../img/video-pr.png') no-repeat;
-                background-size: cover;
-                background-position: center;
 
-                position: relative;
+                cursor: pointer;
 
                 .portfolio__play{
                     position: absolute;
@@ -894,13 +895,14 @@
                         color: #fff;
                     }
                 }
+                &:hover{
+                    background-size: auto 120%;
+                }
             }
             .portfolio__content_photo{
                 background: url('../img/photo-pr.png') no-repeat;
-                background-size: cover;
-                background-position: center;
-
-                position: relative;
+                
+                cursor: pointer;
 
                 .portfolio__photo{
                     position: absolute;
@@ -927,6 +929,9 @@
                         font-size: 16px;
                         color: #fff;
                     }
+                }
+                &:hover{
+                    background-size: auto 120%;
                 }
             }
         }

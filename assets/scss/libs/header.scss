@@ -75,6 +75,8 @@
 
                         a{
                             color: #fff;
+                            position: relative;
+                            z-index: 6;
                         }
     
                         &:hover{
@@ -129,7 +131,10 @@
 
                 &_info{
                     color: #fff;
-                    p{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    a{
                         font-family: "Montserrat-regular";
                         font-size: 16px;
                         line-height: 24px;
@@ -383,10 +388,12 @@
                         i{
                             font-size: 20px;
                         }
-    
-                        p{
-                            font-size: 14px;
-                            color: #373737;
+                        &_info{
+                            a{
+                                font-size: 14px;
+                                color: #373737;
+                            }
+
                         }
                     }
                     .header__btn{

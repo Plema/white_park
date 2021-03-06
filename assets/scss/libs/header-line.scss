@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 30;
 
     padding: 0 10px;
 
@@ -129,7 +129,9 @@
                 }
 
                 &_info{
-                    p{
+                    display: flex;
+                    flex-direction: column;
+                    a{
                         font-family: "Montserrat-regular";
                         font-size: 16px;
                         line-height: 24px;
@@ -348,6 +350,8 @@
 
                             a{
                                 color: #373737;
+                                position: relative;
+                                z-index: 6;
                             }
 
                             &:hover{
@@ -384,11 +388,14 @@
                         i{
                             font-size: 20px;
                         }
-    
-                        p{
-                            font-size: 14px;
+                        &_info{
                             color: #373737;
+                            a{
+                                font-size: 14px;
+                                color: #373737;
+                            }
                         }
+                        
                     }
                     .header__btn{
                         width: 269px;
