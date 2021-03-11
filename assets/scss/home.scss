@@ -187,6 +187,15 @@
                 &:last-of-type{
                     margin-bottom: 0;
                 }
+                &:hover{
+                    .advantages__list_title{
+                        .list__marker{
+                            &_outline{
+                                opacity: 1;
+                            }
+                        }
+                    }    
+                }
             }
 
             &_title{
@@ -194,6 +203,7 @@
                 align-items: center;
 
                 .list__marker{
+                    display: block;
                     width: 16px;
                     height: 16px;
 
@@ -212,6 +222,10 @@
                         position: absolute;
                         top: -10px;
                         left: -13px;
+
+                        opacity: 0;
+
+                        transition: opacity 0.2s linear;
                     }
                 }
                 .list__subtitle{

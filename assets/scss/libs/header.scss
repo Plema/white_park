@@ -57,7 +57,7 @@
                         padding-bottom: 3px;
                     }
                     .nav__link{
-                        font-family: 'Basis-regular';
+                        font-family: 'Montserrat-regular';
                         font-size: 18px;
                         font-weight: 400;
                         line-height: 30px;
@@ -332,7 +332,7 @@
                     display: block;
                     width: 200px;
                     max-width: 314px;
-                    margin: -40px auto 20px;
+                    margin: -60px auto 20px;
                 }
                 .nav{
                     padding-left: 47px;
@@ -344,6 +344,7 @@
                             padding-bottom: 8px;
                         }
                         .nav__link{
+                            font-family: 'Montserrat-semiBold';
                             font-size: 18px;
                             line-height: 18px;
                             color: #373737;
@@ -560,12 +561,13 @@
                 .header__logo_dark{
                     width: 230px;
     
-                    margin-top: -40px;
+                    margin-top: -60px;
                 }
                 .nav{
                     margin-top: -20px;
                     margin-bottom: 30px;
                     .nav__inner{
+                        margin-top: -30px;
                         li{
                             padding-bottom: 20px;
                         }

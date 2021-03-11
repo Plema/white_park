@@ -240,29 +240,38 @@ $(document).ready(function() {
     });
 
     // Show/hide advantages
+    /* $('.advantages__list_item').mouseover(function() {
+        $(this).find('.list__marker_outline').css({'opacity': "1"});
+    });
+    $('.advantages__list_item').mouseout(function() {
+        $(this).find('.list__marker_outline').css({'opacity': "0"});
+    }); */
+
     $('.advantages__list_item').click(function() {
         //show
-        if($(this).find('.advantages__list_text').hasClass('hide') && $(this).find('.advantages__list_text').hasClass('hide')){
+        if($(this).find('.advantages__list_text').hasClass('hide')){
 
             $('.advantages__list_text').slideUp(200).removeClass('show');
             $('.advantages__list_text').addClass('hide');
             $(this).find('.advantages__list_text').slideDown(200).removeClass('hide');
             $(this).find('.advantages__list_text').slideDown(200).addClass('show');
-
-            $('.list__marker_outline').fadeOut(200).removeClass('show'); 
+            
+            /* $('.list__marker_outline').fadeOut(200).removeClass('show'); 
             $('.list__marker_outline').addClass('hide');
             $(this).find('.list__marker_outline').fadeIn(200).removeClass('hide');
-            $(this).find('.list__marker_outline').fadeIn(200).addClass('show');
+            $(this).find('.list__marker_outline').fadeIn(200).addClass('show'); */
 
-        } else if($(this).find('.advantages__list_text').hasClass('show') && $(this).find('.advantages__list_text').hasClass('show')){
+        } else if($(this).find('.advantages__list_text').hasClass('show')){
 
             $(this).find('.advantages__list_text').slideUp(200).removeClass('show');
             $(this).find('.advantages__list_text').addClass('hide');
+            
+            /* $(this).find('.list__marker_outline').fadeOut(200).removeClass('show');
+            $(this).find('.list__marker_outline').addClass('hide'); */
 
-            $(this).find('.list__marker_outline').fadeOut(200).removeClass('show');
-            $(this).find('.list__marker_outline').addClass('hide');
         }
     });
+
 
     // Video-popup
     //show intro

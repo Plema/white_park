@@ -312,17 +312,28 @@
         padding-top: 0;
 
         .contacts__map{
-            padding-top: 50px;
+            padding-top: 10px;
+
             .contacts__title{
+                font-size: 60px;
                 margin-left: 120px;
                 text-align: left;
             }
             .contacts__text{
+                font-size: 18px;
                 margin-left: 120px;
                 text-align: left;
+                margin-top: 10px;
             }
             .contact__bot{
-                bottom: -130px;
+                bottom: 30px;
+
+                &_text{
+                    left: 30px;
+                }
+            }
+            .makeroute{
+                margin-top: 10px;
             }
         }
     }   
@@ -331,7 +342,7 @@
     .contacts__footer{
         .contacts__map{
             .contacts__title{
-                font-size: 80px;
+                font-size: 70px;
                 margin-left: 150px;
             }
             .contacts__text{
@@ -375,6 +386,7 @@
                 margin-left: 250px;
             }
             .makeroute{
+                margin-top: 130px;
                 &__main{
                     width: 61px;
                     height: 254px;
