@@ -8,6 +8,8 @@
         height: 100%;
 
         overflow-y: hidden;
+
+        position: relative;
     }
     .on{
         opacity: 0;
@@ -15,6 +17,57 @@
     }
     .map-link{
         cursor: pointer;
+    }
+    .group1{
+        transform: translate(1700px, 580px);
+    }
+    .group2{
+        transform: translate(740px, 280px);
+    }
+    .group3{
+        transform: translate(2300px, 580px);
+    }
+    .group4{
+        transform: translate(14500px, 500px);
+    }
+    .group5{
+        transform: translate(900px, 250px);
+    }
+    .group6{
+        transform: translate(2100px, 490px);
+    }
+    .group7{
+        transform: translate(640px, 10px);
+    }
+    .group8{
+        transform: translate(1900px, 260px);
+    }
+    .group9{
+        transform: translate(2350px, 440px);
+    }
+    .group10{
+        transform: translate(1730px, 30px);
+    }
+    .group11{
+        transform: translate(2020px, -130px);
+    }
+    .group12{
+        transform: translate(300px, -670px);
+    }
+    .group13{
+        transform: translate(1250px, -490px);
+    }
+    .group14{
+        transform: translate(1250px, 60px);
+    }
+    .group15{
+        transform: translate(2000px, -1000px);
+    }
+    .group16{
+        transform: translate(2000px, -700px);
+    }
+    .group17{
+        transform: translate(2500px, -650px);
     }
     .yes{
         opacity: 1;
