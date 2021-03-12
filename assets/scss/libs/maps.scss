@@ -3,6 +3,22 @@
     overflow-y: hidden;
     height: 100vh;
 
+    position: relative;
+
+    &__title{
+        font-family: 'Alice';
+        font-size: 50px;
+        font-weight: normal;
+        color: #74CFE3;
+        text-shadow: 5px 4px 15px #000000;
+
+        margin: 0;
+
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+    }
     svg{
         width: auto;
         height: 100%;
@@ -74,6 +90,16 @@
         transition: all 0.3s;
     }
 }
+@media (min-width: 768px) {
+    .maps{
+        &__title{
+            font-size: 80px;
+
+            top: 30px;
+            left: 40px;
+        }
+    }
+}
 @media (min-width: 1024px) {
     .maps{
         display: flex;
@@ -82,9 +108,16 @@
         align-items: center;
 
         height: 100vh;
-        background: url('../img/blur-bg.png') no-repeat center/cover;
+        background: url('../img/bg-map.png') no-repeat center/cover;
 
         overflow: scroll;
+
+        &__title{
+            top: 43%;
+            left: -70px;
+
+            transform: rotate(-90deg);
+        }
 
         svg{
             width: 80%;
@@ -94,10 +127,30 @@
         }
     }
 }
+@media (min-width: 1280px) {
+    .maps{
+        &__title{
+            left: -60px;
+        }
+    }
+}
 @media (min-width: 1600px) {
     .maps{
+        &__title{
+            font-size: 96px;
+
+            left: -30px;
+        }
         svg{
             width: 70%;
+        }
+    }
+}
+@media (min-width: 1920px) {
+    .maps{
+        &__title{
+            font-size: 140px;
+            left: -70px
         }
     }
 }
