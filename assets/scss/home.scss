@@ -46,6 +46,13 @@
             }
         }
     }
+    &__text{
+        font-family: 'Montserrat-regular';
+        font-size: 12px;
+        text-align: center;
+
+        margin-top: 20px;
+    }
     @keyframes moveit {
         0% {
           transform: translateY(0px);
@@ -84,6 +91,11 @@
                 width: 8px;
                 height: 8px;
             }
+        }
+        &__text{
+            font-size: 16px;
+
+            margin-top: 40px;
         }
     } 
 }

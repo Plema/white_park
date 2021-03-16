@@ -125,6 +125,24 @@
             border-radius: 10px;
             overflow: scroll;
         }
+        // width
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background: #025142;
+        }
+
+        // Track
+        &::-webkit-scrollbar-track {
+            background: #025142;
+        }
+
+        // Handle
+        &::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            transition: all 0.5s;
+            background: radial-gradient(50% 50% at 50% 50%,#119e6b 0%,#16875e 100%);
+        }
     }
 }
 @media (min-width: 1280px) {
