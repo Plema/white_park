@@ -75,16 +75,17 @@ $(document).ready(function() {
             slidesToScroll: 1,
             asNavFor: '.tent-slider',
             focusOnSelect: true,
+            centerMode: true,
             prevArrow: $('.prev-tent'),
             nextArrow: $('.next-tent'),
             // variableWidth: true,
             responsive: [
                 {
-                    
-                    breakpoint: 768,
+                    breakpoint: 1024,
                     settings: {
                         slidesToShow: 1,
-                    }
+                        centerMode: false,
+                    },
                 }
             ]
 
@@ -156,6 +157,11 @@ $(document).ready(function() {
                 spaceBetween: -500,
             }
         }
+    });
+
+    // placeholder
+    $(document).ready(function() {
+        $('.preloader').delay(400).fadeOut('slow');
     });
 
     //MAP
@@ -247,30 +253,30 @@ $(document).ready(function() {
         $(this).find('.list__marker_outline').css({'opacity': "0"});
     }); */
 
-    $('.advantages__list_item').click(function() {
-        //show
-        if($(this).find('.advantages__list_text').hasClass('hide')){
+    // $('.advantages__list_item').hover(function() {
+    //     //show
+    //     if($(this).find('.advantages__list_text').hasClass('hide')){
 
-            $('.advantages__list_text').slideUp(200).removeClass('show');
-            $('.advantages__list_text').addClass('hide');
-            $(this).find('.advantages__list_text').slideDown(200).removeClass('hide');
-            $(this).find('.advantages__list_text').slideDown(200).addClass('show');
+    //         $('.advantages__list_text').slideUp(200).removeClass('show');
+    //         $('.advantages__list_text').addClass('hide');
+    //         $(this).find('.advantages__list_text').slideDown(200).removeClass('hide');
+    //         $(this).find('.advantages__list_text').slideDown(200).addClass('show');
             
-            /* $('.list__marker_outline').fadeOut(200).removeClass('show'); 
-            $('.list__marker_outline').addClass('hide');
-            $(this).find('.list__marker_outline').fadeIn(200).removeClass('hide');
-            $(this).find('.list__marker_outline').fadeIn(200).addClass('show'); */
+    //         /* $('.list__marker_outline').fadeOut(200).removeClass('show'); 
+    //         $('.list__marker_outline').addClass('hide');
+    //         $(this).find('.list__marker_outline').fadeIn(200).removeClass('hide');
+    //         $(this).find('.list__marker_outline').fadeIn(200).addClass('show'); */
 
-        } else if($(this).find('.advantages__list_text').hasClass('show')){
+    //     } else if($(this).find('.advantages__list_text').hasClass('show')){
 
-            $(this).find('.advantages__list_text').slideUp(200).removeClass('show');
-            $(this).find('.advantages__list_text').addClass('hide');
+    //         $(this).find('.advantages__list_text').slideUp(200).removeClass('show');
+    //         $(this).find('.advantages__list_text').addClass('hide');
             
-            /* $(this).find('.list__marker_outline').fadeOut(200).removeClass('show');
-            $(this).find('.list__marker_outline').addClass('hide'); */
+    //         /* $(this).find('.list__marker_outline').fadeOut(200).removeClass('show');
+    //         $(this).find('.list__marker_outline').addClass('hide'); */
 
-        }
-    });
+    //     }
+    // });
 
 
     // Video-popup

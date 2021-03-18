@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    // placeholder
+    $(document).ready(function() {
+        $('.preloader').delay(400).fadeOut('slow');
+    });
+    
     // full page
     $(document).ready(function() {
         $('.fullpage').fullpage({

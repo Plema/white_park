@@ -1,5 +1,9 @@
 $(document).ready(function() {
-
+    
+    // placeholder
+    $(document).ready(function() {
+        $('.preloader').delay(400).fadeOut('slow');
+    });
     // Video-popup intro
     //show intro
     $('.intro__play').click(function() {

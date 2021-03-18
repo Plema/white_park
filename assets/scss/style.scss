@@ -293,10 +293,9 @@ a {
 }
 @media (min-width: 1600px) {
     .prev-tent{
+        top: -5px;
         width: 59px;
         height: 59px;
-
-        top: 0px;
 
         &:before{
             font-size: 32px;
@@ -304,10 +303,9 @@ a {
         }
     }
     .next-tent{
+        top: -5px;
         width: 59px;
         height: 59px;
-
-        top: 0px;
 
         &:before{
             font-size: 32px;
@@ -443,7 +441,7 @@ a {
             }
             .slick-slide{
                 width: auto;
-                font-size: 25px;
+                font-size: 35px;
                 color: #000;
             }
             .slick-current{
@@ -457,6 +455,16 @@ a {
         .tent__title_slider{
             .slick-slide{
                 font-size: 28px;
+            }
+            .slick-current{
+                transform: scale(1.2);
+            }
+        }
+    }
+    @media (min-width: 1600px){
+        .tent__title_slider{
+            .slick-current{
+                transform: scale(1.4);
             }
         }
     }

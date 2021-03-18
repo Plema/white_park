@@ -295,7 +295,11 @@
                                 opacity: 1;
                             }
                         }
-                    }    
+                    } 
+                    .advantages__list_text{
+                        opacity: 1;
+                        height: auto;
+                    }   
                 }
             }
 
@@ -345,6 +349,12 @@
                 color: #000;
                 margin-left: 42px;
 
+                height: 0px;
+                opacity: 0;
+
+                cursor: pointer;
+
+                transition: all 0.2s linear;
             }
         }
         &__btn{
@@ -1940,7 +1950,12 @@
         }
         .tent{
             padding-top: 60px;
+
             &__title_slider{
+                left: 50%;
+                width: 120%;
+                position: relative;
+                transform: translate(-50%, 0);
 
                 .tent__title{
                     font-size: 24px;
@@ -2097,7 +2112,7 @@
                         box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.25);
                     }
                     .slider__border{
-                        margin-top: 0;
+                        margin-top: -15px;
                     }
                 }
                 .swiper-button-next, .swiper-button-prev{
@@ -2153,7 +2168,7 @@
                 top: 150px;
             }
             .btn__more{
-                margin-top: 20px;
+                margin-top: 10px;
             }
         }
         .form{
@@ -2555,7 +2570,7 @@
         .tent{
             &__title_slider{
                 .tent__title{
-                    font-size: 36px;
+                    font-size: 34px;
                 }
                 
             }
@@ -2628,7 +2643,7 @@
                         transform: scale(0.8);
                     }
                     .slider__border{
-                        margin-top: 20px;
+                        margin-top: 0px;
                     }
                 }
                 .swiper-button-next, .swiper-button-prev{
@@ -2818,7 +2833,7 @@
                 padding: 0 60px;
 
                 .tent__title{
-                    font-size: 38px;
+                    font-size: 32px;
 
                     margin-bottom: 20px;
                 }
