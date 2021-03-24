@@ -408,6 +408,7 @@
         &__buttons{
             .footer__calc, .footer__download{
                 margin: 0;
+
                 &_outline{
                     width: 40px;
                     height: 40px;
@@ -420,6 +421,10 @@
                 }
                 &_text{
                     font-size: 12px;
+
+                    width: 230px;
+                    margin-top: -12px;
+                    padding-left: 0;
                 }
             }
         }
@@ -472,14 +477,14 @@
             }
         }
         &__buttons{
+            width: 28%;
             .footer__calc, .footer__download{
+
                 &_text{
                     font-family: 'Montserrat-semiBold';
                     font-size: 14px;
 
-                    width: 210px;
-
-                    margin-right: 30px;
+                    width: 270px;
                 }
             }
         }
@@ -523,14 +528,6 @@
         }
         &__info{
             margin-top: 20px;
-        }
-        &__buttons{
-            .footer__calc, .footer__download{
-                &_text{
-                    width: 220px;
-                    margin-right: 0;
-                }
-            }
         }
     }
 }

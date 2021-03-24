@@ -1,6 +1,7 @@
 $(document).ready(function() {
-    // full page
-    $(document).ready(function() {
+
+    if( window.innerWidth >= 1024 ){
+        // full page
         $('.fullpage').fullpage({
             anchors: ['section1', 'section2', 'section3', 'section4','section5', 'section6', 'section7', 'section8'],
 
@@ -47,18 +48,9 @@ $(document).ready(function() {
                     }
                 }
             },
-            afterLoad: function(origin, destination, direction){
-                var leavingSection = this;
-        
-                if(origin.index == 4 && direction =='down'){
-                    $('.portfolio__title_img').addClass('portfolio-active');
-
-                } else if(origin.index == 5 && direction =='up'){
-                    $('.portfolio__title_img').removeClass('portfolio-active');
-                }
-            }
         });
-    });
+    } else {
+   }
     
     
     //Slider for tents
@@ -109,7 +101,7 @@ $(document).ready(function() {
             asNavFor: '.project-popup__slider_img, .project-popup__info_slider',
             focusOnSelect: true,
             infinite: true,
-            arrow: true,
+            arrows: true,
             // variableWidth: true,
             responsive: [
                 {
@@ -245,38 +237,22 @@ $(document).ready(function() {
         }
     });
 
-    // Show/hide advantages
-    /* $('.advantages__list_item').mouseover(function() {
-        $(this).find('.list__marker_outline').css({'opacity': "1"});
+    $('.advantages__list_item').hover(function() {
+        //show
+        if($(this).find('.advantages__list_text').hasClass('hide')){
+
+            $('.advantages__list_text').slideUp(200).removeClass('show');
+            $('.advantages__list_text').addClass('hide');
+            $(this).find('.advantages__list_text').slideDown(200).removeClass('hide');
+            $(this).find('.advantages__list_text').slideDown(200).addClass('show');
+
+        } else if($(this).find('.advantages__list_text').hasClass('show')){
+
+            $(this).find('.advantages__list_text').slideUp(200).removeClass('show');
+            $(this).find('.advantages__list_text').addClass('hide');
+
+        }
     });
-    $('.advantages__list_item').mouseout(function() {
-        $(this).find('.list__marker_outline').css({'opacity': "0"});
-    }); */
-
-    // $('.advantages__list_item').hover(function() {
-    //     //show
-    //     if($(this).find('.advantages__list_text').hasClass('hide')){
-
-    //         $('.advantages__list_text').slideUp(200).removeClass('show');
-    //         $('.advantages__list_text').addClass('hide');
-    //         $(this).find('.advantages__list_text').slideDown(200).removeClass('hide');
-    //         $(this).find('.advantages__list_text').slideDown(200).addClass('show');
-            
-    //         /* $('.list__marker_outline').fadeOut(200).removeClass('show'); 
-    //         $('.list__marker_outline').addClass('hide');
-    //         $(this).find('.list__marker_outline').fadeIn(200).removeClass('hide');
-    //         $(this).find('.list__marker_outline').fadeIn(200).addClass('show'); */
-
-    //     } else if($(this).find('.advantages__list_text').hasClass('show')){
-
-    //         $(this).find('.advantages__list_text').slideUp(200).removeClass('show');
-    //         $(this).find('.advantages__list_text').addClass('hide');
-            
-    //         /* $(this).find('.list__marker_outline').fadeOut(200).removeClass('show');
-    //         $(this).find('.list__marker_outline').addClass('hide'); */
-
-    //     }
-    // });
 
 
     // Video-popup
@@ -310,7 +286,7 @@ $(document).ready(function() {
         $('.popup-video-1 iframe').attr('src', video_data);
     });
     //hide biz
-    $('.close-popup-video').click(function() {
+    $('.close-video').click(function() {
         $('.popup-video-1').removeClass('show-video-portfolio');
         $('.popup-video-1').addClass('hide-video-portfolio');
 
@@ -333,7 +309,7 @@ $(document).ready(function() {
         $('.popup-video-2 iframe').attr('src', video_data);
     });
     //hide pr
-    $('.close-popup-video').click(function() {
+    $('.close-video').click(function() {
         $('.popup-video-2').removeClass('show-video-portfolio');
         $('.popup-video-2').addClass('hide-video-portfolio');
 

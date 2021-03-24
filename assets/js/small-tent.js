@@ -11,6 +11,7 @@ $(document).ready(function() {
             scrollOverflow: true,
             responsiveWidth: 1024,
         });
+
     });
 
     //Slider for project
@@ -29,7 +30,7 @@ $(document).ready(function() {
             asNavFor: '.project__slider_img, .project__info_slider',
             focusOnSelect: true,
             infinite: true,
-            // variableWidth: true,
+            arrows: true,
             responsive: [
                 {
                     breakpoint: 768,
@@ -38,7 +39,6 @@ $(document).ready(function() {
                     }
                 }
             ]
-
         });
     });
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
         
     });
 
-    // Slider kitchen
+    // Slider opp
     const swiper = new Swiper('.swiper-container', {
         spaceBetween: -120,
         slidesPerView: 1.5,

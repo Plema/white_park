@@ -107,7 +107,7 @@
         background: -webkit-linear-gradient(top, rgba(165, 239, 255, 0.5), rgba(255, 255, 255, 0));
 
         position: relative;
-        z-index: 50;
+        z-index: 5;
 
         .container{
             padding: 80px 10px 40px;
@@ -181,8 +181,12 @@
         background-position: center;
         background-size: cover;
 
-        padding: 48px 0;
+        // padding: 48px 0;
         position: relative;
+
+        .container{
+            padding: 48px 0;
+        }
 
         &__title{
             font-family: 'Alice';
@@ -654,7 +658,7 @@
 
             &__title_slider{
                 left: 50%;
-                width: 120%;
+                width: 115%;
                 position: relative;
                 transform: translate(-50%, 0);
 
@@ -983,6 +987,7 @@
             padding: 90px 0;
 
             &__title_slider{
+                width: 110%;
                 padding: 0 60px;
 
                 .tent__title{
@@ -1023,6 +1028,8 @@
                 font-size: 20px;
 
                 top: 0px;
+
+                margin-bottom: 0;
     
                 &:before{
                     top: -31px;

@@ -267,7 +267,7 @@
         &__inner{
             &_item{
                 background-color: rgba(116, 207, 227, 0.8);
-                border-radius: 50px;
+                -webkit-border-radius: 30px;
                 padding: 20px;
                 cursor: pointer;
 
@@ -458,6 +458,7 @@
             height: 17px;
 
             margin-right: 8px;
+            position: relative;
 
             border: 1px solid #74CFE3;
             border-radius: 5px;
@@ -536,9 +537,13 @@
         background-position: center;
         background-size: cover;
 
-        padding: 48px 0;
+        // padding: 48px 0;
         position: relative;
         z-index: 5;
+
+        .container{
+            padding: 48px 0;
+        }
 
         &__social{
             display: none;
@@ -1178,6 +1183,7 @@
                 transform: translate(-50%, -50%) scale(1.2);
             }
             .dish__img{
+                width: 45%;
                 margin-top: 60px;
             }
         }
@@ -1218,7 +1224,7 @@
 
             &__title_slider{
                 left: 50%;
-                width: 120%;
+                width: 115%;
                 position: relative;
                 transform: translate(-50%, 0);
 
@@ -1346,6 +1352,21 @@
                 font-size: 50px;
                 padding: 20px 0;
             }
+            &__inner{
+                .item__right{
+                    .advantages__inner_item{
+                        margin-bottom: 70px;
+                    }
+                }
+                .item__left{
+                    top: 80px;
+                    right: -20px;
+
+                    .advantages__inner_item{
+                        margin-bottom: 70px;
+                    }
+                }
+            }
             .btn__download{
                 width: 350px;
                 margin: 0;
@@ -1364,6 +1385,9 @@
             }
             .decor__img{
                 transform: translate(-50%, -50%) scale(1.5);
+            }
+            .dish__img{
+                width: 40%;
             }
         }
         .tent{
@@ -1425,13 +1449,13 @@
                     top: 20px;
 
                     .advantages__inner_item{
-                        margin-bottom: 50px;
+                        margin-bottom: 120px;
                     }
                 }
                 .item__left{
                     top: 100px;
                     .advantages__inner_item{
-                        margin-bottom: 50px;
+                        margin-bottom: 120px;
                     }
                 }
             }
@@ -1600,10 +1624,31 @@
                 padding-bottom: 50px;
             }
             &__inner{
-                .item__right, .item__left{
+                .item__right{
+                    left: -30px;
+
                     .advantages__inner_item{
                         width: 380px;
-                        margin-bottom: 70px;
+                        margin-bottom: 100px;
+
+                        .item__title{
+                            width: 340px;
+                            font-size: 24px;
+                        }
+                        .item__text{
+                            font-size: 16px;
+                        }
+                        .item__img{
+                            top: -13px;
+                        }
+                    }
+                }
+                .item__left{
+                    right: -60px;
+
+                    .advantages__inner_item{
+                        width: 380px;
+                        margin-bottom: 100px;
 
                         .item__title{
                             width: 340px;
@@ -1707,11 +1752,13 @@
 
             &__title_slider{
                 padding: 0 60px;
+                width: 110%;
 
                 .tent__title{
                     font-size: 32px;
 
                     margin-bottom: 20px;
+                    margin-top: 5px;
                 }
             }
             
@@ -1746,6 +1793,8 @@
                 font-size: 20px;
 
                 top: 0px;
+
+                margin-bottom: 0;
     
                 &:before{
                     top: -31px;
@@ -1784,13 +1833,33 @@
             }
         }
         .advantages{
+            height: 100vh;
+
             &__title{
                 font-size: 64px;
 
                 padding: 70px 0 50px;
             }
+            &__inner{
+                .item__right{
+                    .advantages__inner_item{
+                        margin-bottom: 170px;
+                    }
+                }
+                .item__left{
+                    top: 120px;
+                    right: -80px;
+                    
+                    .advantages__inner_item{
+                        margin-bottom: 170px;
+                    }
+                }
+            }
             .decor__img{
                 transform: translate(-50%, -50%) scale(2.2);
+            }
+            .dish__img{
+                width: 34%;
             }
         }
         .estimate{

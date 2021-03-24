@@ -97,6 +97,7 @@
             height: 17px;
 
             margin-right: 8px;
+            position: relative;
 
             border: 1px solid #74CFE3;
             border-radius: 5px;
@@ -280,7 +281,7 @@
                 font-size: 24px;
                 line-height: 30px;
             }
-            .input__name, .input__email{
+            .input__name, .input__phone{
                 width: 100%;
                 font-size: 16px;
     

@@ -103,7 +103,7 @@
     .intro{
         display: flex;
         align-items: center;
-        height: 100%;
+        height: 100vh;
 
         background: url('../img/small-tent-bg.png') no-repeat center/cover;
 
@@ -166,7 +166,7 @@
     }
     .seating{
         position: relative;
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -245,7 +245,7 @@
         }
     }
     .opp{
-        height: 100%;
+        height: 100vh;
         background: linear-gradient(358.59deg, #DEF9FF 1.64%, rgba(255, 255, 255, 0) 154.67%);
         display: flex;
         align-items: center;
@@ -271,6 +271,8 @@
         .swiper-container{
             width: 100%;
             padding: 30px 0;
+
+            position: relative;
 
             .swiper-slide{
                 display: flex;
@@ -335,6 +337,7 @@
                 }
             }
             .swiper-button-prev{
+                display: block;
                 width: 35px;
                 height: 35px;
             
@@ -345,12 +348,13 @@
             
                 position: absolute;
                 top: 50%;
-                left: 35px;
-                z-index: 1;
+                left: 20px;
+                z-index: 5;
 
                 transition: border 0.1s linear;
 
-                transform: translate(-50%);
+                // transform: translate(-50%);
+                -webkit-transform:translate3d(0,0,0);
             
                 &:before{
                     content: '\e801';
@@ -375,6 +379,7 @@
                 }
             }
             .swiper-button-next{
+                display: block;
                 width: 35px;
                 height: 35px;
             
@@ -385,11 +390,12 @@
             
                 position: absolute;
                 top: 50%;
-                right: 0;
-                z-index: 1;
+                right: 20px;
+                z-index: 5;
 
                 transition: border 0.1s linear;
-                transform: translate(-50%);
+                // transform: translate(-50%);
+                -webkit-transform:translate3d(0,0,0);
             
                 &:before{
                     content: '\e800';
@@ -421,7 +427,7 @@
         height: 100%;
         overflow: visible;
 
-        padding-top: 80px;
+        // padding-top: 80px;
 
         &__title{
             font-family: 'Alice';
@@ -440,8 +446,8 @@
                     padding: 0 40px;
                     margin-bottom: 20px;
 
-                    img{
-                        margin: 0 5px;
+                    div{
+                        margin: 0 4.5px;
                     }
                 }
             }
@@ -500,6 +506,7 @@
 
                 .project__social_img{
                     margin-bottom: 10px;
+                    height: 100%;
                 }
             }
         }
@@ -510,7 +517,7 @@
     .estimate{
         background: url('../img/tent-estimate-bg.png') no-repeat center/cover;
 
-        height: 100%;
+        height: 100vh;
 
         .container{
             padding-top: 100px;
@@ -588,6 +595,7 @@
             border-radius: 5px;
             filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.3));
             cursor: pointer;
+            position: relative;
 
             &:before{
                 display: none;
@@ -776,6 +784,14 @@
                     .slider__text{
                         font-size: 26px;
                     }
+                }
+                .swiper-button-next{
+                    top: 51%;
+                    right: 5px;
+                }
+                .swiper-button-prev{
+                    top: 51%;
+                    left: 5px;
                 }
             }
         }
@@ -975,22 +991,28 @@
                 padding: 0;
                 margin-top: 40px;
 
+                position: relative;
+
                 .swiper-slide{
                     transform: scale(0.4);
-
-                    .slider__img{
-                    }
                 }
                 .swiper-slide-active{
                     transform: scale(0.7);
 
-                    .slider__img{
-                    }
                     .slider__text{
                         font-size: 24px;
                     }
                 }
-                .swiper-button-prev, .swiper-button-next{
+                .swiper-button-prev{
+                    left: 25px;
+                    border: 3px solid #fff;
+
+                    &:hover:before{
+                        color: #fff;
+                    }
+                }
+                .swiper-button-next{
+                    right: 25px;
                     border: 3px solid #fff;
 
                     &:hover:before{
@@ -1004,6 +1026,7 @@
         }
         .estimate{
             position: relative;
+            height: 100vh;
 
             .container{
                 padding-top: 150px;
@@ -1379,8 +1402,8 @@
                     width: 59px;
                     height: 59px;
 
-                    left: 5%;
-                    top: 48%;
+                    left: 3%;
+                    top: 50%;
 
                     &:before{
                         font-size: 32px;
@@ -1392,8 +1415,8 @@
                     width: 59px;
                     height: 59px;
 
-                    right: 0;
-                    top: 48%;
+                    right: 3%;
+                    top: 50%;
 
                     &:before{
                         font-size: 32px;

@@ -122,7 +122,7 @@ a {
     color: transparent;
 
     position: absolute;
-    top: 0px;
+    top: 48px;
     right: 10px;
     z-index: 2;
 
@@ -159,7 +159,7 @@ a {
     color: transparent;
 
     position: absolute;
-    top: 0px;
+    top: 48px;
     left: 10px;
     z-index: 2;
 
@@ -267,15 +267,29 @@ a {
         top: 10px;
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .next-tent{
-        top: 0;
+        top: 57px;
     }
     .prev-tent{
-        top: 0;
+        top: 57px;
+    }
+}
+@media (min-width: 1024px) {
+    .next-tent{
+        top: 45px;
+    }
+    .prev-tent{
+        top: 45px;
     }
 }
 @media (min-width: 1280px) {
+    .next-tent{
+        top: 48px;
+    }
+    .prev-tent{
+        top: 48px;
+    }
     .next-project{
         top: 25%;
     }
@@ -285,15 +299,15 @@ a {
 }
 @media (min-width: 1440px) {
     .prev-tent{
-        top: 8px;
+        top: 52px;
     }
     .next-tent{
-        top: 8px;
+        top: 52px;
     }
 }
 @media (min-width: 1600px) {
     .prev-tent{
-        top: -5px;
+        top: 44px;
         width: 59px;
         height: 59px;
 
@@ -303,7 +317,7 @@ a {
         }
     }
     .next-tent{
-        top: -5px;
+        top: 44px;
         width: 59px;
         height: 59px;
 

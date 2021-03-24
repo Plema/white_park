@@ -23,13 +23,12 @@
             color: #373737;
             text-align: center;
 
-            margin-top: 150px;
-
             span{
                 font-family: 'Basis-bold';
             }
         }
         .makeroute{
+            margin-top: 150px;
 
             &__main{
                 display: flex;
@@ -70,11 +69,20 @@
                     display: flex;
                     align-items: center;
 
+                    width: 33%;
+
                     background-color: rgba(255, 255, 255, 0.8);
                     border-radius: 20px;
                     cursor: pointer;
 
                     padding: 5px;
+
+                    a{
+                        display: flex;
+                        align-items: center;
+
+                        width: 100%;
+                    }
 
                     img{
                         width: auto;
@@ -82,7 +90,7 @@
                     }
                     p{
                         font-family: 'Basis-bold';
-                        font-size: 12px;
+                        font-size: 10px;
                         color: #74CFE3;
 
                         margin-left: 5px;
@@ -169,7 +177,21 @@
 }
 
 /* Media Queries */
-
+@media (min-width: 375px){
+    .contacts__footer{
+        .contacts__map{
+            .makeroute{
+                &__inner{
+                    .makeroute__nav, .makeroute__yandex, .makeroute__google{
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (min-width: 480px) {
     .contacts__footer{
         .contacts__map{
@@ -276,6 +298,8 @@
                     .makeroute__nav, .makeroute__yandex, .makeroute__google{
                         padding-left: 40px;
                         margin-bottom: 20px;
+
+                        width: 100%;
                     }
                     .makeroute__google{
                         margin-bottom: 0;
