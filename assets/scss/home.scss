@@ -1977,9 +1977,7 @@
             }
             
         }
-        .tent{
-            padding-top: 60px;
-
+        .tent{ 
             &__title_slider{
                 left: 50%;
                 width: 115%;
@@ -2090,6 +2088,8 @@
             }
         }
         .portfolio{
+            height: auto;
+            overflow: scroll;
             &__title{
                 &_img{
                     padding: 110px 0;
@@ -2309,6 +2309,8 @@
             }
         }
         .tent{
+            padding-top: 20px;
+            
             &__title_slider{
                 margin-bottom: 10px;
 

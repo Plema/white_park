@@ -58,37 +58,60 @@
                         padding-bottom: 3px;
                     }
                     .nav__link{
-                        font-family: 'Montserrat-regular';
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 30px;
-                        // color: #373737;
-                        color: #fff;
-                        text-transform: none;
-                        outline: none;
-                        cursor: pointer;
+                        // font-family: 'Montserrat-regular';
+                        // font-size: 18px;
+                        // font-weight: 400;
+                        // line-height: 30px;
+                        // // color: #373737;
+                        // color: #fff;
+                        // text-transform: none;
+                        // outline: none;
+                        // cursor: pointer;
     
-                        position: relative;
-                        left: 0;
-                        z-index: 2;
+                        // position: relative;
+                        // left: 0;
+                        // z-index: 2;
     
-                        transition: left 0.3s ease-out;
+                        // transition: left 0.3s ease-out;
+
+                        margin-bottom: 10px;
 
                         a{
+                            position: relative;
+                            z-index: 6;
+
+                            font-family: 'Montserrat-regular';
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 30px;
                             color: #fff;
-                        }
-    
-                        &:hover{
-                            left: 50px;
-                        }
-                        &:hover::before{
-                            content: url("../img/hover.svg");
-                            display: block;
-                            width: 10px;
-                            position: absolute;
-                            top: -5px;
-                            left: -50px;
-                        }
+                            text-transform: none;
+                            outline: none;
+                            cursor: pointer;
+
+                            padding-left: 0;
+        
+                            transition: padding-left 0.3s ease-out;
+
+                            &:before{
+                                opacity: 0;
+                                content: url("../img/hover.svg");
+                                display: block;
+                                width: 10px;
+                                position: absolute;
+                                top: -5px;
+
+                                transition: opacity 0.3s ease-out;
+                            }
+
+                            &:hover{
+                                padding-left: 50px;
+
+                            }
+                            &:hover::before{
+                                opacity: 1;
+                            }
+                        } 
                     }
                     .sub-menu{
                         display: none;
@@ -286,6 +309,9 @@
     }
 }
 @media (min-width: 1024px) {
+    .header__line .header__line_inner .header__info_line .nav__inner .nav__link a {
+        color: #373737;
+    }
     .header__line{
         width: 300px;
         height: 0;
@@ -342,27 +368,50 @@
                             padding-bottom: 8px;
                         }
                         .nav__link{
-                            font-family: 'Montserrat-semiBold';
-                            font-size: 18px;
-                            line-height: 18px;
-                            color: #373737;
+                            // font-family: 'Montserrat-semiBold';
+                            // font-size: 18px;
+                            // line-height: 18px;
+                            // color: #373737;
 
                             margin-bottom: 10px;
 
                             a{
-                                color: #373737;
                                 position: relative;
                                 z-index: 6;
+
+                                font-family: 'Montserrat-semiBold';
+                                font-size: 18px;
+                                line-height: 18px;
+                                color: #373737;
+
+                                // &:before{
+                                //     opacity: 0;
+                                //     content: url("../img/hover.svg");
+                                //     display: block;
+                                //     width: 10px;
+                                //     position: absolute;
+                                //     top: -5px;
+    
+                                //     transition: opacity 0.3s ease-out;
+                                // }
+    
+                                // &:hover{
+                                //     padding-left: 50px;
+    
+                                // }
+                                // &:hover::before{
+                                //     opacity: 1;
+                                // }
                             }
 
-                            &:hover{
-                                left: 30px;
-                            }
-                            &:hover:before{
-                                top: -10px;
-                                left: -40px;
-                                transform: scale(0.8);
-                            }
+                            // &:hover{
+                            //     left: 30px;
+                            // }
+                            // &:hover:before{
+                            //     top: -10px;
+                            //     left: -40px;
+                            //     transform: scale(0.8);
+                            // }
                         }
                     }
                 }
@@ -575,7 +624,9 @@
                             padding-bottom: 20px;
                         }
                         .nav__link{
-                            font-size: 20px;
+                            a{
+                                font-size: 20px;
+                            }
     
                             &:hover{
                                 left: 40px;

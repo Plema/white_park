@@ -6,7 +6,8 @@ $(document).ready(function() {
             anchors: ['section1', 'section2', 'section3', 'section4','section5', 'section6', 'section7', 'section8'],
 
             scrollOverflow: true,
-            responsiveWidth: 1024,
+            // responsiveWidth: 1024,
+            normalScrollElements: '#section6',
             onLeave: function(origin, destination, direction){
                 var loadedSection = this;
         
@@ -49,9 +50,7 @@ $(document).ready(function() {
                 }
             },
         });
-    } else {
-   }
-    
+    }
     
     //Slider for tents
     $(document).ready(function(){
