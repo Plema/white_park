@@ -97,4 +97,25 @@ $(document).ready(function() {
         $('.popup-zvonok .zvonok').addClass('hide-zvonok');
 
     });
+    
+    //Thanks
+    //show thanks
+    $('.active-thanks').click(function() {
+        $('.thanks').removeClass('hide-thanks');
+        $('.thanks').addClass('show-thanks');
+    });
+    //hide thanks
+    $('.close-popup-thanks').click(function() {
+        $('.thanks').removeClass('show-thanks');
+        $('.thanks').addClass('hide-thanks');
+
+        $('.popup-app .app').removeClass('show-app');
+        $('.popup-app .app').addClass('hide-app');
+
+        $('.popup-zvonok .zvonok').removeClass('show-zvonok');
+        $('.popup-zvonok .zvonok').addClass('hide-zvonok');
+
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
+    });
 });

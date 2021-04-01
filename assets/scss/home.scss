@@ -290,6 +290,15 @@
                 margin-bottom: 15px;
                 position: relative;
 
+                &:first-of-type{
+                    .advantages__list_title{
+                        .list__marker{
+                            &_outline{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
                 &:last-of-type{
                     margin-bottom: 0;
                 }
@@ -347,7 +356,7 @@
                 }
             }
 
-            &_text{
+            &_text, .first{
                 font-family: 'Montserrat-regular';
                 font-size: 14px;
                 line-height: 20px;
@@ -360,6 +369,8 @@
                 cursor: pointer;
 
                 // transition: all 0.5s linear;
+
+                
             }
         }
         &__btn{
@@ -809,14 +820,14 @@
             position: relative;
 
             &_img{
-            background: url('../img/portfolio-bg.jpg') no-repeat 100% 50%;
+            background: url('../img/portfolio-bg.png') no-repeat 50% 100%;
             background-size: cover;
-            width: 100%;
+            width: 101%;
             height: 100%;
+            padding: 75px 0;
 
             position: absolute;
             top: 0;
-            left: 0;
             z-index: 3;
 
             // transition: all 1s linear;
@@ -1531,7 +1542,7 @@
                 }
                 .tent__info{
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-around;
     
                     &_item{
                         margin-bottom: 0;
@@ -1610,8 +1621,6 @@
                     font-size: 70px;
                 }
                 &_img{
-                    background: url('../img/portfolio-bg.jpg') no-repeat 100% 45%;
-                    background-size: cover;
                     padding: 100px 0;
                 }
                 .portfolio__mouse{
@@ -1949,6 +1958,24 @@
                     &_item{
                         margin-bottom: 10px;
 
+                        &:first-of-type{
+                            .advantages__list_title{
+                                .list__marker{
+                                    &_outline{
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            .advantages__list_title{
+                                .list__marker{
+                                    &_outline{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
                         .advantages__list_title{
                             .list__subtitle{
                                 font-size: 14px;
@@ -1958,6 +1985,7 @@
                             font-size: 12px;
                             line-height: 14px;
                         }
+
                     }
                 }
 
@@ -2087,14 +2115,17 @@
                 transform: rotate(-90deg);
             }
         }
+        .fp-scroller{
+            overflow: hidden;
+        }
         .portfolio{
             height: auto;
             overflow: scroll;
             &__title{
                 &_img{
-                    padding: 110px 0;
-                    background: url(../img/portfolio-bg.jpg) no-repeat 100% 43%;
-                    background-size: cover;
+                    padding: 130px 0;
+                    // background: url(../img/portfolio-bg.jpg) no-repeat 100% 43%;
+                    // background-size: cover;
                 }
             }
             &__btn{
@@ -2109,7 +2140,7 @@
                 }
             }
             &__content_bis{
-                padding-top: 68px;
+                padding-top: 118px;
             }
             .decor__img{
                 display: block;
@@ -2661,6 +2692,13 @@
                 top: -30px;
                 left: -9px;
                 width: 81%;
+            }
+        }
+        .portfolio{
+            &__title{
+                &_img{
+                    padding: 190px 0;
+                }
             }
         }
         .estimate{

@@ -108,6 +108,7 @@
         padding: 100px 0 20px;
 
         &__title{
+            display: none;
             font-family: 'Alice';
             font-size: 46px;
             font-weight: normal;
@@ -564,6 +565,7 @@
 @media (min-width: 1024px) {
     .wrapper{
         .intro{
+            padding: 40px 0 60px;
             &__title{
                 font-size: 52px;
 

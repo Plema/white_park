@@ -1,13 +1,11 @@
 $(document).ready(function() {
 
-    if( window.innerWidth >= 1024 ){
+    if( $(window).width() >= 1024 ){
         // full page
         $('.fullpage').fullpage({
             anchors: ['section1', 'section2', 'section3', 'section4','section5', 'section6', 'section7', 'section8'],
 
             scrollOverflow: true,
-            // responsiveWidth: 1024,
-            normalScrollElements: '#section6',
             onLeave: function(origin, destination, direction){
                 var loadedSection = this;
         
@@ -51,6 +49,9 @@ $(document).ready(function() {
             },
         });
     }
+    setTimeout(function(){
+        $.fn.fullpage.reBuild();
+    }, 1000);
     
     //Slider for tents
     $(document).ready(function(){
@@ -252,6 +253,12 @@ $(document).ready(function() {
 
         }
     });
+    if($(window).width() < 1024) {
+        $('.first').removeClass('hide');
+        $('.first').addClass('show');
+    } else if($(window).width() >= 1024){
+        $('.first').addClass('advantages__list_text');
+    }
 
 
     // Video-popup
@@ -407,15 +414,36 @@ $(document).ready(function() {
     });
 
     //Zayavka-popup
-    // show footer
+    // show app
     $('.intro__btn').click(function() {
         $('.popup-app .app').removeClass('hide-app');
         $('.popup-app .app').addClass('show-app');
     });
-    // hide footer
+    // hide app
     $('.close-popup-app').click(function() {
         $('.popup-app .app').removeClass('show-app');
         $('.popup-app .app').addClass('hide-app');
+    });
+
+    //Thanks
+    //show thanks
+    $('.active-thanks').click(function() {
+        $('.thanks').removeClass('hide-thanks');
+        $('.thanks').addClass('show-thanks');
+    });
+    //hide thanks
+    $('.close-popup-thanks').click(function() {
+        $('.thanks').removeClass('show-thanks');
+        $('.thanks').addClass('hide-thanks');
+
+        $('.popup-app .app').removeClass('show-app');
+        $('.popup-app .app').addClass('hide-app');
+
+        $('.popup-zvonok .zvonok').removeClass('show-zvonok');
+        $('.popup-zvonok .zvonok').addClass('hide-zvonok');
+
+        $('.popup-estimate .estimate').removeClass('show-estimate');
+        $('.popup-estimate .estimate').addClass('hide-estimate');
     });
 
     // Height for gallery
