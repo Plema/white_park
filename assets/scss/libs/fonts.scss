@@ -50,6 +50,14 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'Franklin-medium';
+  src: url('../fonts/framd.ttf');
+  src: local('framd'), local('framd'),
+  url('../fonts/framd.ttf?#iefix') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Basis-light';
   src: url('../fonts/BasisGrotesquePro-Light.ttf');
   src: local('BasisGrotesquePro-Light'), local('BasisGrotesquePro-Light'),
