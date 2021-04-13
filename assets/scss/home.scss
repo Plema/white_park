@@ -291,31 +291,27 @@
                 margin-bottom: 15px;
                 position: relative;
 
-                &:first-of-type{
-                    .advantages__list_title{
-                        .list__marker{
-                            &_outline{
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
+                // &:first-of-type{
+                //     .advantages__list_title{
+                //         .list__marker{
+                //             &_outline{
+                //                 opacity: 1;
+                //             }
+                //         }
+                //     }
+                // }
                 &:last-of-type{
                     margin-bottom: 0;
                 }
-                &:hover{
-                    .advantages__list_title{
-                        .list__marker{
-                            &_outline{
-                                opacity: 1;
-                            }
-                        }
-                    } 
-                    // .advantages__list_text{
-                    //     opacity: 1;
-                    //     height: auto;
-                    // }   
-                }
+                // &:hover{
+                //     .advantages__list_title{
+                //         .list__marker{
+                //             &_outline{
+                //                 opacity: 1;
+                //             }
+                //         }
+                //     }  
+                // }
             }
 
             &_title{
@@ -825,13 +821,17 @@
             background-size: cover;
             width: 101%;
             height: 100%;
-            padding: 75px 0;
+            padding: 95px 0;
 
             position: absolute;
-            top: 0;
+            top: 0px;
             z-index: 3;
 
-            // transition: all 1s linear;
+            transition: top 3s ease-in-out;
+
+            }
+            .parallax-mob{
+                top: -30px;
             }
 
             &_text{
@@ -846,7 +846,7 @@
             }
         }
         &__content_bis{
-            padding-top: 48px;
+            padding-top: 60px;
             
 
             .portfolio__subtitle{
@@ -1724,7 +1724,7 @@
             width: 100%;
             height: 100vh;
 
-            background: url('../img/form-bg.png');
+            background: url('../img/form-bg.jpeg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -2127,6 +2127,12 @@
                     padding: 130px 0;
                     // background: url(../img/portfolio-bg.jpg) no-repeat 100% 43%;
                     // background-size: cover;
+                    top: 0;
+
+                    transition: top 3s ease-in-out;
+                }
+                .parallax{
+                    top: -30px;
                 }
             }
             &__btn{

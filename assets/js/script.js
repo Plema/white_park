@@ -8,6 +8,7 @@ $(document).ready(function() {
             scrollOverflow: true,
             onLeave: function(origin, destination, direction){
                 var loadedSection = this;
+                let pseudoParallax = $('.portfolio__title_img');
         
                 if($(window).width() >= 1024){
                     function showMenu() {
@@ -16,17 +17,28 @@ $(document).ready(function() {
                     function hideMenu() {
                         $('.nav__toggle').css({'right': '0'});
                     }
+                    function showMenuLine() {
+                        $('.header__info_line').css({'right': '0px'});
+                    }
+                    function hideMenuLine() {
+                        $('.nav__toggle_line').css({'right': '0px'});
+                    }
 
-                    if(origin.index == 0 && direction =='down'){
-                        $('.header__info').css({'right': '-300px'});
+                    if(direction =='down'){
+                        $('.header__info, .header__info_line').css({'right': '-300px'});
+                        $('.nav__toggle, .nav__toggle_line').removeClass('active');
+                        $('.nav__toggle_btn').find('i').removeClass('icon-close');
+                        $('.nav__toggle_btn').find('i').addClass('icon-menu');
                     
                         setTimeout(hideMenu, 200);
+                        setTimeout(hideMenuLine, 200);
 
                         $(window).click(function() {
-                            if($('.nav__toggle').hasClass('active')){
-                                $('.nav__toggle').css({'right': '-50px'});
+                            if($('.nav__toggle, .nav__toggle_line').hasClass('active')){
+                                $('.nav__toggle, .nav__toggle_line').css({'right': '-50px'});
 
                                 setTimeout(showMenu, 200);
+                                setTimeout(showMenuLine, 200);
                             }
                         });
                         $(document).click(function (e) {
@@ -43,7 +55,26 @@ $(document).ready(function() {
 
                     } else if(origin.index == 1 && direction =='up'){
                         $('.nav__toggle').css({'right': '-50px'});
+                        $('.header__info_line').css({'right': '-300px'});
+                        $('.nav__toggle_line').removeClass('active');
+
                         setTimeout(showMenu, 200);
+                        setTimeout(hideMenuLine, 200);
+
+                    } else if(direction =='up'){
+                        $('.header__info, .header__info_line').css({'right': '-300px'});
+                        $('.nav__toggle, .nav__toggle_line').removeClass('active');
+                        $('.nav__toggle_btn').find('i').removeClass('icon-close');
+                        $('.nav__toggle_btn').find('i').addClass('icon-menu');
+                    
+                        setTimeout(hideMenu, 200);
+                        setTimeout(hideMenuLine, 200);
+                    }
+
+                    if(origin.index == 4 && direction =='down'){
+                        pseudoParallax.addClass('parallax');
+                    } else{
+                        pseudoParallax.removeClass('parallax');
                     }
                 }
             },
@@ -52,6 +83,28 @@ $(document).ready(function() {
     setTimeout(function(){
         $.fn.fullpage.reBuild();
     }, 1000);
+
+    $(window).scroll(function(){
+        $('.header__info_line').css({'right': '-300px'});
+        $('.nav__toggle_line').removeClass('active');
+        $('.nav__toggle_line .nav__toggle_btn').find('i').removeClass('icon-close');
+        $('.nav__toggle_line .nav__toggle_btn').find('i').addClass('icon-menu');
+
+        hideMenuLine();
+    });
+
+    // Pseudoparallax
+    $(window).scroll(function() {
+        var hT = $('.portfolio__title_img').offset().top,
+            hH = $('.portfolio__title_img').outerHeight(),
+            wH = $(window).height(),
+            wS = $(this).scrollTop();
+        if (wS > (hT+hH-wH)){
+            $('.portfolio__title_img').addClass('parallax-mob');
+        } else{
+            $('.portfolio__title_img').removeClass('parallax-mob');
+        }
+    });
     
     //Slider for tents
     $(document).ready(function(){
@@ -237,27 +290,72 @@ $(document).ready(function() {
         }
     });
 
-    $('.advantages__list_item').hover(function() {
-        //show
-        if($(this).find('.advantages__list_text').hasClass('hide')){
+    //Advantages
 
-            $('.advantages__list_text').slideUp(200).removeClass('show');
-            $('.advantages__list_text').addClass('hide');
-            $(this).find('.advantages__list_text').slideDown(200).removeClass('hide');
-            $(this).find('.advantages__list_text').slideDown(200).addClass('show');
+    // $('.advantages__list_item').hover(function() {
+    //     //show
+    //     if($(this).find('.advantages__list_text, .first').hasClass('hide')){
 
-        } else if($(this).find('.advantages__list_text').hasClass('show')){
+    //         $('.advantages__list_text, .first').slideUp(200).removeClass('show');
+    //         $('.advantages__list_text, .first').addClass('hide');
+    //         $(this).find('.advantages__list_text, .first').slideDown(200).removeClass('hide');
+    //         $(this).find('.advantages__list_text, .first').slideDown(200).addClass('show');
 
-            $(this).find('.advantages__list_text').slideUp(200).removeClass('show');
-            $(this).find('.advantages__list_text').addClass('hide');
+    //     } else if($(this).find('.advantages__list_text, .first').hasClass('show')){
 
-        }
-    });
+    //         $(this).find('.advantages__list_text, .first').slideUp(200).removeClass('show');
+    //         $(this).find('.advantages__list_text, .first').addClass('hide');
+
+    //     }
+    // });
+
     if($(window).width() < 1024) {
         $('.first').removeClass('hide');
         $('.first').addClass('show');
+        $('.first-item').find('.list__marker_outline').css({'opacity': '1'});
+
+        $('.advantages__list_item').click(function() {
+            //show
+            if($(this).find('.advantages__list_text, .first').hasClass('hide')){
+    
+                $('.advantages__list_text, .first').slideUp(200).removeClass('show');
+                $('.advantages__list_text, .first').addClass('hide');
+                $('.list__marker_outline').css({'opacity': '0'});
+
+                $(this).find('.advantages__list_text, .first').slideDown(200).removeClass('hide');
+                $(this).find('.advantages__list_text, .first').slideDown(200).addClass('show');
+
+                $(this).find('.list__marker_outline').css({'opacity': '1'});
+    
+            } else if($(this).find('.advantages__list_text, .first').hasClass('show')){
+    
+                $(this).find('.advantages__list_text, .first').slideUp(200).removeClass('show');
+                $(this).find('.advantages__list_text, .first').addClass('hide');
+
+                $(this).find('.list__marker_outline').css({'opacity': '0'});
+    
+            }
+        });
+
     } else if($(window).width() >= 1024){
         $('.first').addClass('advantages__list_text');
+
+        $('.advantages__list_item').hover(function() {
+            //show
+            if($(this).find('.advantages__list_text, .first').hasClass('hide')){
+    
+                $('.advantages__list_text, .first').slideUp(200).removeClass('show');
+                $('.advantages__list_text, .first').addClass('hide');
+                $(this).find('.advantages__list_text, .first').slideDown(200).removeClass('hide');
+                $(this).find('.advantages__list_text, .first').slideDown(200).addClass('show');
+    
+            } else if($(this).find('.advantages__list_text, .first').hasClass('show')){
+    
+                $(this).find('.advantages__list_text, .first').slideUp(200).removeClass('show');
+                $(this).find('.advantages__list_text, .first').addClass('hide');
+    
+            }
+        });
     }
 
 

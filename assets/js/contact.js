@@ -61,6 +61,15 @@ $(document).ready(function() {
         }
     });
 
+    $(window).scroll(function(){
+        $('.header__info_line').css({'right': '-300px'});
+        $('.nav__toggle_line').removeClass('active');
+        $('.nav__toggle_line .nav__toggle_btn').find('i').removeClass('icon-close');
+        $('.nav__toggle_line .nav__toggle_btn').find('i').addClass('icon-menu');
+
+        hideMenuLine();
+    });
+
     //Estimate-popup
     // show footer
     $('.footer__calc').click(function() {

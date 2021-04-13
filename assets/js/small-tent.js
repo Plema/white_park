@@ -6,13 +6,83 @@ $(document).ready(function() {
     });
     
     // full page
-    $(document).ready(function() {
-        $('.fullpage').fullpage({
-            scrollOverflow: true,
-            responsiveWidth: 1024,
-        });
+    if($(window).width() >= 1024) {
+        $(document).ready(function() {
+            $('.fullpage').fullpage({
+                scrollOverflow: true,
+                responsiveWidth: 1024,
 
-    });
+                onLeave: function(origin, destination, direction){
+                    var loadedSection = this;
+                    let pseudoParallax = $('.portfolio__title_img');
+            
+                    if($(window).width() >= 1024){
+                        function showMenu() {
+                            $('.header__info').css({'right': '0'});
+                        }
+                        function hideMenu() {
+                            $('.nav__toggle').css({'right': '0'});
+                        }
+                        function showMenuLine() {
+                            $('.header__info_line').css({'right': '0px'});
+                        }
+                        function hideMenuLine() {
+                            $('.nav__toggle_line').css({'right': '0px'});
+                        }
+    
+                        if(direction =='down'){
+                            $('.header__info, .header__info_line').css({'right': '-300px'});
+                            $('.nav__toggle, .nav__toggle_line').removeClass('active');
+                            $('.nav__toggle_btn').find('i').removeClass('icon-close');
+                            $('.nav__toggle_btn').find('i').addClass('icon-menu');
+                        
+                            setTimeout(hideMenu, 200);
+                            setTimeout(hideMenuLine, 200);
+    
+                            $(window).click(function() {
+                                if($('.nav__toggle, .nav__toggle_line').hasClass('active')){
+                                    $('.nav__toggle, .nav__toggle_line').css({'right': '-50px'});
+    
+                                    setTimeout(showMenu, 200);
+                                    setTimeout(showMenuLine, 200);
+                                }
+                            });
+                            $(document).click(function (e) {
+                                var btn = $('.nav__toggle');
+                                if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+                                    $('.header__info').css({'right': '-300px'});
+                                    $('.nav__toggle').removeClass('active');
+                                    $('.nav__toggle_btn').find('i').removeClass('icon-close');
+                                    $('.nav__toggle_btn').find('i').addClass('icon-menu');
+    
+                                    setTimeout(hideMenu, 300);
+                                }
+                            });
+    
+                        } else if(origin.index == 1 && direction =='up'){
+                            $('.nav__toggle').css({'right': '-50px'});
+                            $('.header__info_line').css({'right': '-300px'});
+                            $('.nav__toggle_line').removeClass('active');
+    
+                            setTimeout(showMenu, 200);
+                            setTimeout(hideMenuLine, 200);
+    
+                        } else if(direction =='up'){
+                            $('.header__info, .header__info_line').css({'right': '-300px'});
+                            $('.nav__toggle, .nav__toggle_line').removeClass('active');
+                            $('.nav__toggle_btn').find('i').removeClass('icon-close');
+                            $('.nav__toggle_btn').find('i').addClass('icon-menu');
+                        
+                            setTimeout(hideMenu, 200);
+                            setTimeout(hideMenuLine, 200);
+                        }
+                    }
+                },
+            });
+    
+        });
+    }
+    
 
     //Slider for project
     $(document).ready(function(){

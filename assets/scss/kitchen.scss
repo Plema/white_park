@@ -254,7 +254,7 @@
             position: relative;
             z-index: 2;
 
-            padding: 30px 10px;
+            padding: 30px 10px 0;
         }
         &__title{
             font-family: 'Alice';
@@ -359,7 +359,7 @@
             outline: none;
 
             padding: 16px 0;
-            margin: 20px auto 30px;
+            margin: 50px auto 50px;
             transition: background-color .3s ease-out;
             position: relative;
             z-index: 3;
@@ -933,6 +933,8 @@
                 position: absolute;
                 bottom: 100px;
                 left: 50%;
+
+                margin: 30px 0;
 
                 transform: translate(-50%);
             }

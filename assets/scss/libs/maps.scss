@@ -26,6 +26,9 @@
         overflow-y: hidden;
 
         position: relative;
+
+        background: url('../img/map-main.png') no-repeat center;
+        background-size: cover;
     }
     .on{
         opacity: 0;
@@ -124,6 +127,9 @@
             height: auto;
             border-radius: 10px;
             overflow: scroll;
+
+            background: url('../img/map-main.png') no-repeat center;
+            background-size: cover;
         }
         // width
         &::-webkit-scrollbar {

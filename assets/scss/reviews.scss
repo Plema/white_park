@@ -391,7 +391,7 @@
         .container{
             padding: 0;
         }
-        .swiper-container{
+        .swiper-container-own{
             display: flex;
             align-items: center;
             width: 100vw;
@@ -447,7 +447,7 @@
                 color: transparent;
             
                 position: absolute;
-                top: 115%;
+                top: 102%;
                 left: 35%;
                 z-index: 1;
 
@@ -485,7 +485,7 @@
                 color: transparent;
             
                 position: absolute;
-                top: 115%;
+                top: 102%;
                 right: 35%;
                 z-index: 1;
 
@@ -586,7 +586,7 @@
         .container{
             padding: 0;
         }
-        .swiper-container{
+        .swiper-container-doc{
             display: flex;
             align-items: center;
             width: 100vw;
@@ -814,7 +814,7 @@
             display: flex;
             justify-content: center;
 
-            .swiper-container{
+            .swiper-container-own{
                 width: 600px;
 
                 overflow: hidden;
@@ -864,7 +864,7 @@
 
             padding-bottom: 300px;
 
-            .swiper-container{
+            .swiper-container-doc{
                 position: static;
                 width: 600px;
                 min-height: 600px;
@@ -1018,7 +1018,7 @@
             .container{
                 overflow: hidden;
             }
-            .swiper-container{
+            .swiper-container-own{
                 display: flex;
                 justify-content: center;
                 min-height: 200px;
@@ -1051,7 +1051,7 @@
             .container{
                 overflow: hidden;
             }
-            .swiper-container{
+            .swiper-container-doc{
                 display: flex;
                 justify-content: center;
                 min-height: 200px;
@@ -1098,7 +1098,7 @@
             }
         }
         .own__reviews{
-            .swiper-container{
+            .swiper-container-own{
                 margin: 0 auto;
                 max-height: 580px;
                 padding-bottom: 40px;
@@ -1126,7 +1126,7 @@
         .doc__reviews{
             padding-bottom: 220px;
 
-            .swiper-container{
+            .swiper-container-doc{
                 margin: 0 auto;
 
                 .swiper-slide{
@@ -1186,7 +1186,7 @@
 
                 transform: rotate(-90deg);
             }
-            .swiper-container{
+            .swiper-container-own{
                 max-height: 640px;
 
                 overflow: hidden;
@@ -1220,7 +1220,7 @@
 
                 transform: rotate(-90deg);
             }
-            .swiper-container{
+            .swiper-container-doc{
                 overflow: hidden;
                 margin: 0 auto 20px;
 
@@ -1292,7 +1292,7 @@
                 left: -230px;
             }
 
-            .swiper-container{
+            .swiper-container-own{
                 width: 1000px;
                 max-height: 740px;
 
@@ -1346,7 +1346,7 @@
                 lefT: -200px;
             }
 
-            .swiper-container{
+            .swiper-container-doc{
                 width: 1000px;
                 max-height: 700px;
 
@@ -1397,14 +1397,9 @@
     .wrapper{
         .own__reviews{
             padding: 60px 0;
-            
-            .swiper-container{
-            }
         }
         .doc__reviews{
             padding: 30px 0 230px;
-            .swiper-container{
-            }
         }
     }
 }

@@ -549,7 +549,8 @@
                 padding: 10px;
 
                 .intro__item_text{
-                    font-size: 12px;
+                    font-size: 14px;
+                    line-height: 18px;
                 }
             }
             &__item_answer{
@@ -559,7 +560,8 @@
                 padding: 10px;
 
                 .intro__item_text{
-                    font-size: 12px;
+                    font-size: 14px;
+                    line-height: 18px;
                 }
             }
             .small{
@@ -759,12 +761,14 @@
             }
             &__item_question{
                 .intro__item_text{
-                    line-height: 16px;
+                    font-size: 16px;
+                    line-height: 22px;
                 }
             }
             &__item_answer{
                 .intro__item_text{
-                    line-height: 16px;
+                    font-size: 16px;
+                    line-height: 22px;
                 }
             }
         }
@@ -829,8 +833,8 @@
                     transform: scale(0.8);
                 }
                 .intro__item_text{
-                    font-size: 16px;
-                    line-height: 20px;
+                    font-size: 18px;
+                    line-height: 24px;
 
                     padding-left: 20px;
                 }
@@ -843,8 +847,8 @@
                     transform: scale(0.8);
                 }
                 .intro__item_text{
-                    font-size: 14px;
-                    line-height: 18px;
+                    font-size: 18px;
+                    line-height: 24px;
 
                     padding-left: 20px;
                 }
@@ -925,8 +929,8 @@
                 margin-bottom: 10px;
 
                 .intro__item_text{
-                    font-size: 18px;
-                    line-height: 20px;
+                    font-size: 20px;
+                    line-height: 26px;
                 }
             }
             &__item_answer{
@@ -934,8 +938,8 @@
                 padding: 10px 20px;
 
                 .intro__item_text{
-                    font-size: 16px;
-                    line-height: 18px;
+                    font-size: 20px;
+                    line-height: 26px;
                 }
 
                 &:last-of-type{
@@ -1058,7 +1062,7 @@
                 }
                 .intro__item_text{
                     font-size: 22px;
-                    line-height: 24px;
+                    line-height: 28px;
                 }
             }
             &__item_answer{
@@ -1068,7 +1072,8 @@
                     transform: scale(0.9);
                 }
                 .intro__item_text{
-                    font-size: 18px;
+                    font-size: 22px;
+                    line-height: 28px;
                 }
             }
             .small{

@@ -107,7 +107,7 @@
 
         background: url('../img/small-tent-bg.png') no-repeat center/cover;
 
-        padding-top: 40px;
+        // padding-top: 40px;
         position: relative;
         z-index: 20;
 
@@ -117,7 +117,8 @@
             align-items: center;
 
             background: rgba(22, 22, 22, 0.3);
-            padding: 20px 0;
+            height: 100vh;
+            padding: 95px 0 0;
 
         }
         &__title{
@@ -245,7 +246,7 @@
         }
     }
     .opp{
-        height: 100vh;
+        // height: 100vh;
         background: linear-gradient(358.59deg, #DEF9FF 1.64%, rgba(255, 255, 255, 0) 154.67%);
         display: flex;
         align-items: center;
@@ -703,6 +704,7 @@
         .intro{
             .container{
                 width: 100%;
+                height: auto;
 
                 padding: 30px 20px;
             }

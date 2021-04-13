@@ -41,6 +41,15 @@ $(document).ready(function() {
         }
     });
 
+    $(window).scroll(function(){
+        $('.header__info_line').css({'right': '-300px'});
+        $('.nav__toggle_line').removeClass('active');
+        $('.nav__toggle_line .nav__toggle_btn').find('i').removeClass('icon-close');
+        $('.nav__toggle_line .nav__toggle_btn').find('i').addClass('icon-menu');
+
+        hideMenuLine();
+    });
+
     // placeholder
     $(document).ready(function() {
         $('.preloader').delay(400).fadeOut('slow');
@@ -108,16 +117,70 @@ $(document).ready(function() {
             ]
         });
     });
+    $(document).ready(function(){
+        $('.video__slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                  }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                  }
+                }
+            ]
+        });
+    });
 
-    // Slider kitchen
-    const swiper = new Swiper('.swiper-container', {
+    // Swiper own
+    const swiperOwn = new Swiper('.swiper-container-own', {
         spaceBetween: -30,
         slidesPerView: 1.5,
         centeredSlides: true,
         speed: 300,
-        pagination: {
-            el: '.swiper-pagination',
+        roundLengths: true,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
         },
+        breakpoints: {
+            768: {
+                spaceBetween: -200,
+            },
+            1024: {
+                spaceBetween: -310,
+            },
+            1280: {
+                spaceBetween: -300,
+            },
+            1440: {
+                spaceBetween: -200,
+            },
+            1600: {
+                spaceBetween: -525,
+            },
+            1920: {
+                spaceBetween: -525,
+            },
+        }
+    });
+
+    // Swiper doc
+    const swiperDoc = new Swiper('.swiper-container-doc', {
+        spaceBetween: -30,
+        slidesPerView: 1.5,
+        centeredSlides: true,
+        speed: 300,
         roundLengths: true,
         loop: true,
         navigation: {
