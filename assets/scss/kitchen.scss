@@ -100,6 +100,7 @@
     } 
 }
 .wrapper{
+    -webkit-transform: translate3d(0,0,0);
     .intro{
         width: 100%;
         height: 100%;
@@ -110,6 +111,7 @@
 
         position: relative;
         z-index: 20;
+        -webkit-transform:translate3d(0,0,0);
 
         &__title{
             font-family: 'Alice';
@@ -249,6 +251,7 @@
 
         position: relative;
         z-index: 5;
+        -webkit-transform:translate3d(0,0,0);
 
         .container{
             position: relative;
@@ -309,7 +312,7 @@
                 }
                 .item__img{
                     position: absolute;
-                    top: -17px;
+                    top: -15px;
                     right: -5px;
 
                     transform: scale(0.4);
@@ -405,6 +408,7 @@
         background-position-y: top;
 
         height: 100%;
+        -webkit-transform:translate3d(0,0,0);
 
         .container{
             background: rgba(255, 255, 255, 0.8);
@@ -568,6 +572,7 @@
         // padding: 48px 0;
         position: relative;
         z-index: 5;
+        -webkit-transform:translate3d(0,0,0);
 
         .container{
             padding: 48px 0;
@@ -904,7 +909,7 @@
             &__inner{
                 position: relative;
                 &_item{
-                    width: 300px;
+                    width: 340px;
                     background:rgba(116,207,227,.8)
                 }
                 .item__right{
@@ -1662,7 +1667,7 @@
                     left: -30px;
 
                     .advantages__inner_item{
-                        width: 380px;
+                        width: 390px;
                         margin-bottom: 100px;
 
                         .item__title{

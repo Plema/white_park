@@ -515,14 +515,14 @@
 
             @media (min-width: 375px) {
                 .swiper-button-prev, .swiper-button-next{
-                    top: 115%;
+                    top: 105%;
                 }
             }
-            @media (min-width: 410px) {
-                .swiper-button-prev, .swiper-button-next{
-                    top: 118%;
-                }
-            }
+            // @media (min-width: 410px) {
+            //     .swiper-button-prev, .swiper-button-next{
+            //         top: 118%;
+            //     }
+            // }
             /* @media (min-width: 768px) {
                 .swiper-button-prev, .swiper-button-next{
                     top: 100%;

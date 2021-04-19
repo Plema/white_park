@@ -256,12 +256,10 @@
         background-position: -150px 62px;
         position: relative;
 
-        height: 100vh;
+        padding: 50px 0;
 
         display: flex;
         align-items: center;
-
-        padding: 0;
 
         &__img{
             display: none;
@@ -858,7 +856,7 @@
                 line-height: 36px;
                 color: #74CFE3;
                 text-align: center;
-                margin: 0 auto;
+                margin: 20px auto;
 
                 position: relative;
 
@@ -889,6 +887,7 @@
             .portfolio__content_video{
                 margin-top: 36px;
                 background: url('../img/video-bis.png') no-repeat;
+                min-height: 320px;
     
                 cursor: pointer;
 
@@ -936,6 +935,7 @@
             
             .portfolio__content_photo{
                 background: url('../img/photo-bis.png') no-repeat;
+                min-height: 320px;
 
                 cursor: pointer;
 
@@ -983,7 +983,7 @@
                 line-height: 36px;
                 color: #74CFE3;
                 text-align: center;
-                margin: 0 auto;
+                margin: 0 auto 20px;
 
                 position: relative;
 
@@ -1016,6 +1016,7 @@
             .portfolio__content_video{
                 margin-top: 36px;
                 background: url('../img/video-pr.png') no-repeat;
+                min-height: 320px;
 
                 cursor: pointer;
 
@@ -1062,6 +1063,7 @@
             }
             .portfolio__content_photo{
                 background: url('../img/photo-pr.png') no-repeat;
+                min-height: 320px;
                 
                 cursor: pointer;
 
@@ -1414,7 +1416,7 @@
             }
         }
         .advantages{
-            background-image: url('../img/advantages-bg.png');
+            background-image: url('../img/advantages-bg-2.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -1662,10 +1664,12 @@
                     .portfolio__content_video{
                         margin-top: 42px;
                         width: 50%;
+                        min-height: 384px;
                     }
                     .portfolio__content_photo{
                         margin-top: 42px;
                         width: 50%;
+                        min-height: 384px;
                     }
                 }
             }
@@ -1930,6 +1934,9 @@
             }
         }
         .advantages{
+            height: 100vh;
+            padding: 0;
+
             &__img{
                 width: 400px;
 
@@ -2121,7 +2128,8 @@
         }
         .portfolio{
             height: auto;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
             &__title{
                 &_img{
                     padding: 130px 0;
@@ -2148,6 +2156,9 @@
             }
             &__content_bis{
                 padding-top: 118px;
+            }
+            .portfolio__content_bis .portfolio__content_inner .portfolio__content_photo, .portfolio__content_bis .portfolio__content_inner .portfolio__content_video, .portfolio__content_private .portfolio__content_inner .portfolio__content_photo, .portfolio__content_private .portfolio__content_inner .portfolio__content_video{
+                min-height: 512px;
             }
             .decor__img{
                 display: block;
@@ -2451,6 +2462,7 @@
                 padding-top: 80px;
                 .portfolio__content_inner{
                     .portfolio__content_video{
+
                         .portfolio__play{
                             &_outline{
                                 width: 74px;
@@ -2469,6 +2481,7 @@
                         }
                     }
                     .portfolio__content_photo{
+
                         .portfolio__photo{
                             i{
                                 &:before{
@@ -2493,6 +2506,9 @@
                     left: -9px;
                     width: 61%;
                 }
+            }
+            .portfolio__content_bis .portfolio__content_inner .portfolio__content_photo, .portfolio__content_bis .portfolio__content_inner .portfolio__content_video, .portfolio__content_private .portfolio__content_inner .portfolio__content_photo, .portfolio__content_private .portfolio__content_inner .portfolio__content_video{
+                min-height: 640px;
             }
             .decor__img{
                 min-width: 1700px;
@@ -2706,6 +2722,9 @@
                 &_img{
                     padding: 190px 0;
                 }
+            }
+            .portfolio__content_bis .portfolio__content_inner .portfolio__content_photo, .portfolio__content_bis .portfolio__content_inner .portfolio__content_video, .portfolio__content_private .portfolio__content_inner .portfolio__content_photo, .portfolio__content_private .portfolio__content_inner .portfolio__content_video{
+                min-height: 720px;
             }
         }
         .estimate{
@@ -3074,6 +3093,9 @@
                     }
                 }
             }
+            .portfolio__content_bis .portfolio__content_inner .portfolio__content_photo, .portfolio__content_bis .portfolio__content_inner .portfolio__content_video, .portfolio__content_private .portfolio__content_inner .portfolio__content_photo, .portfolio__content_private .portfolio__content_inner .portfolio__content_video{
+                min-height: 840px;
+            }
             &__btn{
                 font-size: 20px;
                 width: 477px;
@@ -3244,6 +3266,9 @@
             }
         }
         .portfolio{
+            .portfolio__content_bis .portfolio__content_inner .portfolio__content_photo, .portfolio__content_bis .portfolio__content_inner .portfolio__content_video, .portfolio__content_private .portfolio__content_inner .portfolio__content_photo, .portfolio__content_private .portfolio__content_inner .portfolio__content_video{
+                min-height: 960px;
+            }
             .decor__img{
                 left: -400px;
                 top: 550px;

@@ -19,6 +19,22 @@
         left: 20px;
         z-index: 2;
     }
+    .scroll-icon{
+        width: 90px;
+
+        opacity: 0;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease-in-out;
+    }
+    .show-scroll{
+        opacity: 1;
+    }
     svg{
         width: auto;
         height: 100%;
@@ -120,6 +136,9 @@
             left: -70px;
 
             transform: rotate(-90deg);
+        }
+        .scroll-icon{
+            display: none;
         }
 
         svg{

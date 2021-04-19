@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    if( $(window).width() >= 1024 ){
+    if($(window).width() >= 1024 ){
         // full page
         $('.fullpage').fullpage({
             anchors: ['section1', 'section2', 'section3', 'section4','section5', 'section6', 'section7', 'section8'],
@@ -105,6 +105,22 @@ $(document).ready(function() {
             $('.portfolio__title_img').removeClass('parallax-mob');
         }
     });
+
+    // Scroll animation for map
+    $(window).scroll(function() {
+        function hideScroll() {
+            $('.scroll-icon').removeClass('show-scroll');
+        }
+        var heightTop = $('.maps').offset().top,
+            windowScroll = $(this).scrollTop() + 70;
+        if (windowScroll > heightTop){
+            $('.scroll-icon').addClass('show-scroll');
+        } else{
+            $('.scroll-icon').removeClass('show-scroll');
+        }
+        // setTimeout(hideScroll, 5000);
+        
+    });
     
     //Slider for tents
     $(document).ready(function(){
@@ -136,36 +152,6 @@ $(document).ready(function() {
 
         });
         
-    });
-
-    //Slider for project 
-    $(document).ready(function(){
-        $('.project-popup__slider_img, .project-popup__info_slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            infinite: true,
-            fade: true,
-            asNavFor: '.project-popup__slider_nav'
-        });
-        $('.project-popup__slider_nav').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: '.project-popup__slider_img, .project-popup__info_slider',
-            focusOnSelect: true,
-            infinite: true,
-            arrows: true,
-            // variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                }
-            ]
-
-        });
     });
 
     // Slider kitchen
@@ -433,15 +419,54 @@ $(document).ready(function() {
         $('.popup-prj-1').removeClass('hide-gallery');
         $('.popup-prj-1').addClass('show-gallery');
 
-        $(".project-popup__slider_img").get(0).slick.setPosition();
-        $(".project-popup__slider_nav").get(0).slick.setPosition();
-        $(".project-popup__info_slider").get(0).slick.setPosition();
+        // Main slider
+        $('.popup-prj-1 .main-slider-biz').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            prevArrow: $('.main-prev-biz'),
+            nextArrow: $('.main-next-biz'),
+        });
+        // Slider for photo
+        $('.main-slider-biz .project__slider_img').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite: true,
+            fade: true,
+            asNavFor: '.main-slider-biz .project__slider_nav'
+        });
+        $('.main-slider-biz .project__slider_nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.main-slider-biz .project__slider_img',
+            focusOnSelect: true,
+            infinite: true,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        });
+
+        $(".main-slider-biz").get(0).slick.setPosition();
+        $(".main-slider-biz .project__slider_nav").get(0).slick.setPosition();
+        $(".main-slider-biz .project__slider_img").get(0).slick.setPosition();
+        $('.main-slider-biz').resize();
         
     });
     // hide
     $('.close').click(function() {
         $('.popup-prj-1').removeClass('show-gallery');
         $('.popup-prj-1').addClass('hide-gallery');
+
+        $('.main-slider-biz').slick('unslick');
+        $('.main-slider-biz .project__slider_nav').slick('unslick');
+        $(".main-slider-biz .project__slider_img").slick('unslick');
     });
 
     $('.biz').mouseover(function() {
@@ -457,14 +482,55 @@ $(document).ready(function() {
         $('.popup-prj-2').removeClass('hide-gallery');
         $('.popup-prj-2').addClass('show-gallery');
 
-        $(".project-popup__slider_img").get(1).slick.setPosition();
-        $(".project-popup__slider_nav").get(1).slick.setPosition();
-        $(".project-popup__info_slider").get(1).slick.setPosition();
+        // Main slider
+        $('.popup-prj-2 .main-slider-pr').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            prevArrow: $('.main-prev-pr'),
+            nextArrow: $('.main-next-pr'),
+        });
+
+        // Slider for photo
+        $('.main-slider-pr .project__slider_img').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite: true,
+            fade: true,
+            asNavFor: '.main-slider-pr .project__slider_nav'
+        });
+        $('.main-slider-pr .project__slider_nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.main-slider-pr .project__slider_img',
+            focusOnSelect: true,
+            infinite: true,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        });
+
+        $(".main-slider-pr").get(0).slick.setPosition();
+        $(".main-slider-pr .project__slider_nav").get(0).slick.setPosition();
+        $(".main-slider-pr .project__slider_img").get(0).slick.setPosition();
+        $('.main-slider-pr').resize();
+
     });
     // hide
     $('.close').click(function() {
         $('.popup-prj-2').removeClass('show-gallery');
         $('.popup-prj-2').addClass('hide-gallery');
+
+        $('.main-slider-pr').slick('unslick');
+        $('.main-slider-pr .project__slider_nav').slick('unslick');
+        $(".main-slider-pr .project__slider_img").slick('unslick');
     });
 
     $('.pr').mouseover(function() {
@@ -473,6 +539,7 @@ $(document).ready(function() {
     $('.pr').mouseout(function() {
         $('.pr').css({'background-size': 'auto 100%'});
     });
+    
 
     //Estimate-popup
     // show footer

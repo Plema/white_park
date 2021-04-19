@@ -86,7 +86,16 @@ $(document).ready(function() {
 
     //Slider for project
     $(document).ready(function(){
-        $('.project__slider_img, .project__info_slider').slick({
+        // Main slider
+        $('.main-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            prevArrow: $('.main-prev'),
+            nextArrow: $('.main-next'),
+        });
+        // Slider for photo
+        $('.project__slider_img').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -97,7 +106,7 @@ $(document).ready(function() {
         $('.project__slider_nav').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            asNavFor: '.project__slider_img, .project__info_slider',
+            asNavFor: '.project__slider_img',
             focusOnSelect: true,
             infinite: true,
             arrows: true,
