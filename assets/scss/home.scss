@@ -103,7 +103,7 @@
     overflow: hidden;
     .intro{
         background-color: rgba(0, 0, 0, 0.5);
-        background-image: url("../img/bg.png");
+        background-image: url("../img/index-bg.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -382,7 +382,7 @@
         display: none;
     }
     .tent{
-        background-image: url('../img/tent-bg.png');
+        background-image: url('../img/tent-bg.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -639,7 +639,6 @@
         }
     }
     .estimate{
-        background-image: url('../img/estimate-bg-mobile.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: top;
@@ -648,8 +647,9 @@
         position: relative;
 
         .container{
-            padding-top: 177px;
-            padding-bottom: 50px;
+            // padding-top: 50px;
+            margin-top: -40px;
+            padding-bottom: 70px;
         }
 
         &__title{
@@ -1571,7 +1571,7 @@
 
             .container{
                 padding-top: 200px;
-
+                margin-top: 0;
                 margin-left: 150px;
             }
             &__title{

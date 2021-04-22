@@ -100,6 +100,7 @@
     } 
 }
 .wrapper{
+    -webkit-transform: translate3d(0,0,0);
     .intro{
         width: 100%;
         height: 100%;
@@ -108,6 +109,7 @@
 
         position: relative;
         z-index: 5;
+        -webkit-transform: translate3d(0,0,0);
 
         .container{
             padding: 80px 10px 40px;
@@ -176,7 +178,8 @@
         }
     }
     .tent{
-        background-image: url('../img/tent-bg.png');
+        -webkit-transform: translate3d(0,0,0);
+        background-image: url('../img/tent-bg.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -186,6 +189,7 @@
 
         .container{
             padding: 48px 0;
+            -webkit-transform: translate3d(0,0,0);
         }
 
         &__title{
@@ -197,6 +201,7 @@
             margin-bottom: 25px;
         }
         &__item_one, &__item_two, &__item_three, &__item_four{
+            -webkit-transform: translate3d(0,0,0);
             .tent__subtitle{
                 .tent__text{
                     font-family: "Basis-bold";
@@ -249,12 +254,14 @@
                 }
             }
             .tent__info{
+                -webkit-transform: translate3d(0,0,0);
                 border-top: 2px solid #373737;
                 border-bottom: 2px solid #373737;
     
                 padding: 30px 0;
     
                 &_item{
+                    -webkit-transform: translate3d(0,0,0);
                     text-align: center;
                     margin-bottom: 14px;
                     
@@ -277,6 +284,7 @@
                 }
             }
             .tent__gallery{
+                -webkit-transform: translate3d(0,0,0);
                 display: grid;
                 grid-template-rows: 1fr 1fr;
                 grid-template-columns: 1fr 1fr;
@@ -287,6 +295,7 @@
                 margin: 30px 0;
     
                 &_item{
+                    -webkit-transform: translate3d(0,0,0);
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;

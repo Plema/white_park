@@ -111,7 +111,7 @@
 
         position: relative;
         z-index: 20;
-        -webkit-transform:translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
 
         &__title{
             font-family: 'Alice';
@@ -251,13 +251,14 @@
 
         position: relative;
         z-index: 5;
-        -webkit-transform:translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
 
         .container{
             position: relative;
             z-index: 2;
 
             padding: 30px 10px 0;
+            -webkit-transform: translate3d(0,0,0);
         }
         &__title{
             font-family: 'Alice';
@@ -270,6 +271,7 @@
             padding: 0 0 30px;
         }
         &__inner{
+            -webkit-transform: translate3d(0,0,0);
             &_item{
                 background-color: rgba(116, 207, 227, 0.9);
                 -webkit-border-radius: 30px;
@@ -279,6 +281,7 @@
                 position: relative;
 
                 margin-bottom: 25px;
+                -webkit-transform: translate3d(0,0,0);
 
                 .item__title{
                     width: 230px;
@@ -388,6 +391,7 @@
 
         .decor__img{
             display: none;
+            -webkit-transform: translate3d(0,0,0);
         }
         .dish__img{
             display: block;
@@ -398,6 +402,7 @@
             z-index: 1;
 
             transform: translate(-50%, -50%);
+            -webkit-transform: translate3d(0,0,0);
 
         }
     }
@@ -408,7 +413,7 @@
         background-position-y: top;
 
         height: 100%;
-        -webkit-transform:translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
 
         .container{
             background: rgba(255, 255, 255, 0.8);
@@ -564,7 +569,7 @@
         }
     }
     .tent{
-        background-image: url('../img/tent-bg.png');
+        background-image: url('../img/tent-bg.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -576,6 +581,7 @@
 
         .container{
             padding: 48px 0;
+            -webkit-transform: translate3d(0,0,0);
         }
 
         &__social{
@@ -591,6 +597,7 @@
             margin-bottom: 25px;
         }
         &__item_one, &__item_two, &__item_three, &__item_four{
+            -webkit-transform: translate3d(0,0,0);
             .tent__subtitle{
                 .tent__text{
                     font-family: "Basis-bold";
@@ -647,10 +654,12 @@
                 border-bottom: 2px solid #373737;
     
                 padding: 30px 0;
+                -webkit-transform: translate3d(0,0,0);
     
                 &_item{
                     text-align: center;
                     margin-bottom: 14px;
+                    -webkit-transform: translate3d(0,0,0);
                     
                     &:last-of-type{
                         margin-bottom: 0;
@@ -671,6 +680,7 @@
                 }
             }
             .tent__gallery{
+                -webkit-transform: translate3d(0,0,0);
                 display: grid;
                 grid-template-rows: 1fr 1fr;
                 grid-template-columns: 1fr 1fr;
@@ -681,6 +691,7 @@
                 margin: 30px 0;
     
                 &_item{
+                    -webkit-transform: translate3d(0,0,0);
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;

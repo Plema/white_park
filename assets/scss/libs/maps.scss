@@ -31,9 +31,21 @@
 
         transform: translate(-50%, -50%);
         transition: all 0.4s ease-in-out;
+        animation: move 3s infinite;
     }
     .show-scroll{
         opacity: 1;
+    }
+    @keyframes move{
+        0%{
+            transform: translateX(-70%);
+        }
+        50%{
+            transform: translateX(-30%);
+        }
+        100%{
+            transform: translateX(-70%);
+        }
     }
     svg{
         width: auto;
@@ -63,7 +75,7 @@
         transform: translate(2300px, 580px);
     }
     .group4{
-        transform: translate(14500px, 500px);
+        transform: translate(1450px, 500px);
     }
     .group5{
         transform: translate(900px, 250px);
@@ -107,6 +119,9 @@
     .yes{
         opacity: 1;
         transition: all 0.3s;
+    }
+    .hide{
+        opacity: 0;
     }
 }
 @media (min-width: 768px) {

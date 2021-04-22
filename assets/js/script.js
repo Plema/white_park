@@ -105,22 +105,6 @@ $(document).ready(function() {
             $('.portfolio__title_img').removeClass('parallax-mob');
         }
     });
-
-    // Scroll animation for map
-    $(window).scroll(function() {
-        function hideScroll() {
-            $('.scroll-icon').removeClass('show-scroll');
-        }
-        var heightTop = $('.maps').offset().top,
-            windowScroll = $(this).scrollTop() + 70;
-        if (windowScroll > heightTop){
-            $('.scroll-icon').addClass('show-scroll');
-        } else{
-            $('.scroll-icon').removeClass('show-scroll');
-        }
-        // setTimeout(hideScroll, 5000);
-        
-    });
     
     //Slider for tents
     $(document).ready(function(){
@@ -200,13 +184,49 @@ $(document).ready(function() {
         var link = $(this).data('map');
         $('.' + link).removeClass('on');
         $('.' + link).addClass('yes');
+        $('.scroll-icon').removeClass('show-scroll');
     });
+    $('.group').on('mouseenter', function(){
+        if($('.map-item').hasClass('yes')){
+            $(this).removeClass('group');
+            $('.group').addClass('hide');
+        }
+    })
     
     $('.map-link').on('mouseleave', function(){
         var link = $(this).data('map');
         $('.' + link).removeClass('yes');
         $('.' + link).addClass('on');
     });
+    $('.group').on('mouseleave', function(){
+        if($('.map-item').hasClass('on')){
+            $(this).addClass('group');
+            $('.group').removeClass('hide');
+        }
+    })
+    
+
+    // Scroll animation for map
+    $(window).scroll(function() {
+        // function hideScroll() {
+        //     $('.scroll-icon').removeClass('show-scroll');
+        // }
+        var heightTop = $('.maps').offset().top,
+            windowScroll = $(this).scrollTop() + 70;
+        if (windowScroll > heightTop){
+            $('.scroll-icon').addClass('show-scroll');
+        } else{
+            $('.scroll-icon').removeClass('show-scroll');
+        }
+        // setTimeout(hideScroll, 5000);
+    });
+    $('.maps').scroll(function(){
+        if((this).scrollLeft >= 10){
+            $('.scroll-icon').removeClass('show-scroll');
+        } else if((this).scrollLeft == 0){
+            $('.scroll-icon').addClass('show-scroll');
+        }
+    })
 
 
     // Show/hide nav on main
@@ -629,4 +649,5 @@ $(document).ready(function() {
     jQuery(function($){
         $(".input__phone").mask("+7 (999) 999-99-99");
     });
+
 });
