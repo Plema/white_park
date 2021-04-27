@@ -595,6 +595,26 @@
         }
     }
 }
+@media only screen 
+    and (min-width : 1280px) 
+    and (min-height : 620px){
+    
+    .header{
+        &__inner{
+            .header__info{
+                .nav{
+                    .nav__inner{
+                        margin-top: -40px;
+
+                        .nav__link{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (min-width: 1400px) {
     .header{
         &__inner{

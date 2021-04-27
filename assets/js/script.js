@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    // preloader
+    $(document).ready(function() {
+        $('.preloader').delay(1000).fadeOut('slow');
+    });
+
     if($(window).width() >= 1024 ){
         // full page
         $('.fullpage').fullpage({
@@ -69,6 +74,18 @@ $(document).ready(function() {
                     
                         setTimeout(hideMenu, 200);
                         setTimeout(hideMenuLine, 200);
+                    } else if(origin.index == 5 && direction == 'down'){
+                        console.log('Hello');
+                        // video in gallery
+                        $('.project__slider_nav').on('afterChange', function(event, slick, currentSlide){
+                            if($('.video-item').hasClass('slick-current')){
+                                var video_data = $('iframe').data('src');
+                                $('iframe').attr('src', video_data);
+                        
+                            } else{
+                                $('.slider__img_item iframe').attr('src', '');
+                            }
+                        });
                     }
 
                     if(origin.index == 4 && direction =='down'){
@@ -174,51 +191,47 @@ $(document).ready(function() {
         }
     });
 
-    // preloader
-    $(document).ready(function() {
-        $('.preloader').delay(400).fadeOut('slow');
-    });
-
     //MAP
     $('.map-link').on('mouseenter', function(){
         var link = $(this).data('map');
         $('.' + link).removeClass('on');
         $('.' + link).addClass('yes');
         $('.scroll-icon').removeClass('show-scroll');
+
+        let numberOfImg = $(this).data('img');
+        $('.maps').append(`<img class="info-img info-img${numberOfImg}" src="/wp-content/themes/alliance/img/map-img/${numberOfImg}.png">`);
     });
     $('.group').on('mouseenter', function(){
         if($('.map-item').hasClass('yes')){
             $(this).removeClass('group');
             $('.group').addClass('hide');
         }
-    })
+    });
     
     $('.map-link').on('mouseleave', function(){
         var link = $(this).data('map');
         $('.' + link).removeClass('yes');
         $('.' + link).addClass('on');
+
+        $('.maps').find('.info-img').remove();
     });
     $('.group').on('mouseleave', function(){
         if($('.map-item').hasClass('on')){
             $(this).addClass('group');
             $('.group').removeClass('hide');
         }
-    })
+    });
     
 
     // Scroll animation for map
     $(window).scroll(function() {
-        // function hideScroll() {
-        //     $('.scroll-icon').removeClass('show-scroll');
-        // }
         var heightTop = $('.maps').offset().top,
-            windowScroll = $(this).scrollTop() + 70;
+            windowScroll = $(this).scrollTop() + 300;
         if (windowScroll > heightTop){
             $('.scroll-icon').addClass('show-scroll');
         } else{
             $('.scroll-icon').removeClass('show-scroll');
         }
-        // setTimeout(hideScroll, 5000);
     });
     $('.maps').scroll(function(){
         if((this).scrollLeft >= 10){
@@ -297,23 +310,6 @@ $(document).ready(function() {
     });
 
     //Advantages
-
-    // $('.advantages__list_item').hover(function() {
-    //     //show
-    //     if($(this).find('.advantages__list_text, .first').hasClass('hide')){
-
-    //         $('.advantages__list_text, .first').slideUp(200).removeClass('show');
-    //         $('.advantages__list_text, .first').addClass('hide');
-    //         $(this).find('.advantages__list_text, .first').slideDown(200).removeClass('hide');
-    //         $(this).find('.advantages__list_text, .first').slideDown(200).addClass('show');
-
-    //     } else if($(this).find('.advantages__list_text, .first').hasClass('show')){
-
-    //         $(this).find('.advantages__list_text, .first').slideUp(200).removeClass('show');
-    //         $(this).find('.advantages__list_text, .first').addClass('hide');
-
-    //     }
-    // });
 
     if($(window).width() < 1024) {
         $('.first').removeClass('hide');
@@ -473,6 +469,16 @@ $(document).ready(function() {
             ]
         });
 
+        $('.project__slider_nav').on('afterChange', function(event, slick, currentSlide){
+            if($('.video-item').hasClass('slick-current')){
+                var video_data = $('iframe').data('src');
+                $('iframe').attr('src', video_data);
+        
+            } else{
+                $('.slider__img_item iframe').attr('src', '');
+            }
+        });
+
         $(".main-slider-biz").get(0).slick.setPosition();
         $(".main-slider-biz .project__slider_nav").get(0).slick.setPosition();
         $(".main-slider-biz .project__slider_img").get(0).slick.setPosition();
@@ -535,6 +541,16 @@ $(document).ready(function() {
                     }
                 }
             ]
+        });
+
+        $('.project__slider_nav').on('afterChange', function(event, slick, currentSlide){
+            if($('.video-item').hasClass('slick-current')){
+                var video_data = $('iframe').data('src');
+                $('iframe').attr('src', video_data);
+        
+            } else{
+                $('.slider__img_item iframe').attr('src', '');
+            }
         });
 
         $(".main-slider-pr").get(0).slick.setPosition();

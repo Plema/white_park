@@ -27,6 +27,9 @@
     <!-- Popup for thanks -->
 	<include src="assets/templates/popup-thanks.html"></include>
 
+    <!-- Fancybox for projects -->
+	<include src="assets/templates/fancybox.html"></include>
+
     <!-- Прелоадер -->
 	<div class="preloader">
 		<img class="preloader__logo" src="img/logo-dark.png" alt="">
@@ -183,9 +186,12 @@
                                 <div class="main-slider-item">
                                     <div class="project__slider">
                                         <div class="project__slider_img slider-for">
-                                            <div class="slider__img_item"><img src="img/project-1.jpg" alt=""></div>
+                                            <div class="slider__img_item"><a href="img/project-1.jpg"><img src="img/project-1.jpg" alt=""></a></div>
                                             <div class="slider__img_item"><img src="img/project-2.jpg" alt=""></div>
                                             <div class="slider__img_item"><img src="img/project-3.jpg" alt=""></div>
+                                            <div class="slider__img_item"><img src="img/project-1.jpg" alt=""></div>
+                                            <div class="slider__img_item"><img src="img/project-2.jpg" alt=""></div>
+                                            <div class="slider__img_item video-item"><iframe src='' frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube.com/embed/z_neMO2t4jU"></iframe></div>
                                         </div>
         
         
@@ -195,6 +201,7 @@
                                             <div><img src="img/project-3.jpg" alt=""></div>
                                             <div><img src="img/project-1.jpg" alt=""></div>
                                             <div><img src="img/project-2.jpg" alt=""></div>
+                                            <div><img class="video-item-img" src="http://img.youtube.com/vi/z_neMO2t4jU/2.jpg" alt=""></div>
                                         </div>
                                     </div>
 
@@ -350,6 +357,7 @@
     <!-- Скрипты -->
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js"></script>
 	<script src="js/scrolloverflow.min.js"></script>

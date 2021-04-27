@@ -308,6 +308,8 @@
             -webkit-transform: translate3d(0,0,0);
 
             .swiper-slide{
+                position: relative;
+                z-index: -1;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -346,6 +348,7 @@
             }
             
             .swiper-slide-active{
+                position: relative;
                 z-index: 5;
                 background-color: transparent;
                 border-radius: 50%;
@@ -486,6 +489,56 @@
                         
                         &_img{
                             margin-bottom: 20px;
+
+                            .slider__img_item{
+                                cursor: pointer;
+                                iframe{
+                                    width: 300px;
+                                    height: 200px;
+                                }
+                                @media (min-width: 375px){
+                                    iframe{
+                                        width: 355px;
+                                        height: 237px;
+                                    } 
+                                }
+                                @media (min-width: 414px){
+                                    iframe{
+                                        width: 394px;
+                                        height: 263px;
+                                    } 
+                                }
+                                @media (min-width: 768px){
+                                    iframe{
+                                        width: 708px;
+                                        height: 472px;
+                                    } 
+                                }
+                                @media (min-width: 1024px){
+                                    iframe{
+                                        width: 864px;
+                                        height: 576px;
+                                    } 
+                                }
+                                @media (min-width: 1280px){
+                                    iframe{
+                                        width: 490px;
+                                        height: 327px;
+                                    } 
+                                }
+                                @media (min-width: 1440px){
+                                    iframe{
+                                        width: 539px;
+                                        height: 360px;
+                                    } 
+                                }
+                                @media (min-width: 1600px){
+                                    iframe{
+                                        width: 577px;
+                                        height: 385px;
+                                    } 
+                                }
+                            }
                         }
                         &_nav{
                             padding: 0 40px;
@@ -496,6 +549,54 @@
                             }
                             .slick-slide{
                                 margin-right: 5px;
+                            }
+                            div{
+                                .video-item-img{
+                                    width: 108px;
+                                    max-height: 72px;
+                                }
+                                @media (min-width: 375px){
+                                    .video-item-img{
+                                        width: 135px;
+                                        max-height: 90px;
+                                    }
+                                }
+                                @media (min-width: 414px){
+                                    .video-item-img{
+                                        width: 155px;
+                                        max-height: 103px;
+                                    }
+                                }
+                                @media (min-width: 768px){
+                                    .video-item-img{
+                                        width: 206px;
+                                        max-height: 137px;
+                                    }
+                                }
+                                @media (min-width: 1024px){
+                                    .video-item-img{
+                                        width: 258px;
+                                        max-height: 172px;
+                                    }
+                                }
+                                @media (min-width: 1280px){
+                                    .video-item-img{
+                                        width: 127px;
+                                        max-height: 85px;
+                                    }
+                                }
+                                @media (min-width: 1440px){
+                                    .video-item-img{
+                                        width: 143px;
+                                        max-height: 95px;
+                                    }
+                                }
+                                @media (min-width: 1600px){
+                                    .video-item-img{
+                                        width: 156px;
+                                        max-height: 104px;
+                                    }
+                                }
                             }
                         }
                     }
