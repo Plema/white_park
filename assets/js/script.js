@@ -560,7 +560,7 @@ $(document).ready(function() {
 
     });
     // hide
-    $('.close').click(function() {
+    $('.close-pr').click(function() {
         $('.popup-prj-2').removeClass('show-gallery');
         $('.popup-prj-2').addClass('hide-gallery');
 
@@ -665,5 +665,59 @@ $(document).ready(function() {
     jQuery(function($){
         $(".input__phone").mask("+7 (999) 999-99-99");
     });
+
+    //  Fancybox
+    $(".popup-prj-1 .slider__img_item a").fancybox({
+        parentEl: '.fancybox',
+        panimationDuration : 600,
+        animationEffect: 'slide-in-out',
+        clickContent: false,
+        beforeShow: function(){
+            $("body").css({'overflow-y':'hidden'});
+        },
+        afterClose: function(){
+            $("body").css({'overflow-y':'scroll'});
+
+            $('html, body').scrollTop(3600);
+            if($(window).width() >= 375){
+                $('html, body').scrollTop(3800);
+            }
+            if($(window).width() >= 414){
+                $('html, body').scrollTop(4000);
+            }
+            if($(window).width() >= 768){
+                $('html, body').scrollTop(5200);
+            }
+            if($(window).width() >= 1024){
+                $("body").css({'overflow-y':'hidden'});
+            }
+        },
+    });
+    $(".popup-prj-2 .slider__img_item a").fancybox({
+        parentEl: '.fancybox',
+        panimationDuration : 600,
+        animationEffect: 'slide-in-out',
+        clickContent: false,
+        beforeShow: function(){
+            $("body").css({'overflow-y':'hidden'});
+        },
+        afterClose: function(){
+            $("body").css({'overflow-y':'scroll'});
+
+            $('html, body').scrollTop(4550);
+            if($(window).width() >= 375){
+                $('html, body').scrollTop(4750);
+            }
+            if($(window).width() >= 414){
+                $('html, body').scrollTop(4950);
+            }
+            if($(window).width() >= 768){
+                $('html, body').scrollTop(5700);
+            }
+            if($(window).width() >= 1024){
+                $("body").css({'overflow-y':'hidden'});
+            }
+        },
+    }); 
 
 });

@@ -300,5 +300,28 @@ $(document).ready(function() {
 
     $(".slider__img_item a").fancybox({
         parentEl: '.fancybox',
+        clickContent: false,
+        padding: 0,
+        beforeShow: function(){
+            $("body").css({'overflow-y':'hidden'});
+        },
+        afterClose: function(){
+            $("body").css({'overflow-y':'scroll'});
+
+            const pr = $('.project');
+            $('html, body').scrollTop(1550);
+            if($(window).width() >= 375){
+                $('html, body').scrollTop(1750);
+            }
+            if($(window).width() >= 414){
+                $('html, body').scrollTop(1950);
+            }
+            if($(window).width() >= 768){
+                $('html, body').scrollTop(2800);
+            }
+            if($(window).width() >= 1024){
+                $("body").css({'overflow-y':'hidden'});
+            }
+        },
     }); 
 });
