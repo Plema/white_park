@@ -25,7 +25,22 @@ body {
 
     overflow-x: hidden;
 }
+.amo-button-holder{
+    left: 5px !important;
+    right: auto !important;
+    bottom: 10px !important;
 
+    @media(min-width: 1440px){
+        left: 13px !important;
+        bottom: 20px !important;
+    }
+
+    .amo-button{
+        .amo-livechat{
+            display: none !important;
+        }
+    }
+}
 html {
     box-sizing: border-box;
     position: relative;
