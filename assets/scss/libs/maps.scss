@@ -781,9 +781,10 @@
         opacity: 0;
         transition: all 0.3s;
     }
-    .map-link{
+    .map-link, path{
         cursor: pointer;
     }
+
     .group1{
         transform: translate(1200px, 400px);
     }

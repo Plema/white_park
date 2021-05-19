@@ -38,7 +38,7 @@ $(document).ready(function() {
                         setTimeout(hideMenu, 200);
                         setTimeout(hideMenuLine, 200);
 
-                        $(window).click(function() {
+                        $(window).on('mouseenter', function() {
                             if($('.nav__toggle, .nav__toggle_line').hasClass('active')){
                                 $('.nav__toggle, .nav__toggle_line').css({'right': '-50px'});
 
@@ -46,16 +46,26 @@ $(document).ready(function() {
                                 setTimeout(showMenuLine, 200);
                             }
                         });
-                        $(document).click(function (e) {
-                            var btn = $('.nav__toggle');
-                            if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+                        // $(document).click(function (e) {
+                        //     var btn = $('.nav__toggle');
+                        //     if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+                        //         $('.header__info').css({'right': '-300px'});
+                        //         $('.nav__toggle').removeClass('active');
+                        //         $('.nav__toggle_btn').find('i').removeClass('icon-close');
+                        //         $('.nav__toggle_btn').find('i').addClass('icon-menu');
+
+                        //         setTimeout(hideMenu, 300);
+                        //     }
+                        // });
+                        $('.header__info').on('mouseleave', function(){
+                            setTimeout(hideMenu, 300);
+                            setTimeout(function(){
                                 $('.header__info').css({'right': '-300px'});
                                 $('.nav__toggle').removeClass('active');
                                 $('.nav__toggle_btn').find('i').removeClass('icon-close');
                                 $('.nav__toggle_btn').find('i').addClass('icon-menu');
 
-                                setTimeout(hideMenu, 300);
-                            }
+                            }, 301);
                         });
 
                     } else if(origin.index == 1 && direction =='up'){
@@ -74,8 +84,8 @@ $(document).ready(function() {
                     
                         setTimeout(hideMenu, 200);
                         setTimeout(hideMenuLine, 200);
+
                     } else if(origin.index == 5 && direction == 'down'){
-                        console.log('Hello');
                         // video in gallery
                         $('.project__slider_nav').on('afterChange', function(event, slick, currentSlide){
                             if($('.video-item').hasClass('slick-current')){
@@ -86,6 +96,13 @@ $(document).ready(function() {
                                 $('.slider__img_item iframe').attr('src', '');
                             }
                         });
+                    }
+
+                    if(origin.index == 6 && direction =='down'){
+                        setTimeout(showMenu, 200);
+                        setTimeout(function(){
+                            $('.nav__toggle').css({'right': '-50px'});
+                        }, 201);
                     }
 
                     if(origin.index == 4 && direction =='down'){
@@ -192,13 +209,13 @@ $(document).ready(function() {
     });
 
     //MAP
-    $('.map-link').on('mouseenter', function(){
-        var link = $(this).data('map');
+    $('.group').on('mouseenter', function(){
+        var link = $(this).find('.map-link').data('map');
         $('.' + link).removeClass('on');
         $('.' + link).addClass('yes');
         $('.scroll-icon').removeClass('show-scroll');
 
-        let numberOfImg = $(this).data('img');
+        let numberOfImg = $(this).find('.map-link').data('img');
         $('.maps').append(`<img class="info-img info-img${numberOfImg}" src="/wp-content/themes/alliance/img/map-img/${numberOfImg}.png">`);
     });
     $('.group').on('mouseenter', function(){
@@ -208,8 +225,8 @@ $(document).ready(function() {
         }
     });
     
-    $('.map-link').on('mouseleave', function(){
-        var link = $(this).data('map');
+    $('.group').on('mouseleave', function(){
+        var link = $(this).find('.map-link').data('map');
         $('.' + link).removeClass('yes');
         $('.' + link).addClass('on');
 
@@ -243,7 +260,7 @@ $(document).ready(function() {
 
 
     // Show/hide nav on main
-    $('.nav__toggle').on("click", function(e) {
+    $('.nav__toggle').on("mouseenter", function(e) {
         e.preventDefault();
 
         $(this).toggleClass('active');
@@ -276,7 +293,7 @@ $(document).ready(function() {
         $('.nav__toggle_line').css({'right': '0px'});
     }
 
-    $('.nav__toggle_line').on("click", function(e) {
+    $('.nav__toggle_line').on("mouseenter", function(e) {
         e.preventDefault();
 
         $(this).toggleClass('active');
@@ -297,16 +314,27 @@ $(document).ready(function() {
         }
     });
 
-    $(document).click(function (e) {
-        var btn = $('.nav__toggle_line');
-        if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+    // $(document).click(function (e) {
+    //     var btn = $('.nav__toggle_line');
+    //     if (!btn.is(e.target) && btn.has(e.target).length === 0) {
+    //         $('.header__info_line').css({'right': '-300px'});
+    //         $('.nav__toggle_line').removeClass('active');
+    //         $('.nav__toggle_line .nav__toggle_btn').find('i').removeClass('icon-close');
+    //         $('.nav__toggle_line .nav__toggle_btn').find('i').addClass('icon-menu');
+
+    //         setTimeout(hideMenuLine, 300);
+    //     }
+    // });
+
+    $('.header__info_line').on('mouseleave', function(){
+        setTimeout(hideMenuLine, 300);
+        setTimeout(function(){
             $('.header__info_line').css({'right': '-300px'});
             $('.nav__toggle_line').removeClass('active');
-            $('.nav__toggle_line .nav__toggle_btn').find('i').removeClass('icon-close');
-            $('.nav__toggle_line .nav__toggle_btn').find('i').addClass('icon-menu');
+            $('.nav__toggle_btn').find('i').removeClass('icon-close');
+            $('.nav__toggle_btn').find('i').addClass('icon-menu');
 
-            setTimeout(hideMenuLine, 300);
-        }
+        }, 301);
     });
 
     //Advantages

@@ -147,6 +147,8 @@
             }
         }
         &__buttons{
+            display: flex;
+            flex-direction: column-reverse;
             .intro__btn{
                 display: flex;
                 justify-content: center;
@@ -164,7 +166,7 @@
                 outline: none;
     
                 padding: 16px 0;
-                margin: 0 auto 20px;
+                margin: 0 auto;
                 transition: background-color .3s ease-out;
                 position: relative;
                 overflow: hidden;
@@ -195,7 +197,7 @@
                 position: relative;
     
                 width: 260px;
-                margin: 0 auto;
+                margin: 0 auto 40px;
     
                 &_outline{
                     padding-left: 4px;
@@ -1801,11 +1803,13 @@
             }
             &__buttons{
                 display: flex;
-                justify-content: flex-start;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
 
                 .intro__btn{
                     width: 269px;
                     margin: 0;
+                    margin-left: 19px;
                     font-size: 18px;
 
                     padding: 23px 0;
@@ -1818,8 +1822,8 @@
                     }
                 }
                 .intro__play{
-                    margin-left: 0;
-                    margin-left: 19px;
+                    margin: 0;
+
                     &_outline{
                         top: 5px;
 

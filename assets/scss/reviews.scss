@@ -574,6 +574,21 @@
         .decor__img{
             display: none;
         }
+
+        @media(min-width: 375px){
+            padding-bottom: 70px;
+
+            &_title{
+                padding-bottom: 20px;
+            }
+        }
+        @media(min-width: 414px){
+            padding-bottom: 80px;
+
+            &_title{
+                padding:10px 0 20px;
+            }
+        }
     }
     .doc__reviews{
         display: flex;
@@ -776,6 +791,17 @@
         }
         .decor__img{
             display: none;
+        }
+
+        @media(min-width: 375px){
+            &_title{
+                padding-bottom: 20px;
+            }
+        }
+        @media(min-width: 414px){
+            &_title{
+                padding: 10px 0 20px;
+            }
         }
     }
 }
