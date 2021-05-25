@@ -517,7 +517,7 @@ a {
             height: 35px;
         
             border-radius: 50%;
-            border: 3px solid #373737;
+            border: none;
             background-color: transparent;
             color: transparent;
         
@@ -542,9 +542,6 @@ a {
         
                 transition: color 0.1s linear;
             }
-            &:hover{
-                border: 3px solid #74CFE3;
-            }
             &:hover:before{
                 color: #373737;
             }
@@ -554,7 +551,7 @@ a {
             height: 35px;
         
             border-radius: 50%;
-            border: 3px solid #373737;
+            border: none;
             background-color: transparent;
             color: transparent;
         
@@ -579,14 +576,20 @@ a {
         
                 transition: color 0.1s linear;
             }
-        
-            &:hover{
-                border: 3px solid #74CFE3;
-            }
             &:hover:before{
                 color: #373737;
             }
         
+        }
+    }
+    @media(min-width: 375px){
+        .slick-next, .slick-prev{
+            top: 35%;
+        }
+    }
+    @media(min-width: 414px){
+        .slick-next, .slick-prev{
+            top: 40%;
         }
     }
     @media(min-width: 768px){

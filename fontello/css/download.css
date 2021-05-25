@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'download';
-  src: url('../font/download.eot?77887769');
-  src: url('../font/download.eot?77887769#iefix') format('embedded-opentype'),
-       url('../font/download.woff2?77887769') format('woff2'),
-       url('../font/download.woff?77887769') format('woff'),
-       url('../font/download.ttf?77887769') format('truetype'),
-       url('../font/download.svg?77887769#download') format('svg');
+  src: url('../font/download.eot?25827302');
+  src: url('../font/download.eot?25827302#iefix') format('embedded-opentype'),
+       url('../font/download.woff2?25827302') format('woff2'),
+       url('../font/download.woff?25827302') format('woff'),
+       url('../font/download.ttf?25827302') format('truetype'),
+       url('../font/download.svg?25827302#download') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'download';
-    src: url('../font/download.svg?77887769#download') format('svg');
+    src: url('../font/download.svg?25827302#download') format('svg');
   }
 }
 */
@@ -69,6 +69,8 @@
 .icon-tent-icon-s:before { content: '\e80b'; } /* '' */
 .icon-tent-icon-m:before { content: '\e80c'; } /* '' */
 .icon-tent-icon-l:before { content: '\e80d'; } /* '' */
+.icon-proj-arrow-prev:before { content: '\e818'; } /* '' */
+.icon-proj-arrow-next:before { content: '\e819'; } /* '' */
 .icon-location:before { content: '\f031'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-play-circled:before { content: '\f144'; } /* '' */

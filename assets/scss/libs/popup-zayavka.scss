@@ -1,7 +1,8 @@
 .popup-app{
     display: block;
     width: 100%;
-    overflow: scroll;
+    // overflow: scroll;
+    overflow: hidden;
 
     
     .app{

@@ -385,6 +385,34 @@
     }
     .complex{
         padding: 47px 23px 109px 27px;
+        position: relative;
+
+        .complex-slider{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+
+            &-item{
+                width: 100%;
+                height: 1077px;
+            }
+            @media(min-width: 768px){
+                &-item{
+                    height: 957px;
+                }
+                
+            }
+        }
+        .complex-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 44, 54, 0.7);
+        }
 
         &-title{
             font-family: 'Alice';
@@ -1963,6 +1991,12 @@
                 position: absolute;
                 bottom: -25px;
                 left: 0;
+            }
+
+            .complex-slider{
+                &-item{
+                    height: 100vh;
+                }
             }
 
             &-title{
