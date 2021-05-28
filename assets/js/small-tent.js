@@ -341,15 +341,15 @@ $(document).ready(function() {
             $("body").css({'overflow-y':'scroll'});
 
             const pr = $('.project');
-            $('html, body').scrollTop(1550);
+            $('html, body').scrollTop(400);
             if($(window).width() >= 375){
-                $('html, body').scrollTop(1750);
+                $('html, body').scrollTop(700);
             }
             if($(window).width() >= 414){
-                $('html, body').scrollTop(1950);
+                $('html, body').scrollTop(800);
             }
             if($(window).width() >= 768){
-                $('html, body').scrollTop(2800);
+                $('html, body').scrollTop(1000);
             }
             if($(window).width() >= 1024){
                 $("body").css({'overflow-y':'hidden'});

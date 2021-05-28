@@ -24,6 +24,14 @@ body {
     text-rendering: optimizeLegibility;
 
     overflow-x: hidden;
+
+    .wrapper{
+        .insta{
+            .wis-template-ad{
+                display: none !important;
+            }
+        }
+    }
 }
 .amo-button-holder{
     left: 5px !important;
