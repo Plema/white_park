@@ -9,8 +9,9 @@ $(document).ready(function() {
         // full page
         $('.fullpage').fullpage({
             anchors: ['section1', 'section2', 'section3', 'section4','section5', 'section6', 'section7', 'section8'],
-
+            scrollingSpeed: 1000,
             scrollOverflow: true,
+
             onLeave: function(origin, destination, direction){
                 var loadedSection = this;
                 let pseudoParallax = $('.portfolio__title_img');
@@ -105,12 +106,11 @@ $(document).ready(function() {
                         }, 201);
                     }
 
-                    // if(origin.index == 3 && direction =='down'){
-                    //     pseudoParallax.addClass('parallax');
-                    // } else{
-                    //     pseudoParallax.removeClass('parallax');
-                    // }
-
+                    if(origin.index == 3 && direction =='down'){
+                        pseudoParallax.addClass('parallax');
+                    } else{
+                        pseudoParallax.removeClass('parallax');
+                    }
                 }
             },
         });
@@ -479,6 +479,7 @@ $(document).ready(function() {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
+            fade: true,
             prevArrow: $('.main-prev-biz'),
             nextArrow: $('.main-next-biz'),
             asNavFor: '.main-slider-title-biz',
@@ -499,6 +500,9 @@ $(document).ready(function() {
             nextArrow: '<button class="img-next-biz"></button>',
             dots: true,
             infinite: true,
+            autoplaySpeed: 3500,
+            pauseOnHover: false,
+            pauseOnFocus: false,
             fade: true,
             asNavFor: '.main-slider-biz .project__slider_nav',
             responsive: [
@@ -575,6 +579,7 @@ $(document).ready(function() {
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
+            fade: true,
             prevArrow: $('.main-prev-pr'),
             nextArrow: $('.main-next-pr'),
             asNavFor: '.main-slider-title-pr',
@@ -597,6 +602,9 @@ $(document).ready(function() {
             dots: true,
             infinite: true,
             fade: true,
+            autoplaySpeed: 100,
+            pauseOnHover: false,
+            pauseOnFocus: false,
             asNavFor: '.main-slider-pr .project__slider_nav',
             responsive: [
                 {
@@ -804,5 +812,10 @@ $(document).ready(function() {
             }
         },
     }); 
+
+    // Advantages btn
+    $('.advantages__btn').on('click', function(){
+        $.fn.fullpage.moveTo(5)
+    });
 
 });

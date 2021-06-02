@@ -23,7 +23,7 @@
                 position: absolute;
                 top: 0;
                 // right: 0;
-                left: 85%;
+                left: 90%;
 
                 .fancybox-button--zoom{
                     display: none;
@@ -99,25 +99,25 @@
                         }
                         @media (min-width: 1280px){
                             iframe{
-                                width: 900px;
-                                height: 500px;
+                                min-width: 900px;
+                                height: 600px;
                             }
                         }
                         @media (min-width: 1440px){
                             iframe{
                                 width: 1000px;
-                                height: 500px;
                             }
                         }
                         @media (min-width: 1600px){
                             iframe{
                                 width: 1200px;
+                                height: 750px;
                             }
                         }
                     }
                 }
                 @media (min-width: 1024px){
-                    width: 60%;
+                    width: 70%;
                     // margin: auto;
 
                     .fancybox-slide{

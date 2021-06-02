@@ -157,9 +157,9 @@
     
                 font-family: 'Basis-bold';
                 font-size: 16px;
-                color: #fff;
+                color: #74CFE3;
     
-                background-color: #74CFE3;
+                background-color: #fff;
     
                 border: none;
                 border-radius: 5px;
@@ -174,16 +174,30 @@
     
                 &:hover{
                     background-color: #2EA6C0;
+                    color: #fff;
+
+                    &:before{
+                        content: '';
+                        background-image: url('../img/button-bg-blue.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 61%;
+                        height: 220%;
+                        position: absolute;
+                        top: -22px;
+                        left: -6px;
+                        z-index: 0;
+                    }
                 }
                 &:before{
                     content: '';
-                    background-image: url('../img/button-bg-blue.png');
+                    background-image: url('../img/wave-tent-slider.png');
                     background-size: contain;
                     background-repeat: no-repeat;
-                    width: 61%;
+                    width: 60%;
                     height: 220%;
                     position: absolute;
-                    top: -22px;
+                    top: -23px;
                     left: -6px;
                     z-index: 0;
                 }
@@ -204,7 +218,7 @@
     
                     width: 56px;
                     height: 56px;
-                    border: 1px #fff solid;
+                    border: 1px #74CFE3 solid;
                     border-radius: 28px;
     
                     position: absolute;
@@ -213,15 +227,13 @@
     
                     transition: width 0.4s ease-out; 
     
-                    i{
-                        font-family: 'fontello';
-                        font-size: 46px;
-                        color: #fff;
-                        filter: drop-shadow(4px 4px 4px rgba(255, 255, 255, 0.25));
-    
+                    .play-button-blue{
+                        width: 42px;
+                        height: 42px;
+
                         position: absolute;
                         top: 50%;
-                        left: 4px;
+                        left: 6px;
                         transform: translate(0, -50%);
         
                         &:before{
@@ -372,6 +384,7 @@
         }
         &__btn{
             display: none;
+            cursor: pointer;
         }
         .decor__img{
             display: none;
@@ -1604,7 +1617,7 @@
                     padding: 100px 0;
                 }
                 .portfolio__mouse{
-                    display: block;
+                    display: none;
                     width: 31px;
                     height: auto;
 
@@ -1788,11 +1801,21 @@
 
                     padding: 23px 0;
 
+                    &:hover{
+                        &:before{
+                            width: 91%;
+
+                            top: -31px;
+                            left: -10px;
+                        }
+                    }
+
                     &:before{
-                        width: 93%;
+                        width: 90%;
 
                         top: -32px;
                         left: -10px;
+
                     }
                 }
                 .intro__play{
@@ -2561,7 +2584,7 @@
                 }
 
                 .portfolio__mouse{
-                    display: block;
+                    display: none;
                     width: 36px;
                     height: auto;
 
@@ -2922,9 +2945,15 @@
                     font-size: 20px;
 
                     padding: 22px 0;
+                    &:hover{
+                        &:before{
+                            top: -29px;
+                            width: 83%
+                        }
+                    }
                     &:before{
-                        top: -30px;
-                        width: 83%
+                        top: -31px;
+                        width: 82%
                     }
                 }
                 .intro__play{

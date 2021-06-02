@@ -375,6 +375,8 @@
                     left: 50%;
 
                     transform: translate(-50%, -50%);
+
+                    -webkit-transform: translate3d(0,0,0);
                 }
             }
             .swiper-button-prev{
@@ -484,24 +486,32 @@
             padding: 50px 0 0;
         }
         &__inner{
+            -webkit-transform: translate3d(0,0,0);
+            
             .main-slider-title{
                 display: none;
+                -webkit-transform: translate3d(0,0,0);
             }
             .main-slider{
+                -webkit-transform: translate3d(0,0,0);
                 &-item{
                     position: relative;
+                    -webkit-transform: translate3d(0,0,0);
 
                     .project__slider{
                         padding-top: 100px;
+                        -webkit-transform: translate3d(0,0,0);
                         
                         &_img{
                             margin-bottom: 20px;
+                            -webkit-transform: translate3d(0,0,0);
 
                             .slick-dots{
                                 display: none !important;
                             }
 
                             .slider__img_item{
+                                -webkit-transform: translate3d(0,0,0);
                                 a{
                                     cursor: zoom-in;
 
@@ -607,6 +617,7 @@
                             }
                         }
                         &_nav{
+                            -webkit-transform: translate3d(0,0,0);
                             padding: 0 40px;
                             margin-bottom: 20px;
                             
@@ -667,6 +678,7 @@
                         }
                     }
                     .project__info{
+                        -webkit-transform: translate3d(0,0,0);
                         padding: 0 10px;
 
                         &_main{
@@ -732,7 +744,7 @@
                 color: transparent;
             
                 position: absolute;
-                top: 121px;
+                top: 31px;
                 left: 10px;
                 z-index: 2;
             
@@ -770,7 +782,7 @@
                 color: transparent;
             
                 position: absolute;
-                top: 121px;
+                top: 31px;
                 right: 10px;
                 z-index: 2;
             
@@ -805,6 +817,8 @@
     .insta{
         background: linear-gradient(180deg, rgba(187, 243, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
         padding: 30px 0;
+
+        -webkit-transform: translate3d(0,0,0);
 
         &_wrapper{
             .insta_title{
@@ -1545,9 +1559,11 @@
                             padding-top: 0;
 
                             position: absolute;
+                            z-index: 1;
                             top: 0;
                             left: 0;
-                            z-index: 1;
+                            // -webkit-transform:translateZ(0);
+                            // -webkit-backface-visibility:hidden;
 
                             &_nav{
                                 display: none;
@@ -1556,9 +1572,13 @@
                             }
                             &_img{
                                 position: relative;
+                                z-index: -1;
+                                // -webkit-transform:translateZ(0);
+                                // -webkit-backface-visibility:hidden;
                                  
                                 .slider__img_item{
                                     height: 100vh;
+                                    z-index: 100 !important;
                                     // pointer-events: none;
                                     a{
                                         height: 100%;
@@ -1702,7 +1722,7 @@
                             background: rgba(8, 12, 13, 0.8);
 
                             position: relative;
-                            z-index: 1000;
+                            z-index: 999;
 
                             &_main{
                                 width: auto;
@@ -1794,6 +1814,11 @@
                 transform: scale(1.8);
             }
         }
+        .insta{
+            &_wrapper{
+                padding: 0 50px;
+            }
+        }
         .estimate{
             background-position-x: 0;
 
@@ -1830,7 +1855,7 @@
         }
     }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
     .wrapper{
         .intro{
             .container{
@@ -1957,6 +1982,11 @@
                     top: 20%;
                     left: 37%;
                 }
+            }
+        }
+        .insta{
+            &_wrapper{
+                padding: 0 100px;
             }
         }
         .estimate{
@@ -2182,6 +2212,8 @@
         }
         .insta{
             &_wrapper{
+                padding: 0 120px;
+
                 .insta_inner{
                     .insta_img{
                         margin-bottom: 20px;
@@ -2389,7 +2421,7 @@
         }
         .insta{
             &_wrapper{
-                padding: 0 100px;
+                padding: 0 150px;
             }
         }
     }

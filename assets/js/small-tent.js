@@ -5,6 +5,68 @@ $(document).ready(function() {
         $('.preloader').delay(400).fadeOut('slow');
     });
 
+    //Slider for project
+    $(document).ready(function(){
+        // Main slider
+        $('.main-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            infinite: true,
+            // arrows: false,
+            prevArrow: $('.main-prev'),
+            nextArrow: $('.main-next'),
+            asNavFor: '.main-slider-title',
+        });
+        $('.main-slider-title').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            asNavFor: '.main-slider',
+            focusOnSelect: true,
+            infinite: true,
+            arrows: false,
+        });
+        // Slider for photo
+        $('.project__slider_img').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            infinite: true,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 3500,
+            pauseOnHover: false,
+            // pauseOnFocus: false,
+            asNavFor: '.project__slider_nav',
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+        $('.project__slider_nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.project__slider_img',
+            focusOnSelect: true,
+            infinite: true,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        });
+    });
+
      // Slider opp
      const swiper = new Swiper('.swiper-container', {
         spaceBetween: -120,
@@ -41,6 +103,7 @@ $(document).ready(function() {
         $(document).ready(function() {
             $('.fullpage').fullpage({
                 scrollOverflow: true,
+                scrollingSpeed: 1000,
                 responsiveWidth: 1024,
 
                 onLeave: function(origin, destination, direction){
@@ -109,6 +172,9 @@ $(document).ready(function() {
                         } else if(origin.index == 2 && direction == 'down'){
                             // video in gallery
                             $('.project__slider_nav').on('afterChange', function(event, slick, currentSlide){
+                                // $('.main-slider').get(0).slick.setPosition();
+                                // $('.project__slider_img').slick('resize');
+
                                 if($('.video-item').hasClass('slick-current')){
                                     var video_data = $('iframe').data('src');
                                     $('iframe').attr('src', video_data);
@@ -124,64 +190,6 @@ $(document).ready(function() {
     
         });
     }
-    
-
-    //Slider for project
-    $(document).ready(function(){
-        // Main slider
-        $('.main-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            // arrows: false,
-            prevArrow: $('.main-prev'),
-            nextArrow: $('.main-next'),
-            asNavFor: '.main-slider-title',
-        });
-        $('.main-slider-title').slick({
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            asNavFor: '.main-slider',
-            focusOnSelect: true,
-            infinite: true,
-            arrows: false,
-        });
-        // Slider for photo
-        $('.project__slider_img').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
-            infinite: true,
-            fade: true,
-            asNavFor: '.project__slider_nav',
-            responsive: [
-                {
-                    breakpoint: 1280,
-                    settings: {
-                        arrows: false,
-                        dots: true
-                    }
-                }
-            ]
-        });
-        $('.project__slider_nav').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: '.project__slider_img',
-            focusOnSelect: true,
-            infinite: true,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                }
-            ]
-        });
-    });
 
     //Slider for seating
     $(document).ready(function(){
