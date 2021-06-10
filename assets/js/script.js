@@ -502,7 +502,7 @@ $(document).ready(function() {
             infinite: true,
             autoplaySpeed: 3500,
             pauseOnHover: false,
-            pauseOnFocus: false,
+            // pauseOnFocus: false,
             fade: true,
             asNavFor: '.main-slider-biz .project__slider_nav',
             responsive: [
@@ -602,9 +602,9 @@ $(document).ready(function() {
             dots: true,
             infinite: true,
             fade: true,
-            autoplaySpeed: 100,
+            autoplaySpeed: 3500,
             pauseOnHover: false,
-            pauseOnFocus: false,
+            // pauseOnFocus: false,
             asNavFor: '.main-slider-pr .project__slider_nav',
             responsive: [
                 {

@@ -432,7 +432,7 @@
         }
 
         .container{
-            z-index: 999;
+            z-index: 20;
         }
 
         &-title{
@@ -1487,7 +1487,7 @@
                 }
             }
             &__btn{
-                display: flex;
+                display: none;
                 justify-content: center;
                 width: 257px;
                 height: auto;

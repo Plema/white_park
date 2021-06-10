@@ -46,7 +46,14 @@ $(document).ready(function() {
                         arrows: false,
                         dots: true
                     }
-                }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        arrows: false,
+                        autoplay: false,
+                    }
+                },
             ]
         });
         $('.project__slider_nav').slick({

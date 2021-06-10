@@ -22,8 +22,8 @@
             .fancybox-toolbar{
                 position: absolute;
                 top: 0;
-                // right: 0;
-                left: 90%;
+                right: 0;
+                // left: 90%;
 
                 .fancybox-button--zoom{
                     display: none;
@@ -130,6 +130,16 @@
             }
             .fancybox-caption{
                 display: none;
+            }
+        }
+    }
+    @media(min-width: 1024px){
+        .fancybox-container{
+            .fancybox-inner{
+                .fancybox-toolbar{
+                    left: 90%;
+                    right: initial;
+                }
             }
         }
     }
